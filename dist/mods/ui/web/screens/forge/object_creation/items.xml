@@ -1,0 +1,529 @@
+﻿<root>
+  <category name="PROPS" id="props">
+    <category name="BARRELS">
+      <item type="prop" name="BARREL" tagindex="0x30a3" />
+      <item type="prop" name="BARREL, SMALL" tagindex="0x3095" />
+      <item type="prop" name="DRUM, 12 GAL" tagindex="0x2eeb" />
+      <item type="prop" name="DRUM, 55 GAL" tagindex="0x2dea" />
+    </category>
+    <category name="NATURAL">
+      <item type="prop" name="BUSH, A" tagindex="0x306f" />
+      <item type="prop" name="BUSH, B" tagindex="0x307b" />
+      <item type="prop" name="BUSH, SMALL" tagindex="0x3080" />
+      <item type="prop" name="ICICLE, 10 INCH" tagindex="0x2c32" />
+      <item type="prop" name="ICICLE, 18 INCH" tagindex="0x2c3e" />
+      <item type="prop" name="ICICLE, 24 INCH" tagindex="0x2c53" />
+      <item type="prop" name="ICICLE, 6 INCH" tagindex="0x2eda" />
+      <item type="prop" name="PALM BUSH, LARGE" tagindex="0x2f18" />
+      <item type="prop" name="PALM BUSH, MEDIUM" tagindex="0x2f20" />
+      <item type="prop" name="PALM TREE, SMALL" tagindex="0x2f25" >
+        <!-- tag phased by default ONLY -->
+        <setter target="physics" value="0" type="int" hidden="true" />
+      </item>
+      <item type="prop" name="PINE TREE" tagindex="0x2eff" >
+        <!-- tag phased by default ONLY -->
+        <setter target="physics" value="0" type="int" hidden="true" />
+      </item>
+      <item type="prop" name="PINE TREE, LARGE" tagindex="0x2ef0" >
+        <!-- tag phased by default ONLY -->
+        <setter target="physics" value="0" type="int" hidden="true" />
+      </item>
+    </category>
+    <category name="COVER">
+      <item type="prop" name="AWNING" tagindex="0x2f32" />
+      <!-- tag phased by default -->
+      <item type="prop" name="BARRICADE" tagindex="0x2a59" />
+      <item type="prop" name="BARRICADE, SMALL" tagindex="0x2e0f" />
+      <item type="prop" name="BARRIER" tagindex="0x2c98" />
+      <item type="prop" name="BARRIER, SHORT" tagindex="0x2cbc" />
+      <item type="prop" name="BATTLE SHIELD" tagindex="0x2f2a" />
+      <item type="prop" name="DUMPSTER" tagindex="0x2d16" />
+      <item type="prop" name="ROADBLOCK" tagindex="0x30a9" />
+      <item type="prop" name="SANDBAGS" tagindex="0x2eb7" />
+      <item type="prop" name="SANDBAGS, 45° CORNER" tagindex="0x2ec1" />
+      <item type="prop" name="SANDBAGS, 90° CORNER" tagindex="0x2ec6" />
+      <item type="prop" name="SANDBAGS, ENDCAP" tagindex="0x2ecb" />
+      <item type="prop" name="SANDBAGS, TURRET" tagindex="0x30C0" />
+      <item type="prop" name="SANDBAG, SINGLE" tagindex="0x2ed5" />
+      <item type="prop" name="SANDBAG, TWO" tagindex="0x2ed0" />
+    </category>
+    <category name="CRATES">
+      <item type="prop" name="AMMO CASE" tagindex="0x2dfa" />
+      <item type="prop" name="AMMO CRATE" tagindex="0x30C5" />
+      <item type="prop" name="AMMO CRATE, SMALL" tagindex="0x3085" />
+      <item type="prop" name="CABINET" tagindex="0x2fea" />
+      <item type="prop" name="CONTAINER" tagindex="0x2e00" />
+      <item type="prop" name="CONTAINER, LID" tagindex="0x2e0a" />
+      <item type="prop" name="CRATE, INDUSTRIAL" tagindex="0x33F5" />
+      <item type="prop" name="CRATE, MULTI" tagindex="0x2c63" />
+      <item type="prop" name="CRATE, PACKING" tagindex="0x2aa6" />
+      <item type="prop" name="CRATE, PACKING, LID" tagindex="0x2ab6" />
+      <item type="prop" name="INDUSTRIAL BOX, OPEN" tagindex="0x2c6b" />	  
+      <item type="prop" name="INDUSTRIAL BOX" tagindex="0x2c7e" />
+      <item type="prop" name="INDUSTRIAL BOX, SHORT" tagindex="0x2c83" />
+	  <item type="prop" name="INDUSTRIAL BOX, SHORT, CLOSED" tagindex="0x2c88" />	  
+      <item type="prop" name="DOUBLE BOX" tagindex="0x33CF" />
+      <item type="prop" name="DOUBLE BOX, OPEN" tagindex="0x33D9" />	  
+      <item type="prop" name="SINGLE BOX, SHORT" tagindex="0x33E7" />
+	  <item type="prop" name="SINGLE BOX, SHORT, CLOSED" tagindex="0x33E2" />	  
+      <item type="prop" name="EQUIPMENT CASE" tagindex="0x2df5" />
+      <item type="prop" name="EQUIPMENT CASE, LID" tagindex="0x30D3" />
+      <item type="prop" name="EQUIPMENT CASE, OPEN" tagindex="0x30CA]" />
+      <item type="prop" name="EQUIPMENT CASE, SMALL" tagindex="0x30d8" />
+      <item type="prop" name="FENCE BOX" tagindex="0x2d27" />
+      <item type="prop" name="MEDICAL CRATE" tagindex="0x2e16" />
+      <item type="prop" name="COVENANT CRATE, OPEN" tagindex="0x2edf" />
+      <item type="prop" name="COVENANT CRATE, CLOSED" tagindex="0x2e25" />	  
+      <item type="prop" name="METAL CRATE" tagindex="0x33EC" />	  
+    </category>
+    <category name="EXPLOSIVES">
+      <item type="prop" name="PLASMA BATTERY" tagindex="0x2e3b" />
+      <item type="prop" name="FUSION COIL" tagindex="0x2b4a" />
+      <item type="prop" name="POWER CORE" tagindex="0x3024" />
+      <item type="prop" name="PROPANE BURNER" tagindex="0x30DB" />
+      <item type="prop" name="PROPANE TANK" tagindex="0x2ceb" />
+    </category>
+    <category name="LIGHTS">
+      <item type="light" name="BLUE" tagindex="0x2abc" />
+      <item type="light" name="RED" tagindex="0x2ac3" />	
+    </category>	
+    <category name="TECH">
+      <item type="prop" name="MONITOR" tagindex="0x2fcc" />
+      <item type="prop" name="MONITOR, MEDIUM" tagindex="0x3186" />	  
+      <item type="prop" name="MONITOR, SMALL" tagindex="0x3193" />	  
+      <item type="prop" name="KEYBOARD" tagindex="0x2fc2" />
+      <item type="prop" name="FLOODLIGHTS" tagindex="0x24cb" />
+      <item type="prop" name="FORKLIFT" tagindex="0x2dba" />
+      <item type="prop" name="GENERATOR" tagindex="0x2e77" />
+      <item type="prop" name="GENERATOR, INDUSTRIAL" tagindex="0x2ff7" />
+      <item type="prop" name="GENERATOR, SMALL" tagindex="0x3000" />
+      <item type="prop" name="INDUSTRIAL CART" tagindex="0x3056" />
+      <item type="prop" name="RADIO SET" tagindex="0x30E5" />
+      <item type="prop" name="RADIO SET, SMALL" tagindex="0x2e68" />
+    </category>
+    <category name="GADGETS">
+      <item type="prop" name="SOCCER BALL" tagindex="0x30ee" />
+      <item type="prop" name="WEAPON HOLDER" tagindex="0x2a98" />
+      <item type="prop" name="GRAV LIFT" tagindex="0x227a" />
+      <item type="prop" name="LIFT, GOLD" tagindex="0x301b" />
+      <item type="prop" name="MAN CANNON" tagindex="0x2af8" />
+      <item type="prop" name="SHIELD DOOR" tagindex="0x2c5e" />
+      <item type="prop" name="SHIELD DOOR, 2" tagindex="0x3124" />	  
+      <item type="prop" name="SHIELD DOOR, LARGE" tagindex="0x2ae8" />
+      <item type="prop" name="SHIELD DOOR, GOLD" tagindex="0x30F6" />
+    </category>
+    <category name="OFFICE">
+      <item type="prop" name="CHAIR" tagindex="0x3116" />
+      <item type="prop" name="COMPUTER, MONITOR" tagindex="0x2fcd" />
+      <item type="prop" name="COMPUTER, BRIEFCASE" tagindex="0x3043" />
+      <item type="prop" name="COMPUTER, BRIEFCASE, SMALL" tagindex="0x2e84" />	  
+      <item type="prop" name="FILING CABINET" tagindex="0x2fbb" />
+      <item type="prop" name="FILING CABINET, SMALL" tagindex="0x2fad" />
+      <item type="prop" name="KEYBOARD" tagindex="0x2fc2" />
+      <item type="prop" name="STAND" tagindex="0x3051" />
+      <item type="prop" name="TABLE" tagindex="0x311F" />
+      <item type="prop" name="TELEPHONE, WALL" tagindex="0x30FD" />
+    </category>
+    <category name="MISCELLANEOUS">
+      <item type="prop" name="BACKPACK" tagindex="0x2e9e" />
+      <item type="prop" name="BEACON" tagindex="0x312A" />
+      <item type="prop" name="BLITZ CAN" tagindex="0x2e98" />
+      <item type="prop" name="BRIDGE" tagindex="0x2c8d" />
+      <item type="prop" name="CAMPING STOOL" tagindex="0x2ea7" />
+      <item type="prop" name="CHAIN LINK GATE" tagindex="0x3132" />
+      <item type="prop" name="DROP BRIDGE" tagindex="0x2f50" >
+        <!-- tag phased by default ONLY -->
+        <setter target="physics" value="0" type="int" hidden="true" />
+      </item>
+      <item type="prop" name="DROP POD, CLOSED" tagindex="0x3400" />
+      <item type="prop" name="DROP POD, FIRED" tagindex="0x3405" />
+      <item type="prop" name="FLOOR HATCH" tagindex="0x3062" />
+      <!-- tag phased by default -->
+      <item type="prop" name="GARBAGE CAN" tagindex="0x24c4" />
+      <item type="prop" name="LOCKER" tagindex="0x2fea" />
+      <item type="prop" name="LOUDSPEAKER" tagindex="0x313F" />
+      <item type="prop" name="MEDICAL BARREL" tagindex="0x2e31" />
+      <item type="prop" name="MISSILE, BODY" tagindex="0x2fa7" />
+      <item type="prop" name="MISSILE, WARHEAD" tagindex="0x2f9f" />
+      <item type="prop" name="MONGOOSE PLATFORM" tagindex="0x2f09" />
+      <item type="prop" name="PALLET" tagindex="0x319D" />
+      <item type="prop" name="PALLET, LARGE" tagindex="0x2a67" />
+      <item type="prop" name="PHANTOM DESTROYED, BACK, BOTTOM" tagindex="0x3148" />	  
+      <item type="prop" name="PHANTOM DESTROYED, BACK, TOP" tagindex="0x3159" />
+      <item type="prop" name="PHANTOM DESTROYED, BACK, MEDIUM" tagindex="0x3153" />
+      <item type="prop" name="PHANTOM DESTROYED, BACK, SMALL" tagindex="0x3163" />
+      <item type="prop" name="PHANTOM DESTROYED, BOTTOM" tagindex="0x3168" />
+      <item type="prop" name="PHANTOM DESTROYED, FRONT" tagindex="0x3177" />	  
+      <item type="prop" name="PHANTOM DESTROYED, FLAT, LEFT" tagindex="0x316d" />
+      <item type="prop" name="PHANTOM DESTROYED, FLAT, RIGHT" tagindex="0x3172" />
+      <item type="prop" name="PHANTOM DESTROYED, SIDE, LEFT" tagindex="0x317c" />
+      <item type="prop" name="PHANTOM DESTROYED, SIDE, RIGHT" tagindex="0x3181" />
+      <item type="prop" name="RADIO ANTENNAE" tagindex="0x2b43" />
+      <item type="prop" name="STREET CONE" tagindex="0x2d01" />
+      <!-- tag phased by default -->
+      <item type="prop" name="TOOLBOX" tagindex="0x2f8a" />
+      <item type="prop" name="TOOLBOX, SMALL" tagindex="0x2f9a" />
+      <item type="prop" name="TRASH CAN" tagindex="0x31A2" />
+      <item type="prop" name="WARTHOG PLATFORM" tagindex="0x2f13" />
+      <item type="prop" name="WARTHOG TIRE" tagindex="0x24e4" />
+      <item type="prop" name="WARTHOG TIRE, SNOW" tagindex="0x2c0d" />
+      <item type="prop" name="WEAPON SHELF" tagindex="0x31AB" />
+      <item type="prop" name="WIRE SPOOL" tagindex="0x2d0e" />
+    </category>
+  </category>
+  <category name="PORTED" id="props">
+	<category name="ASSEMBLY">	
+      <item type="prop" name="BASE GRAVLIFT" tagindex="0x3C3C" />
+      <item type="prop" name="BASE GRAVLIFT, YELLOW" tagindex="0x3C44" />
+      <item type="prop" name="DOOR BLOCKER" tagindex="0x3C4A" />
+      <item type="prop" name="MAN CANNON, ASSEMBLY" tagindex="0x3C83" />
+    </category>
+	<category name="AVALANCHE">	
+      <item type="prop" name="FORERUNNER, CORNER" tagindex="0x3C98" />
+      <item type="prop" name="FOREFUNNER, RAMP" tagindex="0x3CA9" />
+      <item type="prop" name="FORERUNNER, WALL, CORNER" tagindex="0x3CBF" />
+      <item type="prop" name="FORERUNNER, WALL" tagindex="0x3CC4" />
+      <item type="prop" name="FORERUNNER, WALL, SHIELD" tagindex="0x3CC9" />
+      <item type="prop" name="LIFT" tagindex="0x3CCE" />
+      <item type="prop" name="MAN CANNON, AVALANCHE" tagindex="0x3CD8" />
+      <item type="prop" name="SHIELD DOOR, LARGE" tagindex="0x3CE0" />
+      <item type="prop" name="SHIELD DOOR, SMALL" tagindex="0x3CEA" />
+      <item type="prop" name="BUNKER PLATFORM" tagindex="0x3CF1" />
+    </category> 	
+	<category name="BLACKOUT">	
+      <item type="prop" name="CORE SHELF" tagindex="0x3D7B" />
+      <item type="prop" name="FENCE DOOR" tagindex="0x3D86" />
+      <item type="prop" name="CELL TOWER" tagindex="0x3D98" />
+      <item type="prop" name="LIFT [NOT VISIBLE]" tagindex="0x3D91" />	  
+      <item type="prop" name="CELL TOWER, SIMPLE" tagindex="0x3DA5" />
+      <item type="prop" name="LOCKER, CLOSED" tagindex="0x3DAA" />
+      <item type="prop" name="WINDCUPS" tagindex="0x3DAF" />
+      <item type="prop" name="WINDSOCK" tagindex="0x3DB8" />
+    </category> 	
+	<category name="COLD STORAGE">	
+      <item type="prop" name="FLOOD DANGLER, LARGE" tagindex="0x3D03" />
+      <item type="prop" name="FLOOD DANGLER, SMALL" tagindex="0x3D13" />
+      <item type="prop" name="FLOOD BALL, PULSING" tagindex="0x3D30" />	 
+      <item type="prop" name="FLOOD FORM, PASSIVE" tagindex="0x3D6C" />	  
+      <item type="prop" name="ENERGY BLOCKER, SMALL" tagindex="0x3D18" />
+      <item type="prop" name="VIEWING AREA" tagindex="0x3D1F" />
+      <item type="prop" name="VIEWING AREA, SMALL" tagindex="0x3D26" />
+      <item type="prop" name="SHIELD DOOR" tagindex="0x3D2B" />
+    </category>
+	<category name="CITADEL">	
+      <item type="prop" name="SHIELD, YELLOW" tagindex="0x3DCC" />
+      <item type="prop" name="SHIELD YELLOW, SMALL" tagindex="0x3DD4" />
+      <item type="prop" name="CRATE, BLUE" tagindex="0x3DDA" />
+      <item type="prop" name="CRATE, RED" tagindex="0x3DEA" />
+    </category>  	
+	<category name="ISOLATION">	
+      <item type="prop" name="LIFT, CURVE" tagindex="0x3DF0" />
+      <item type="prop" name="ISOLATION WALL" tagindex="0x3E05" />
+      <item type="prop" name="FLOODBALL, PULSING" tagindex="0x3E11" />
+    </category> 
+	<category name="EPITAPH">	
+      <item type="prop" name="GRAV PLATFORM" tagindex="0x3E12" />
+      <item type="prop" name="HOLOGRAM PANEL, 1" tagindex="0x3E1E" />
+      <item type="prop" name="HOLOGRAM PANEL, 2" tagindex="0x3E2F" />
+      <item type="prop" name="HOLOGRAM PANEL, 3" tagindex="0x3E35" />
+      <item type="prop" name="JUMP PAD" tagindex="0x3E3B" />
+      <item type="prop" name="LIGHT, MAIN" tagindex="0x3E44" />
+      <item type="prop" name="LIGHT, SIDE" tagindex="0x3E4B" />
+      <item type="prop" name="JITTERY HOLOGRAM" tagindex="0x3E4F" />
+      <item type="prop" name="SHIELD DOOR, SMALL" tagindex="0x3E5F" />
+      <item type="prop" name="SHIELD DOOR, LARGE" tagindex="0x30F6" />
+      <item type="prop" name="ALTAR" tagindex="0x3E64" />
+    </category>	
+	<category name="SANDBOX">	
+      <item type="prop" name="RAMP, SMALL 1X1" tagindex="0x31b9" />
+      <item type="prop" name="RAMP, SMALL 2X2" tagindex="0x31cb" />
+      <item type="prop" name="SAND ARCHTOP" tagindex="0x31d2" />
+      <item type="prop" name="SAND BLOCK" tagindex="0x31e3" />
+      <item type="prop" name="SAND BLOCK, FLAT" tagindex="0x31ec" />
+      <item type="prop" name="SAND BLOCK, LARGE" tagindex="0x31f1" />
+      <item type="prop" name="SAND BLOCK, RAMP" tagindex="0x31f6" />
+      <item type="prop" name="SAND BLOCK, WITTLE" tagindex="0x31fb" />
+      <item type="prop" name="SAND BRIDGE" tagindex="0x3202" />
+      <item type="prop" name="SAND COLUMN, SHORT" tagindex="0x3207" />
+      <item type="prop" name="SAND COLUMN, SHORT, RED" tagindex="0x3213" />
+      <item type="prop" name="SAND COLUMN, TT" tagindex="0x3219" />
+      <item type="prop" name="SAND CYLINDER" tagindex="0x321e" />
+      <item type="prop" name="SAND CYLINDER, END" tagindex="0x322b" />
+      <item type="prop" name="SAND CYLINDER, L-TURN" tagindex="0x3230" />
+      <item type="prop" name="SAND CYLINDER, THREEWAY" tagindex="0x3235" />	  
+      <item type="prop" name="SAND GATEHOUSE" tagindex="0x323a" />
+      <item type="prop" name="SAND CUBE, LARGE" tagindex="0x3249" />
+      <item type="prop" name="SAND CUBE, LARGE X2" tagindex="0x323f" />
+      <item type="prop" name="SAND CUBE, HALFCUBE" tagindex="0x3263" />
+      <item type="prop" name="SAND CUBE, HALFCUBE X2" tagindex="0x3256" />
+      <item type="prop" name="SAND CUBE, PILLAR" tagindex="0x324e" />
+      <item type="prop" name="SAND CUBE, RAMP" tagindex="0x3268" />
+      <item type="prop" name="SAND CUBE, RAMP, SMALL" tagindex="0x329a" />	  
+      <item type="prop" name="SAND CUBE, SLANT" tagindex="0x3290" />
+      <item type="prop" name="SAND CUBE, SLANT, CORNER" tagindex="0x3295" />	  
+      <item type="prop" name="SAND BRIDGE, WOOD" tagindex="0x325b" />
+      <item type="prop" name="SAND BRIDGE, WOOD, SMALL" tagindex="0x32a4" />	  
+      <item type="prop" name="SAND MAST HOUSE" tagindex="0x326d" />
+      <item type="prop" name="SAND PYR, BRIDGE" tagindex="0x3273" />
+      <item type="prop" name="SAND PYR, CORNER" tagindex="0x3278" />
+      <item type="prop" name="SAND PYR, CORNER EXTENDER" tagindex="0x327e" />
+      <item type="prop" name="SAND RAMP" tagindex="0x3283" />
+      <item type="prop" name="SAND SCAFFOLD" tagindex="0x3288" />
+      <item type="prop" name="SAND WALL" tagindex="0x32a9" />
+      <item type="prop" name="SAND WALL X2" tagindex="0x329f" />
+      <item type="prop" name="SAND WALL, FORGE" tagindex="0x33a0" />
+      <item type="prop" name="SAND WALL, HALF DOOR" tagindex="0x32ae" />
+      <item type="prop" name="SAND WALL, LOW DOOR" tagindex="0x32b3" />	  
+      <item type="prop" name="SAND WALL, L-SECTION" tagindex="0x32b8" />
+      <item type="prop" name="SAND WALL, SLIT" tagindex="0x32bd" />
+      <item type="prop" name="SAND WALL, T-SECTION" tagindex="0x32c2" />
+      <item type="prop" name="STONE COLUMN, DAMAGED" tagindex="0x32c7" />
+      <item type="prop" name="STONE COLUMN, SHORT" tagindex="0x32cc" />
+      <item type="prop" name="STONE COLUMN, TALL" tagindex="0x32d1" />
+      <item type="prop" name="KILL BALL" tagindex="0x2aca" />
+      <item type="prop" name="GOLF CUP" tagindex="0x2ada" />
+      <item type="prop" name="SANDBOX GRID" tagindex="0x340E" />	  
+    </category>
+	<category name="SNOWBOUND">	
+      <item type="prop" name="AIRLOCK FIELD" tagindex="0x3124" />
+      <item type="prop" name="AIRLOCK FIELD, CAVE" tagindex="0x3E6E" />
+      <item type="prop" name="AIRLOCK FIELD, LARGE" tagindex="0x3E73" />
+      <item type="prop" name="COVENANT DEFENDER" tagindex="0x3E84" />
+    </category>
+	<category name="LONGSHORE">	
+      <item type="prop" name="DINGY" tagindex="0x3EA0" />
+      <item type="prop" name="DOOR BLOCKER, LARGE" tagindex="0x3EB5" />
+      <item type="prop" name="DOOR BLOCKER, MEDIUM" tagindex="0x3EBE" />
+      <item type="prop" name="DOOR BLOCKER, SMALL" tagindex="0x3EC3" />
+      <item type="prop" name="FISH CANS" tagindex="0x3EC8" />
+      <item type="prop" name="CRATE INDUSTRIAL, FISH" tagindex="0x3EDB" />
+      <item type="prop" name="WATER BARREL" tagindex="0x3EE0" />
+      <item type="prop" name="WATER BARREL, SINGLE" tagindex="0x3EEA" />
+      <item type="prop" name="HOLIDAY SIGN" tagindex="0x3EF3" />
+      <item type="prop" name="HOLIDAY SIGN, 2" tagindex="0x3EFD" />
+      <item type="prop" name="HOLIDAY MENU" tagindex="0x3EF8" />
+      <item type="prop" name="RUSTY BARREL" tagindex="0x3F02" />
+      <item type="prop" name="SECURITY LIGHT, RED" tagindex="0x3F03" />
+      <item type="prop" name="SPEAKER" tagindex="0x3F11" />  
+    </category>
+	<category name="ORBITAL">	
+      <item type="prop" name="GENERATOR" tagindex="0x3F12" />
+      <item type="prop" name="SERVER DOOR" tagindex="0x3F1B" />
+      <item type="prop" name="SERVER RACK" tagindex="0x3F26" />
+      <item type="prop" name="SPACE DOOR" tagindex="0x3F36" />
+      <item type="prop" name="TRASHCAN" tagindex="0x3F45" />
+      <item type="prop" name="FLAG WAVER, BLUE" tagindex="0x3F4D" />
+      <item type="prop" name="FLAG WAVER, RED" tagindex="0x3F55" />
+      <item type="prop" name="WELCOME SIGN" tagindex="0x3F65" />
+    </category> 	
+	<category name="HERETIC">	
+      <item type="prop" name="BASE FLOOR" tagindex="0x3F72" />
+      <item type="prop" name="BASE FLOOR, RED" tagindex="0x3F78" />
+      <item type="prop" name="COVENANT CAPITAL SHIP" tagindex="0x3F7D" />
+      <item type="prop" name="COVENANT CRUISER" tagindex="0x3F8D" />
+    </category> 	
+	<category name="GHOST TOWN">	
+      <item type="prop" name="GHOST TOWN, BLOCK" tagindex="0x3FA4" />
+      <item type="prop" name="GHOST TOWN, BRIDGE" tagindex="0x3FB6" />
+      <item type="prop" name="GHOST TOWN BRIDGE, SMALL" tagindex="0x3FD5" />	  
+      <item type="prop" name="GHOST TOWN, PANEL" tagindex="0x3FBB" />
+      <item type="prop" name="GHOST TOWN, PLATFORM" tagindex="0x3FC5" />
+      <item type="prop" name="GHOST TOWN, SCAFFOLD" tagindex="0x3FD0" />
+      <item type="prop" name="DOOR" tagindex="0x3FDA" />
+      <item type="prop" name="JUNGLE, BUSH, SMALL" tagindex="0x3FE3" />
+      <item type="prop" name="JUNGLE, TREE SAPLING" tagindex="0x3FEA" />
+      <item type="prop" name="TECH, PRIMARY SYSTEMS" tagindex="0x3FF6" />
+      <item type="prop" name="TECH, SECONDARY SYSTEMS" tagindex="0x4003" />
+      <item type="prop" name="TECH, SUBSTATION" tagindex="0x4008" />
+      <item type="prop" name="TECH, SIMPLE" tagindex="0x401D" />  
+      <item type="prop" name="FUSEBOX" tagindex="0x400D" />
+      <item type="prop" name="MONITOR STATION" tagindex="0x4016" />  
+    </category>
+	<category name="FOUNDRY">	
+      <item type="prop" name="FENCE WALL" tagindex="0x4022" />
+      <item type="prop" name="FENCE SIGN, BLUE" tagindex="0x2d34" />
+      <item type="prop" name="FENCE SIGN, RED" tagindex="0x2d3e" />
+      <item type="prop" name="RUST CORNER" tagindex="0x2d47" />
+      <item type="prop" name="RUST WALL" tagindex="0x2d62" />
+      <item type="prop" name="RUST WALL, DOUBLE" tagindex="0x2d5d" />
+      <item type="prop" name="STAIRS" tagindex="0x2d67" />
+      <item type="prop" name="TRUCK" tagindex="0x2d7a" />
+      <item type="prop" name="WAREHOUSE DOOR" tagindex="0x4027" />
+      <item type="prop" name="WAREHOUSE DOOR, A" tagindex="0x4034" />	  
+      <item type="prop" name="WAREHOUSE WINDOW" tagindex="0x402F" />
+      <item type="prop" name="SECURITY LIGHT, YELLOW" tagindex="0x4044" />
+    </category>   	
+  </category>
+  <category name="GAMEPLAY" id="gameplay">
+    <category name="GAMETYPE">
+      <category name="GENERAL">
+        <item type="general" name="RESPAWN POINT" tagindex="0x3391" />
+        <item type="general" name="RESPAWN POINT, INVISIBLE" tagindex="0x32d6" />		
+      </category>
+      <category name="ASSAULT">
+        <item type="assault" name="BOMB PLANT POINT" tagindex="0x2b11" />
+        <item type="assault" name="BOMB SPAWN POINT" tagindex="0x2b1a" />
+        <item type="assault" name="STARTING POINT" tagindex="0x3396" />
+        <item type="assault" name="RESPAWN AREA" tagindex="0x3397" />
+      </category>
+      <category name="CTF">
+        <item type="ctf" name="RESPAWN, FLAG HOME" tagindex="0x3398" />
+        <item type="ctf" name="RESPAWN, FLAG AWAY" tagindex="0x3399" />
+        <item type="ctf" name="FLAG RETURN POINT" tagindex="0x2b23" />
+        <item type="ctf" name="FLAG SPAWN POINT" tagindex="0x2b24" />
+        <item type="ctf" name="STARTING POINT" tagindex="0x339a" />
+        <item type="ctf" name="RESPAWN AREA" tagindex="0x339b" />
+      </category>
+      <category name="INFECTION">
+        <item type="infection" name="STARTING POINT" tagindex="0x339c" />
+        <item type="infection" name="RESPAWN AREA" tagindex="0x339d" />
+        <item type="infection" name="SAFE HAVEN" tagindex="0x2b25" />
+      </category>
+      <category name="JUGGERNAUT">
+        <item type="juggernaut" name="GO TO POINT" tagindex="0x2b28" />
+      </category>
+      <category name="KING OF THE HILL">
+        <item type="koth" name="HILL MARKER" tagindex="0x2b29" />
+        <item type="koth" name="STARTING POINT" tagindex="0x339e" />
+        <item type="koth" name="RESPAWN AREA" tagindex="0x339f" />
+      </category>
+      <category name="ODDBALL">
+        <item type="oddball" name="BALL SPAWN POINT" tagindex="0x2b2a" />
+        <item type="oddball" name="STARTING POINT" tagindex="0x338d" />
+        <item type="oddball" name="RESPAWN AREA" tagindex="0x338e" />
+      </category>
+      <category name="TERRITORIES">
+        <item type="territories" name="STARTING POINT" tagindex="0x3392" />
+        <item type="territories" name="RESPAWN AREA" tagindex="0x3393" />
+        <item type="territories" name="TERRITORY MARKER" tagindex="0x2b2b" />
+      </category>
+      <category name="SLAYER">
+        <item type="slayer" name="STARTING POINT" tagindex="0x338f" />
+        <item type="slayer" name="RESPAWN AREA" tagindex="0x3390" />
+      </category>
+      <category name="VIP">
+        <item type="vip" name="GO TO POINT" tagindex="0x2b2d" />
+        <item type="vip" name="STARTING POINT" tagindex="0x3394" />
+        <item type="vip" name="RESPAWN AREA" tagindex="0x3395" />
+      </category>
+    </category>
+    <category name="MAP TOOLS">
+      <item type="tool" name="MAP MODIFIER" tagindex="0x33c7" max_allowed="1">
+        <help>Map flags and flags and more flags</help>
+        <setter target="physics" value="1" type="int" hidden="true" />
+      </item>
+      <item type="tool" name="PREMATCH CAMERA" tagindex="0x104b" max_allowed="1">
+        <help>Pretty fucking obvious what this is.</help>
+        <setter target="physics" value="1" type="int" hidden="true" />
+      </item>
+      <item type="tool" name="KILL VOLUME" tagindex="0x33cc" >
+        <help>This kills people.</help>
+      </item>
+      <item type="tool" name="GARBAGE COLLECTION VOLUME" tagindex="0x33c8" >
+        <help>Deletes the selected objects from this volume.</help>
+      </item>
+    </category>
+    <category name="EQUIPMENT">
+      <category name="CLASSIC">
+        <item type="equipment" name="AUTO TURRET" tagindex="0x235b" />	
+        <item type="equipment" name="BUBBLE SHIELD" tagindex="0x2248" />
+        <item type="equipment" name="DEPLOYABLE COVER" tagindex="0x22b1" />
+        <item type="equipment" name="FLARE" tagindex="0x2331" />
+        <item type="equipment" name="GRAV LIFT" tagindex="0x2274" />
+        <item type="equipment" name="INVINCIBILITY" tagindex="0x264a" />
+        <item type="equipment" name="POWER DRAIN" tagindex="0x22f5" />
+        <item type="equipment" name="RADAR JAMMER" tagindex="0x22d8" />
+        <item type="equipment" name="REGENERATOR" tagindex="0x2318" />
+        <item type="equipment" name="TRIP MINE" tagindex="0x2354" />	
+      </category>
+      <category name="GRENADES">
+        <item type="equipment" name="FRAG GRENADE" tagindex="0x00b9" />
+        <item type="equipment" name="PLASMA GRENADE" tagindex="0x026f" />
+        <item type="equipment" name="FIREBOMB GRENADE" tagindex="0x042e" />
+        <item type="equipment" name="SPIKE GRENADE" tagindex="0x02cc" />
+      </category>
+      <category name="POWERUPS">
+        <item type="equipment" name="ACTIVE CAMO" tagindex="0x33B5" />
+        <item type="equipment" name="OVERSHIELDS" tagindex="0x2728" />
+        <item type="equipment" name="CUSTOM POWERUP" tagindex="0x33BC" />
+        <item type="equipment" name="HEALTH PACK, SMALL" tagindex="0x33B4" />
+        <item type="equipment" name="HEALTH PACK, MEDIUM" tagindex="0x33B3" />
+        <item type="equipment" name="HEALTH PACK, LARGE" tagindex="0x33A4" />		
+      </category>
+    </category>
+    <category name="WEAPONS">
+      <category name="BASE GAME">
+        <item type="weapon" name="ASSAULT RIFLE" tagindex="0x0f7a" />	  
+        <item type="weapon" name="BATTLE RIFLE" tagindex="0x1bd1" />
+        <item type="weapon" name="SMG" tagindex="0x1c0A" />
+        <item type="weapon" name="SMG_SILENCED" tagindex="0x26f3" />		
+        <item type="weapon" name="COVENANT CARBINE" tagindex="0x1f2c" />
+        <item type="weapon" name="MAULER" tagindex="0x2082" />
+        <item type="weapon" name="MAGNUM" tagindex="0x1971" />
+        <item type="weapon" name="AUTOMAG" tagindex="0x270c" />		
+        <item type="weapon" name="PLASMA PISTOL" tagindex="0x1eb6" />
+      </category>
+      <category name="TURRETS">
+        <item type="weapon" name="MACHINE GUN TURRET" tagindex="0x2423" />
+        <item type="weapon" name="MACHINE GUN TURRET, DETACHED" tagindex="0x1aa6" />
+        <item type="weapon" name="PLASMA CANNON" tagindex="0x29d5" />
+        <item type="weapon" name="PLASMA CANNON, DETACHED" tagindex="0x2063" />
+        <item type="weapon" name="MISSILE POD" tagindex="0x1d92" />
+      </category>
+      <category name="POWER WEAPONS">
+        <item type="weapon" name="BEAM RIFLE" tagindex="0x20dd" />
+        <item type="weapon" name="BRUTE SHOT" tagindex="0x1dca" />
+        <item type="weapon" name="ENERGY SWORD" tagindex="0x1dfb" />
+        <item type="weapon" name="FLAMETHROWER" tagindex="0x2149" />
+        <item type="weapon" name="FUEL ROD GUN" tagindex="0x20b2" />
+        <item type="weapon" name="FLAG" tagindex="0x0fd3" />		
+        <item type="weapon" name="GRAVITY HAMMER" tagindex="0x1e3c" />
+        <item type="weapon" name="GOLF CLUB" tagindex="0x217c" />		
+        <item type="weapon" name="NEEDLER" tagindex="0x1e5a" />
+        <item type="weapon" name="PLASMA RIFLE" tagindex="0x0f99" />
+        <item type="weapon" name="PLASMA RIFLE, RED" tagindex="0x4308" />	      
+        <item type="weapon" name="ROCKET LAUNCHER" tagindex="0x1d47" />
+        <item type="weapon" name="SENTINEL BEAM" tagindex="0x211c" />
+        <item type="weapon" name="SHOTGUN" tagindex="0x1c53" />
+        <item type="weapon" name="SNIPER RIFLE" tagindex="0x1c98" />
+        <item type="weapon" name="SPARTAN LASER" tagindex="0x1ce1" />
+        <item type="weapon" name="SPIKER" tagindex="0x1f6e" />
+      </category>
+    </category>
+    <category name="VEHICLES">
+      <item type="vehicle" name="BANSHEE" tagindex="0x29ed" />
+      <item type="vehicle" name="CHOPPER" tagindex="0x257b" />
+      <item type="vehicle" name="ELEPHANT" tagindex="0x32df" />
+      <item type="vehicle" name="GHOST" tagindex="0x2379" />
+      <item type="vehicle" name="GHOST, SNOW" tagindex="0x2b6a" />	  
+      <item type="vehicle" name="HORNET" tagindex="0x2854" />
+      <item type="vehicle" name="HORNET, LITE" tagindex="0x28e4" />
+      <item type="vehicle" name="MONGOOSE" tagindex="0x25e5" />
+      <item type="vehicle" name="MONGOOSE, SNOW" tagindex="0x2b6b" />	  
+      <item type="vehicle" name="PROWLER" tagindex="0x27fe" />
+      <item type="vehicle" name="SCORPION" tagindex="0x273a" />
+      <item type="vehicle" name="SCORPION, SNOW" tagindex="0x2b93" />	  
+      <item type="vehicle" name="SHADE TURRET" tagindex="0x3332" />
+      <item type="vehicle" name="WARTHOG" tagindex="0x2452" />
+      <item type="vehicle" name="WARTHOG, GAUSS" tagindex="0x33ea" />
+      <item type="vehicle" name="WARTHOG, NO TURRET" tagindex="0x3372" />	  
+      <item type="vehicle" name="WARTHOG, TROOP" tagindex="0x3371" />
+      <item type="vehicle" name="WARTHOG, WRECKED" tagindex="0x3373" /> 
+      <item type="vehicle" name="WARTHOG, SNOW" tagindex="0x2bfe" />
+      <item type="vehicle" name="WARTHOG, SNOW, GAUSS" tagindex="0x3377" />	  
+      <item type="vehicle" name="WARTHOG, SNOW, NO TURRET" tagindex="0x3374" />
+      <item type="vehicle" name="WARTHOG, SNOW, TROOP" tagindex="0x3376" />
+      <item type="vehicle" name="WARTHOG, SNOW, WRECKED" tagindex="0x3375" />	  
+      <item type="vehicle" name="WRAITH" tagindex="0x2968" />
+      <item type="vehicle" name="WRAITH, ANTI-AIR" tagindex="0x3378" />
+    </category>
+    <category name="TELEPORTERS">
+      <item type="teleporter" name="TWO-WAY" tagindex="0x2a3a" />
+      <item type="teleporter" name="RECEIVER" tagindex="0x2a33" />
+      <item type="teleporter" name="SENDER" tagindex="0x2a22" />
+    </category>
+  </category>
+  <category name="PREFABS" id="prefabs" />
+  <category name="RECENTLY USED" id="recent" />
+  <category name="MAP OPTIONS" id="map_options" />
+</root>

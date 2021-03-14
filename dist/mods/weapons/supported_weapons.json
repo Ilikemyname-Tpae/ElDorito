@@ -1,0 +1,45 @@
+{"supported_weapons":[
+  {"name":"unarmed","tagname":"objects\\weapons\\melee\\energy_blade\\unarmed"},
+  {"name":"energy_sword","tagname":"objects\\weapons\\melee\\energy_blade\\energy_blade"},
+  {"name":"energy_sword_hilt","tagname":"objects\\weapons\\melee\\energy_blade\\energy_blade_useless"},
+  {"name":"gravity_hammer","tagname":"objects\\weapons\\melee\\gravity_hammer\\gravity_hammer"},
+  {"name":"golf_club","tagname":"objects\\levels\\dlc\\shared\\golf_club\\golf_club"},
+
+  {"name":"flag","tagname":"objects\\weapons\\multiplayer\\flag\\flag"},
+  {"name":"oddball","tagname":"objects\\weapons\\multiplayer\\ball\\ball"},
+  {"name":"assault_bomb","tagname":"objects\\weapons\\multiplayer\\assault_bomb\\assault_bomb"},
+
+  {"name":"mauler","tagname":"objects\\weapons\\pistol\\excavator\\excavator"},
+
+  {"name":"magnum","tagname":"objects\\weapons\\pistol\\magnum\\magnum"},
+  {"name":"silenced_magnum","tagname":"objects\\weapons\\pistol\\automag\\automag"},
+
+  {"name":"needler","tagname":"objects\\weapons\\pistol\\needler\\needler"},
+
+  {"name":"plasma_pistol","tagname":"objects\\weapons\\pistol\\plasma_pistol\\plasma_pistol"},
+
+  {"name":"assault_rifle","tagname":"objects\\weapons\\rifle\\assault_rifle\\assault_rifle"},
+
+  {"name":"battle_rifle","tagname":"objects\\weapons\\rifle\\battle_rifle\\battle_rifle"},
+
+  {"name":"beam_rifle","tagname":"objects\\weapons\\rifle\\beam_rifle\\beam_rifle"},
+
+  {"name":"covenant_carbine","tagname":"objects\\weapons\\rifle\\covenant_carbine\\covenant_carbine"},
+
+  {"name":"plasma_rifle","tagname":"objects\\weapons\\rifle\\plasma_rifle\\plasma_rifle"},
+  {"name":"plasma_rifle_red","tagname":"objects\\weapons\\rifle\\plasma_rifle_red\\plasma_rifle_red"},
+
+  {"name":"shotgun","tagname":"objects\\weapons\\rifle\\shotgun\\shotgun"},
+
+  {"name":"smg","tagname":"objects\\weapons\\rifle\\smg\\smg"},
+  {"name":"smg_silenced","tagname":"objects\\weapons\\rifle\\smg_silenced\\smg_silenced"},
+
+  {"name":"sniper_rifle","tagname":"objects\\weapons\\rifle\\sniper_rifle\\sniper_rifle"},
+  {"name":"spike_rifle","tagname":"objects\\weapons\\rifle\\spike_rifle\\spike_rifle"},
+
+  {"name":"flak_cannon","tagname":"objects\\weapons\\support_high\\flak_cannon\\flak_cannon"},
+  {"name":"rocket_launcher","tagname":"objects\\weapons\\support_high\\rocket_launcher\\rocket_launcher"},
+  {"name":"spartan_laser","tagname":"objects\\weapons\\support_high\\spartan_laser\\spartan_laser"},
+  {"name":"brute_shot","tagname":"objects\\weapons\\support_low\\brute_shot\\brute_shot"},
+  {"name":"sentinel_gun","tagname":"objects\\weapons\\support_low\\sentinel_gun\\sentinel_gun"}
+]}
