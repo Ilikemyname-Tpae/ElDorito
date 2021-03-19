@@ -14,6 +14,7 @@ namespace Modules
 		Command* VarArmorArms;
 		Command* VarArmorLegs;
 		Command* VarArmorPelvis;
+		Command* VarRenderWeapon;
 
 		Command* VarColorsPrimary;
 		Command* VarColorsSecondary;

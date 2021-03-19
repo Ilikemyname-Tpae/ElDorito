@@ -59,6 +59,7 @@ var settingsToLoad = [
 	['armorLegs', 'Player.Armor.Legs','Legs','Legs.', 3],
     ['gender', 'Player.Gender','Gender','', 6],
     ['playerRep', 'Player.Representation', 'Player Representation','', 6],
+	['renderWeapon', 'Player.RenderWeapon','Podium Weapon','Podium Weapon.',3],
     ['colorsPrimary', 'Player.Colors.Primary','Armor Primary','The primary armor color will serve you in individual combat but will be overwritten in team scenarios.',0],
     ['colorsSecondary', 'Player.Colors.Secondary','Armor Secondary','The secondary armor color accents your primary color and will be overwritten in team scenarios.',1],
     ['colorsVisor', 'Player.Colors.Visor','Armor Detail','The armor detail color preserves your individual identity in all multiplayer scenarios.',2],
@@ -303,7 +304,19 @@ $(document).ready(function(){
     });
 	$("#randomColors").hide();
 	SetupEmblems(false, true, true);
-		
+	
+	dew.command('Weapon.List', {}).then(function(response){
+        var weaponList = response.split('\n');
+        var weaponArray = [];
+        for(i = 0; i < weaponList.length; i++){
+            var weapName = weaponList[i].split('Name: ')[1]
+            if(weapName && weapName != 'unarmed'){
+                var fancyName = weapName.replace(/_/g, ' ');
+                weaponArray.push([fancyName,weapName]);
+            }   
+        }
+        setRadioList('renderWeapon', weaponArray, true);
+    });
     setRadioList('armorHelmet', armorHelmetList, true);
     setRadioList('armorChest', armorChestList, true);
     setRadioList('armorRightShoulder', armorShoulderList, true);

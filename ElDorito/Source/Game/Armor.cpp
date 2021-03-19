@@ -47,6 +47,7 @@ namespace
 	std::map<std::string, uint8_t> armsIndices;
 	std::map<std::string, uint8_t> legsIndices;
 	std::map<std::string, uint8_t> pelvisIndices;
+	std::map<std::string, uint16_t> weaponIndices;
 
 	bool updateUiPlayerArmor = true; // Set to true to update the Spartan on the main menu
 
@@ -102,7 +103,24 @@ namespace Game::Armor
 {
 	void ArmorExtension::BuildData(int playerIndex, PlayerCustomization *out)
 	{
+		using Blam::Tags::TagInstance;
+		using Blam::Tags::Game::Globals;
+		using Blam::Tags::Game::MultiplayerGlobals;
+		using Blam::Tags::Globals::CacheFileGlobalTags;
+
+		auto* mulg = TagInstance::GetDefinition<MultiplayerGlobals>("multiplayer\\multiplayer_globals");
+
 		BuildPlayerCustomization(Modules::ModulePlayer::Instance(), out);
+
+		for (auto& element : mulg->Universal->GameVariantWeapons)
+		{
+			if (element.Weapon.TagIndex == -1)
+				continue;
+
+			weaponIndices.emplace(
+				std::string(Blam::Cache::StringIDCache::Instance.GetString(element.Name)),
+				(uint16_t)element.Weapon.TagIndex);
+		}
 	}
 
 	void ArmorExtension::ApplyData(int playerIndex, PlayerProperties *properties, const PlayerCustomization &data)
@@ -124,9 +142,6 @@ namespace Game::Armor
 		for (int i = 0; i < ColorIndices::Count; i++)
 			stream->WriteUnsigned<uint32_t>(data.Colors[i], 24);
 
-		// Unused
-		stream->WriteUnsigned<uint32_t>(0, 32);
-
 		// Armor
 		for (int i = 0; i < ArmorIndices::Count; i++)
 			stream->WriteUnsigned<uint8_t>(data.Armor[i], 0, MaxArmorIndices[i]);
@@ -141,9 +156,6 @@ namespace Game::Armor
 		// Colors
 		for (int i = 0; i < ColorIndices::Count; i++)
 			out->Colors[i] = stream->ReadUnsigned<uint32_t>(24);
-
-		// Unused
-		stream->ReadUnsigned<uint32_t>(32);
 
 		// Armor
 		for (int i = 0; i < ArmorIndices::Count; i++)
@@ -206,8 +218,22 @@ namespace Game::Armor
 	static const auto ApplyArmorColor = (void(*)(uint32_t objectDatum, int colorIndex, float *colorData))(0xB328F0);
 	static const auto UpdateArmorColors = (void(*)(uint32_t objectDatum))(0x5A2FA0);
 
-	/*__declspec(naked) void PoseWithWeapon(uint32_t unit, uint32_t weaponTag)
+	bool CommandPlayerListRenderWeapons(const std::vector<std::string>& Arguments, std::string& returnInfo)
 	{
+		std::stringstream ss;
+
+		for (auto& entry : weaponIndices)
+			ss << entry.first << std::endl;
+		returnInfo = ss.str();
+		return true;
+	}
+
+	__declspec(naked) void PoseWithWeapon(uint32_t unit, uint32_t weaponTag)
+	{
+		using Blam::Tags::TagInstance;
+
+		auto &playerVars = Modules::ModulePlayer::Instance();
+
 		// This is a pretty big hack, basically I don't know where the function pulls the weapon index from
 		// so this lets us skip over the beginning of the function and set the weapon tag to whatever we want
 		__asm
@@ -223,7 +249,14 @@ namespace Game::Armor
 			push 0x7B77DA
 			ret
 		}
-	}*/
+		// Give the biped a weapon (0x151E = tag index for Assault Rifle)
+		auto weaponName = playerVars.VarRenderWeapon->ValueString;
+
+		if (weaponIndices.find(weaponName) == weaponIndices.end())
+			weaponName = (playerVars.VarRenderWeapon->ValueString = "assault_rifle");
+
+		PoseWithWeapon(bipedObject, weaponIndices.find(weaponName)->second);
+	}
 
 	void CustomizeBiped(uint32_t bipedObject)
 	{
@@ -251,9 +284,6 @@ namespace Game::Armor
 
 		// Need to call this or else colors don't actually show up
 		UpdateArmorColors(bipedObject);
-
-		// Pose the biped with the assault rifle
-		// PoseWithWeapon(bipedObject, TagInstance::Find('weap', "objects\\weapons\\rifle\\assault_rifle\\assault_rifle").Index);
 	}
 
 	static const auto Object_SetTransform = (void(*)(int objectIndex, Blam::Math::RealVector3D * position, Blam::Math::RealVector3D * right, Blam::Math::RealVector3D * up, int a5))(0x00B33530);
