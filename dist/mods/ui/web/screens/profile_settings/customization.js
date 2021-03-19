@@ -54,11 +54,53 @@ var settingsToLoad = [
     ['armorChest', 'Player.Armor.Chest','Body','From arm to arm.', 3],
     ['armorRightShoulder', 'Player.Armor.RightShoulder','Right Shoulder','Right there on that shoulder.', 4],
     ['armorLeftShoulder', 'Player.Armor.LeftShoulder','Left Shoulder','The only shoulder that\'s left.', 5],
+	['armorArms', 'Player.Armor.Arms','Arms','Arms.', 3],
+	['armorPelvis', 'Player.Armor.Pelvis','Pelvis','Pelvis.', 3],
+	['armorLegs', 'Player.Armor.Legs','Legs','Legs.', 3],
     ['gender', 'Player.Gender','Gender','', 6],
     ['playerRep', 'Player.Representation', 'Player Representation','', 6],
     ['colorsPrimary', 'Player.Colors.Primary','Armor Primary','The primary armor color will serve you in individual combat but will be overwritten in team scenarios.',0],
     ['colorsSecondary', 'Player.Colors.Secondary','Armor Secondary','The secondary armor color accents your primary color and will be overwritten in team scenarios.',1],
     ['colorsVisor', 'Player.Colors.Visor','Armor Detail','The armor detail color preserves your individual identity in all multiplayer scenarios.',2],
+];
+var armorHelmetList = [
+	['Mark VI','base','Integrated Communications Helmet, Mjolnir: This standard-issue helmet for the Mjolnir Mark VI Powered Assault Armor has been in use since October 2552. It is compatible with all Mjolnir variants.'],
+	['Mark V','mp_markv',' Originally issued in August 2542, all extant Mark V helmets have been upgraded with current-issue internal components and software.'],
+	['CQB','mp_cobra','The Mjolnir/C variant was developed and tested at UNSC facilities in Essen, Deutschland, and Songnam, Hanguk, respectively, integrating feedback gathered from the Jericho VII Theater.'],
+    ['EOD','mp_regulator','The Mjolnir/EOD variant was created at UNSC facilities on Chi Ceti 4. The helmet was designed specifically to channel the pressure wave around the user\'s head, significantly reducing the likelihood of decapitation.'],
+    ['EVA','mp_intruder','The Mjolnir/V variant was developed and tested at UNSC facilities in Lister, Aigburth on Ganymede, integrating feedback gathered from the Summa Deep Space Incident.'],
+    ['Recon','mp_ninja','The Mjolnir VI/R variant was developed concurrently with the Mjolnir Mark VI Powered Assault Armor. The goal was to increase stealth capability without impacting endurance.'],
+    ['Rogue','mp_rogue','The Mark VI[A] helmet was the first of the "privatized" variants. With the fall of the Outer Colonies the UNSC called upon private industry to manufacture previously classified war materiel.'],
+    ['Scout','mp_scout','As with the RECON variant the goal was to improve the armor\'s stealth capabilities with no impact on endurance; however, the SCOUT variant relies more heavily on advanced materials.'],
+    ['Security','mp_marathon','The Mjolnir V(m) variant was manufactured at the Misrah Armories Facility on Mars in 2528. It has been upgraded and modified to be compatible with all current-issue armor variants.'],
+    ['Hayabusa','mp_ryu','The critical innovation brought about by RKD\'s involvement in the development of power armor is in the use of advanced materials-reducing the weight of current generation armor by nearly a third.'],
+    ['ODST','mp_odst','Many technologies initially developed for Project: MJOLNIR have gained widespread adoption; the use of CTCs for body armor and helmet-integrated neural interfaces being the most visible.'],
+	['Air Assault','air_assault','Based on a proven Ushuaia Armory design, Naphtali hopes to leverage the AIR ASSAULT\'s all-around excellent performance and combat endurance to compete for the UNSC\'s lucrative Spartan recruit armor contract. AIR ASSAULT armor is a front-runner for the standard armor that future Spartans will be clad in.'],
+    ['Renegade','renegade',' Obstentially a strategic reconnaissance variant, users have noticed the RENEGADE\'s sensor suite is calibrated specifically to track other Mjolnir suits; particularly those featuring emissions cloaking.'],
+    ['Juggernaut','juggernaut','The JUGGERNAUT\'s design was thought lost during the fall of Reach. Recovered by a corporate scout team in 2553, the prototype helmets were paired with a GEN2 prototype harness and shipped to Anvil Station for integration testing. 2553 Each JUGGERNAUT helmet is dabbed with vitrified dirt from Reach as a reminder of what is at stake.'],
+    ['Scanner','scanner','Scanner'],
+    ['Chameleon','chameleon','Chameleon'],
+    ['Stealth','stealth','Stealth'],
+    ['Omni','omni','A surprisingly effective composite of other Acheron Security designs, the OMNI is currently the companys cutting-edge Mjolnir suit, and one of the few able to effectively use Material Groups GEN2 prototype sensor suite. Petabytes of Mjolnir combat data have been carefully sifted and analzed by Acheron researchers to inform the OMNI\'s design.'],
+    ['Orbital','orbital','Orbital'],
+    ['Shark','shark','Shark'],
+    ['Halberd','halberd','Cloaked in secrecy, all users of the HALBERD-class armor must sign binding non-disclosure agreements about its performance and the particulars of its new weapon mag-lock arrangement. Emerson guards the HALBERD prototype suits with their own - heavily armed - private security.'],
+    ['Hoplite','hoplite','Initially designed as an alternative to the SPI armor used by SPARTAN-III operatives, the notoriously secretive Watershed group has unexpectedly revealed the HOPLITE as a low-cost Mjolnir variant optimized for pairing with UNSC pistols.-III. HOPLITE armor lacks the bells and whistles of most Mjolnir variants, but is easy to build and repair.'],
+	['Ballista','ballista','Ballista'],
+	['Cyclops','cyclops','Cyclops'],
+	['Demo','demo','Demo'],
+	['Dutch','dutch','Dutch'],
+	['Gladiator','gladiator','Gladiator'],
+	['Gungnir','gungnir','Gungnir'],
+	['Hammerhead','hammerhead','Hammerhead'],
+	['Mac','mac','Mac'],
+	['Mercenary','mercenary','Mercenary'],
+	['Nihard','nihard','Nihard'],
+	['Oracle','oracle','Oracle'],
+	['Silverback','silverback','Silverback'],
+	['Spectrum','spectrum','Spectrum'],
+	['Strider','strider','Strider'],
+	['Widow Maker','widow_maker','Widow Maker']
 ];
 var armorShoulderList = [
     ['Mark VI','base','Supplemental Armor, Pauldron, Mjolnir: This standard-issue shoulder armor for the Mjolnir Mark VI Powered Assault Armor has been in use since October 2552. It is compatible with all Mjolnir variants.'],
@@ -68,31 +110,135 @@ var armorShoulderList = [
     ['Recon','mp_ninja','In developing the Mjolnir VI/R variant, the goal was to increase the armor\'s overall stealth capabilities with little or no loss of endurance. This was achieved by relying on several tried-and-true methods.'],
     ['Scout','mp_scout','The SCOUT and RECON projects were run as independent parallel projects intended to develop a single variant of the Mjolnir Powered Assault Armor with stealth capabilities.'],
     ['Security','mp_marathon','The Mjolnir Mark V(m) Powered Assault Armor was originally manufactured in 2528 and recently upgraded to be compatible with all current-issue armor variants.'],
-    ['Hayabusa','mp_ryu','The critical innovation brought about by RKD\'s involvement in the development of power armor is in the use of advanced materials-reducing the weight of current generation armor by nearly a third.']
-];
-var armorHelmetList = [
-    ['Mark VI','base','Integrated Communications Helmet, Mjolnir: This standard-issue helmet for the Mjolnir Mark VI Powered Assault Armor has been in use since October 2552. It is compatible with all Mjolnir variants.'],
-    ['Mark V','mp_markv',' Originally issued in August 2542, all extant Mark V helmets have been upgraded with current-issue internal components and software.'],
-    ['CQB','mp_cobra','The Mjolnir/C variant was developed and tested at UNSC facilities in Essen, Deutschland, and Songnam, Hanguk, respectively, integrating feedback gathered from the Jericho VII Theater.'],
-    ['EOD','mp_regulator','The Mjolnir/EOD variant was created at UNSC facilities on Chi Ceti 4. The helmet was designed specifically to channel the pressure wave around the user\'s head, significantly reducing the likelihood of decapitation.'],
-    ['EVA','mp_intruder','The Mjolnir/V variant was developed and tested at UNSC facilities in Lister, Aigburth on Ganymede, integrating feedback gathered from the Summa Deep Space Incident.'],
-    ['Recon','mp_ninja','The Mjolnir VI/R variant was developed concurrently with the Mjolnir Mark VI Powered Assault Armor. The goal was to increase stealth capability without impacting endurance.'],
-    ['Rogue','mp_rogue','The Mark VI[A] helmet was the first of the "privatized" variants. With the fall of the Outer Colonies the UNSC called upon private industry to manufacture previously classified war materiel.'],
-    ['Scout','mp_scout','As with the RECON variant the goal was to improve the armor\'s stealth capabilities with no impact on endurance; however, the SCOUT variant relies more heavily on advanced materials.'],
-    ['Security','mp_marathon','The Mjolnir V(m) variant was manufactured at the Misrah Armories Facility on Mars in 2528. It has been upgraded and modified to be compatible with all current-issue armor variants.'],
     ['Hayabusa','mp_ryu','The critical innovation brought about by RKD\'s involvement in the development of power armor is in the use of advanced materials-reducing the weight of current generation armor by nearly a third.'],
-    ['ODST','mp_odst','Many technologies initially developed for Project: MJOLNIR have gained widespread adoption; the use of CTCs for body armor and helmet-integrated neural interfaces being the most visible.']
+	['Air Assault','air_assault','Based on a proven Ushuaia Armory design, Naphtali hopes to leverage the AIR ASSAULT\'s all-around excellent performance and combat endurance to compete for the UNSC\'s lucrative Spartan recruit armor contract. AIR ASSAULT armor is a front-runner for the standard armor that future Spartans will be clad in.'],
+    ['Renegade','renegade',' Obstentially a strategic reconnaissance variant, users have noticed the RENEGADE\'s sensor suite is calibrated specifically to track other Mjolnir suits; particularly those featuring emissions cloaking.'],
+    ['Juggernaut','juggernaut','The JUGGERNAUT\'s design was thought lost during the fall of Reach. Recovered by a corporate scout team in 2553, the prototype helmets were paired with a GEN2 prototype harness and shipped to Anvil Station for integration testing. 2553 Each JUGGERNAUT helmet is dabbed with vitrified dirt from Reach as a reminder of what is at stake.'],
+    ['Scanner','scanner','Scanner'],
+    ['Chameleon','chameleon','Chameleon'],
+    ['Stealth','stealth','Stealth'],
+    ['Omni','omni','A surprisingly effective composite of other Acheron Security designs, the OMNI is currently the companys cutting-edge Mjolnir suit, and one of the few able to effectively use Material Groups GEN2 prototype sensor suite. Petabytes of Mjolnir combat data have been carefully sifted and analzed by Acheron researchers to inform the OMNI\'s design.'],
+    ['Orbital','orbital','Orbital'],
+    ['Shark','shark','Shark'],
+    ['Halberd','halberd','Cloaked in secrecy, all users of the HALBERD-class armor must sign binding non-disclosure agreements about its performance and the particulars of its new weapon mag-lock arrangement. Emerson guards the HALBERD prototype suits with their own - heavily armed - private security.'],
+    ['Hoplite','hoplite','Initially designed as an alternative to the SPI armor used by SPARTAN-III operatives, the notoriously secretive Watershed group has unexpectedly revealed the HOPLITE as a low-cost Mjolnir variant optimized for pairing with UNSC pistols.-III. HOPLITE armor lacks the bells and whistles of most Mjolnir variants, but is easy to build and repair.'],
+	['Ballista','ballista','Ballista'],
+	['Cyclops','cyclops','Cyclops'],
+	['Demo','demo','Demo'],
+	['Dutch','dutch','Dutch'],
+	['Gladiator','gladiator','Gladiator'],
+	['Gungnir','gungnir','Gungnir'],
+	['Hammerhead','hammerhead','Hammerhead'],
+	['Mac','mac','Mac'],
+	['Mercenary','mercenary','Mercenary'],
+	['Nihard','nihard','Nihard'],
+	['Oracle','oracle','Oracle'],
+	['Silverback','silverback','Silverback'],
+	['Spectrum','spectrum','Spectrum'],
+	['Strider','strider','Strider'],
+	['Tankmode','tankmode_human','The divine creation of Tankmode.'],
+	['Widow Maker','widow_maker','Widow Maker']
 ];
 var armorChestList = [
     ['Mark VI','base','Mjolnir Mark VI Powered Assault Armor: This is the standard issue Powered Assault Armor for Spartans as of October 2552. It is compatible with all certified helmet and pauldron variants.'],
-    ['Bungie','mp_bungie','Forged in the flames of passion and perseverance. Go forth and represent.'],
+	['Bungie','mp_bungie','Forged in the flames of passion and perseverance. Go forth and represent.'],
     ['CQB','mp_cobra','The Mjolnir/C variant was developed and tested at UNSC facilities in Essen, Deutschland, and Songnam, Hanguk, respectively, integrating feedback gathered from the Jericho VII Theater.'],
     ['EOD','mp_regulator','This variant was designed specifically to protect Spartans during operations involving the handling of explosive ordnance (e.g., clearing/planting land mines, demolishing enemy structures/materiel).'],
     ['EVA','mp_intruder','In developing the Mjolnir Mark VI Powered Assault Armor/V variant, emphasis was placed on increasing exoatmospheric endurance and improving mobility in zero gravity without the use of thrusters.'],
     ['Recon','mp_ninja','In developing the Mjolnir Mark VI Powered Assault Armor/R, the emphasis was to increase stealth capability, specifically by reducing its IR signature, reflective surfaces, and Cherenkov radiation emission.'],
     ['Scout','mp_scout','The Mjolnir VI/S variant was developed and tested alongside the RECON variant at the ONI\'s Ordnance Testing Facility (B5D) at Swanbourne, Perth, Western Australia.'],
     ['Hayabusa','mp_ryu','In late 2536, RKD-an Earth-based think tank-presented the UNSC Ordnance Committee with its answer to the self-contained powered armor problem: Project: HAYABUSA.'],
-    ['Katana','mp_katana','To correctly use the sword, one must make it an extension of one\'s body. This is for the understanding of those intending to be warriors.']
+	['Katana','mp_katana','To correctly use the sword, one must make it an extension of one\'s body. This is for the understanding of those intending to be warriors.'],
+	['Air Assault','air_assault','Based on a proven Ushuaia Armory design, Naphtali hopes to leverage the AIR ASSAULT\'s all-around excellent performance and combat endurance to compete for the UNSC\'s lucrative Spartan recruit armor contract. AIR ASSAULT armor is a front-runner for the standard armor that future Spartans will be clad in.'],
+    ['Renegade','renegade',' Obstentially a strategic reconnaissance variant, users have noticed the RENEGADE\'s sensor suite is calibrated specifically to track other Mjolnir suits; particularly those featuring emissions cloaking.'],
+    ['Juggernaut','juggernaut','The JUGGERNAUT\'s design was thought lost during the fall of Reach. Recovered by a corporate scout team in 2553, the prototype helmets were paired with a GEN2 prototype harness and shipped to Anvil Station for integration testing. 2553 Each JUGGERNAUT helmet is dabbed with vitrified dirt from Reach as a reminder of what is at stake.'],
+    ['Scanner','scanner','Scanner'],
+    ['Chameleon','chameleon','Chameleon'],
+    ['Stealth','stealth','Stealth'],
+    ['Omni','omni','A surprisingly effective composite of other Acheron Security designs, the OMNI is currently the companys cutting-edge Mjolnir suit, and one of the few able to effectively use Material Groups GEN2 prototype sensor suite. Petabytes of Mjolnir combat data have been carefully sifted and analzed by Acheron researchers to inform the OMNI\'s design.'],
+    ['Orbital','orbital','Orbital'],
+    ['Shark','shark','Shark'],
+    ['Halberd','halberd','Cloaked in secrecy, all users of the HALBERD-class armor must sign binding non-disclosure agreements about its performance and the particulars of its new weapon mag-lock arrangement. Emerson guards the HALBERD prototype suits with their own - heavily armed - private security.'],
+    ['Hoplite','hoplite','Initially designed as an alternative to the SPI armor used by SPARTAN-III operatives, the notoriously secretive Watershed group has unexpectedly revealed the HOPLITE as a low-cost Mjolnir variant optimized for pairing with UNSC pistols.-III. HOPLITE armor lacks the bells and whistles of most Mjolnir variants, but is easy to build and repair.'],
+	['Ballista','ballista','Ballista'],
+	['Cyclops','cyclops','Cyclops'],
+	['Demo','demo','Demo'],
+	['Dutch','dutch','Dutch'],
+	['Gladiator','gladiator','Gladiator'],
+	['Gungnir','gungnir','Gungnir'],
+	['Hammerhead','hammerhead','Hammerhead'],
+	['Mac','mac','Mac'],
+	['Mercenary','mercenary','Mercenary'],
+	['Nihard','nihard','Nihard'],
+	['Oracle','oracle','Oracle'],
+	['Silverback','silverback','Silverback'],
+	['Spectrum','spectrum','Spectrum'],
+	['Strider','strider','Strider'],
+	['Tankmode','tankmode_human','The divine creation of Tankmode.'],
+	['Widow Maker','widow_maker','Widow Maker']
+];
+var armorArmList = [
+	['Mark VI','base','Integrated Communications Helmet, Mjolnir: This standard-issue helmet for the Mjolnir Mark VI Powered Assault Armor has been in use since October 2552. It is compatible with all Mjolnir variants.'],
+	['Air Assault','air_assault','Based on a proven Ushuaia Armory design, Naphtali hopes to leverage the AIR ASSAULT\'s all-around excellent performance and combat endurance to compete for the UNSC\'s lucrative Spartan recruit armor contract. AIR ASSAULT armor is a front-runner for the standard armor that future Spartans will be clad in.'],
+    ['Renegade','renegade',' Obstentially a strategic reconnaissance variant, users have noticed the RENEGADE\'s sensor suite is calibrated specifically to track other Mjolnir suits; particularly those featuring emissions cloaking.'],
+    ['Juggernaut','juggernaut','The JUGGERNAUT\'s design was thought lost during the fall of Reach. Recovered by a corporate scout team in 2553, the prototype helmets were paired with a GEN2 prototype harness and shipped to Anvil Station for integration testing. 2553 Each JUGGERNAUT helmet is dabbed with vitrified dirt from Reach as a reminder of what is at stake.'],
+    ['Scanner','scanner','Scanner'],
+    ['Chameleon','chameleon','Chameleon'],
+    ['Stealth','stealth','Stealth'],
+    ['Omni','omni','A surprisingly effective composite of other Acheron Security designs, the OMNI is currently the companys cutting-edge Mjolnir suit, and one of the few able to effectively use Material Groups GEN2 prototype sensor suite. Petabytes of Mjolnir combat data have been carefully sifted and analzed by Acheron researchers to inform the OMNI\'s design.'],
+    ['Orbital','orbital','Orbital'],
+    ['Shark','shark','Shark'],
+    ['Halberd','halberd','Cloaked in secrecy, all users of the HALBERD-class armor must sign binding non-disclosure agreements about its performance and the particulars of its new weapon mag-lock arrangement. Emerson guards the HALBERD prototype suits with their own - heavily armed - private security.'],
+    ['Hoplite','hoplite','Initially designed as an alternative to the SPI armor used by SPARTAN-III operatives, the notoriously secretive Watershed group has unexpectedly revealed the HOPLITE as a low-cost Mjolnir variant optimized for pairing with UNSC pistols.-III. HOPLITE armor lacks the bells and whistles of most Mjolnir variants, but is easy to build and repair.'],
+	['Ballista','ballista','Ballista'],
+	['Cyclops','cyclops','Cyclops'],
+	['Demo','demo','Demo'],
+	['Dutch','dutch','Dutch'],
+	['Gladiator','gladiator','Gladiator'],
+	['Gungnir','gungnir','Gungnir'],
+	['Hammerhead','hammerhead','Hammerhead'],
+	['Mac','mac','Mac'],
+	['Mercenary','mercenary','Mercenary'],
+	['Nihard','nihard','Nihard'],
+	['Oracle','oracle','Oracle'],
+	['Silverback','silverback','Silverback'],
+	['Spectrum','spectrum','Spectrum'],
+	['Strider','strider','Strider'],
+	['Widow Maker','widow_maker','Widow Maker']
+];
+var armorPelvisList = [
+	['Mark VI','base','Mjolnir Mark VI Powered Assault Armor: This is the standard issue Powered Assault Armor for Spartans as of October 2552. It is compatible with all certified helmet and pauldron variants.'],
+	['Air Assault','air_assault','Based on a proven Ushuaia Armory design, Naphtali hopes to leverage the AIR ASSAULT\'s all-around excellent performance and combat endurance to compete for the UNSC\'s lucrative Spartan recruit armor contract. AIR ASSAULT armor is a front-runner for the standard armor that future Spartans will be clad in.'],
+	['Tankmode','tankmode_human','The divine creation of Tankmode.']
+];
+var armorLegList = [
+	['Mark VI','base','Integrated Communications Helmet, Mjolnir: This standard-issue helmet for the Mjolnir Mark VI Powered Assault Armor has been in use since October 2552. It is compatible with all Mjolnir variants.'],
+	['Air Assault','air_assault','Based on a proven Ushuaia Armory design, Naphtali hopes to leverage the AIR ASSAULT\'s all-around excellent performance and combat endurance to compete for the UNSC\'s lucrative Spartan recruit armor contract. AIR ASSAULT armor is a front-runner for the standard armor that future Spartans will be clad in.'],
+    ['Renegade','renegade',' Obstentially a strategic reconnaissance variant, users have noticed the RENEGADE\'s sensor suite is calibrated specifically to track other Mjolnir suits; particularly those featuring emissions cloaking.'],
+    ['Juggernaut','juggernaut','The JUGGERNAUT\'s design was thought lost during the fall of Reach. Recovered by a corporate scout team in 2553, the prototype helmets were paired with a GEN2 prototype harness and shipped to Anvil Station for integration testing. 2553 Each JUGGERNAUT helmet is dabbed with vitrified dirt from Reach as a reminder of what is at stake.'],
+    ['Scanner','scanner','Scanner'],
+    ['Chameleon','chameleon','Chameleon'],
+    ['Stealth','stealth','Stealth'],
+    ['Omni','omni','A surprisingly effective composite of other Acheron Security designs, the OMNI is currently the companys cutting-edge Mjolnir suit, and one of the few able to effectively use Material Groups GEN2 prototype sensor suite. Petabytes of Mjolnir combat data have been carefully sifted and analzed by Acheron researchers to inform the OMNI\'s design.'],
+    ['Orbital','orbital','Orbital'],
+    ['Shark','shark','Shark'],
+    ['Halberd','halberd','Cloaked in secrecy, all users of the HALBERD-class armor must sign binding non-disclosure agreements about its performance and the particulars of its new weapon mag-lock arrangement. Emerson guards the HALBERD prototype suits with their own - heavily armed - private security.'],
+    ['Hoplite','hoplite','Initially designed as an alternative to the SPI armor used by SPARTAN-III operatives, the notoriously secretive Watershed group has unexpectedly revealed the HOPLITE as a low-cost Mjolnir variant optimized for pairing with UNSC pistols.-III. HOPLITE armor lacks the bells and whistles of most Mjolnir variants, but is easy to build and repair.'],
+	['Ballista','ballista','Ballista'],
+	['Cyclops','cyclops','Cyclops'],
+	['Demo','demo','Demo'],
+	['Dutch','dutch','Dutch'],
+	['Gladiator','gladiator','Gladiator'],
+	['Gungnir','gungnir','Gungnir'],
+	['Hammerhead','hammerhead','Hammerhead'],
+	['Mac','mac','Mac'],
+	['Mercenary','mercenary','Mercenary'],
+	['Nihard','nihard','Nihard'],
+	['Oracle','oracle','Oracle'],
+	['Silverback','silverback','Silverback'],
+	['Spectrum','spectrum','Spectrum'],
+	['Strider','strider','Strider'],
+	['Widow Maker','widow_maker','Widow Maker']
 ];
 var colorPicker;
 var genderList = [
@@ -161,6 +307,9 @@ $(document).ready(function(){
     setRadioList('armorChest', armorChestList, true);
     setRadioList('armorRightShoulder', armorShoulderList, true);
     setRadioList('armorLeftShoulder', armorShoulderList, true);
+	setRadioList('armorArms', armorArmList, true);
+	setRadioList('armorPelvis', armorPelvisList, true);
+    setRadioList('armorLegs', armorLegList, true);
     setRadioList('gender', genderList, true);
     setRadioList('playerRep', playerRepList, true);
     setRadioList('colorsPrimary', h3ColorArray);
@@ -632,7 +781,7 @@ function setRadioList(ElementID, ArrayVar,hasImage){
 }
 
 function randomArmor(){
-    var armorArray = ['armorHelmet','armorChest','armorRightShoulder','armorLeftShoulder'];
+    var armorArray = ['armorHelmet','armorChest','armorRightShoulder','armorLeftShoulder','armorArms','armorPelvis','armorLegs'];
     for(var i = 0; i < armorArray.length; i++) {
         var $options = $('#'+armorArray[i]).find('input'),
             random = ~~(Math.random() * $options.length);
