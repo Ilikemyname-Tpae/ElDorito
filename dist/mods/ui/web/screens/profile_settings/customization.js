@@ -62,6 +62,7 @@ var settingsToLoad = [
     ['colorsPrimary', 'Player.Colors.Primary','Armor Primary','The primary armor color will serve you in individual combat but will be overwritten in team scenarios.',0],
     ['colorsSecondary', 'Player.Colors.Secondary','Armor Secondary','The secondary armor color accents your primary color and will be overwritten in team scenarios.',1],
     ['colorsVisor', 'Player.Colors.Visor','Armor Detail','The armor detail color preserves your individual identity in all multiplayer scenarios.',2],
+	['colorsHolo', 'Player.Colors.Holo','Armor Holo','Armor Holo.',3]
 ];
 var armorHelmetList = [
 	['Mark VI','base','Integrated Communications Helmet, Mjolnir: This standard-issue helmet for the Mjolnir Mark VI Powered Assault Armor has been in use since October 2552. It is compatible with all Mjolnir variants.'],
@@ -316,6 +317,7 @@ $(document).ready(function(){
     setRadioList('colorsSecondary', h3ColorArray);
     setRadioList('colorsVisor', h3ColorArray);
     setRadioList('colorsLights', h3ColorArray);
+	setRadioList('colorsHolo', h3ColorArray);
     $('.tabs li a').off('click').on('click', function(e){
         $('.tabs li').removeClass('selected');
         $(this).parent().addClass('selected');
@@ -353,7 +355,7 @@ $(document).ready(function(){
         $(location.hash+' #infoBox #infoText').text($(this).attr('desc'));
 		setUrl(false);
     });
-    $('#colorsPrimaryText, #colorsSecondaryText,#colorsVisorText,#colorsLightsText').off('click').on('click', function(e){
+    $('#colorsPrimaryText, #colorsSecondaryText, #colorsVisorText, #colorsLightsText, #colorsHoloText').off('click').on('click', function(e){
         $('.colorForm').hide();
         colorPicker = dew.makeColorPicker(document.querySelector('#colorPicker'));
         var whichColor = $(this);
@@ -820,7 +822,7 @@ function randomEmblem(){
 }
 
 function randomColors(){
-    var colorArray = ['colorsPrimary','colorsSecondary','colorsLights','colorsVisor'];
+    var colorArray = ['colorsPrimary','colorsSecondary','colorsLights','colorsVisor','colorsHolo'];
     for(var i = 0; i < colorArray.length; i++) {
         var randomColor = '#'+Math.floor(Math.random()*16777215).toString(16).toUpperCase();
         $('#'+colorArray[i]+'Text').val(randomColor);

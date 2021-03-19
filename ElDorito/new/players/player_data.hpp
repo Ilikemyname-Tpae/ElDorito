@@ -11,6 +11,7 @@ namespace blam
 		_player_color_secondary,
 		_player_color_visor,
 		_player_color_lights,
+		_player_color_holo,
 
 		k_number_of_player_color_types
 	};
@@ -33,7 +34,6 @@ namespace blam
 	struct player_customization_data
 	{
 		argb_color colors[k_number_of_player_color_types];
-		long : 32;
 		byte armor_pieces[k_number_of_player_armor_pieces];
 		long : 32;
 	};
