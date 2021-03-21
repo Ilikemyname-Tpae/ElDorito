@@ -35,6 +35,7 @@ namespace Blam::Players
 			Arms,
 			Legs,
 			Pelvis,
+			UpperBody,
 
 			Count
 		};

@@ -26,6 +26,7 @@ namespace blam
 		_player_armor_arms,
 		_player_armor_legs,
 		_player_armor_pelvis,
+		_player_armor_upper_body,
 
 		k_number_of_player_armor_pieces
 	};

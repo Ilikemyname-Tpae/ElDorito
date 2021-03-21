@@ -51,21 +51,22 @@ var settingsToLoad = [
     ['playerName', 'Player.Name','Name','', 2],
     ['serviceTag', 'Player.ServiceTag','Service Tag','', 3],
     ['armorHelmet', 'Player.Armor.Helmet','Helmet','The thing that goes on your head.', 2],
-    ['armorChest', 'Player.Armor.Chest','Body','From arm to arm.', 3],
     ['armorRightShoulder', 'Player.Armor.RightShoulder','Right Shoulder','Right there on that shoulder.', 4],
     ['armorLeftShoulder', 'Player.Armor.LeftShoulder','Left Shoulder','The only shoulder that\'s left.', 5],
+	['armorChest', 'Player.Armor.Chest','Body','From arm to arm.', 3],
 	['armorArms', 'Player.Armor.Arms','Arms','Arms.', 3],
 	['armorPelvis', 'Player.Armor.Pelvis','Pelvis','Pelvis.', 3],
 	['armorLegs', 'Player.Armor.Legs','Legs','Legs.', 3],
+	['armorUpperBody', 'Player.Armor.UpperBody','Upper Body','Upper Body.', 3],
+	['playerRep', 'Player.Representation', 'Player Representation','', 6],
     ['gender', 'Player.Gender','Gender','', 6],
-    ['playerRep', 'Player.Representation', 'Player Representation','', 6],
 	['renderWeapon', 'Player.RenderWeapon','Podium Weapon','Podium Weapon.',3],
     ['colorsPrimary', 'Player.Colors.Primary','Armor Primary','The primary armor color will serve you in individual combat but will be overwritten in team scenarios.',0],
     ['colorsSecondary', 'Player.Colors.Secondary','Armor Secondary','The secondary armor color accents your primary color and will be overwritten in team scenarios.',1],
     ['colorsVisor', 'Player.Colors.Visor','Armor Detail','The armor detail color preserves your individual identity in all multiplayer scenarios.',2],
 	['colorsHolo', 'Player.Colors.Holo','Armor Holo','Armor Holo.',3]
 ];
-var armorHelmetList = [
+var armorSpartanHelmetList = [
 	['Mark VI','base','Integrated Communications Helmet, Mjolnir: This standard-issue helmet for the Mjolnir Mark VI Powered Assault Armor has been in use since October 2552. It is compatible with all Mjolnir variants.'],
 	['Mark V','mp_markv',' Originally issued in August 2542, all extant Mark V helmets have been upgraded with current-issue internal components and software.'],
 	['CQB','mp_cobra','The Mjolnir/C variant was developed and tested at UNSC facilities in Essen, Deutschland, and Songnam, Hanguk, respectively, integrating feedback gathered from the Jericho VII Theater.'],
@@ -104,7 +105,7 @@ var armorHelmetList = [
 	['Strider','strider','Strider'],
 	['Widow Maker','widow_maker','Widow Maker']
 ];
-var armorShoulderList = [
+var armorSpartanShoulderList = [
     ['Mark VI','base','Supplemental Armor, Pauldron, Mjolnir: This standard-issue shoulder armor for the Mjolnir Mark VI Powered Assault Armor has been in use since October 2552. It is compatible with all Mjolnir variants.'],
     ['CQB','mp_cobra','Developed at Beweglichrüstungsysteme of Essen and tested at the Special Warfare Center in Songnam, the Mjolnir/C variant focuses on improving combat survivability and mobility.'],
     ['EOD','mp_regulator','Developed at the UNSC Damascus Materials Testing Facility on Chi Ceti 4, the Mjolnir/EOD variant was designed specifically to reduce the number of grabbing edges on the armor, decreasing the likelihood of dismemberment.'],
@@ -141,7 +142,7 @@ var armorShoulderList = [
 	['Tankmode','tankmode_human','The divine creation of Tankmode.'],
 	['Widow Maker','widow_maker','Widow Maker']
 ];
-var armorChestList = [
+var armorSpartanChestList = [
     ['Mark VI','base','Mjolnir Mark VI Powered Assault Armor: This is the standard issue Powered Assault Armor for Spartans as of October 2552. It is compatible with all certified helmet and pauldron variants.'],
 	['Bungie','mp_bungie','Forged in the flames of passion and perseverance. Go forth and represent.'],
     ['CQB','mp_cobra','The Mjolnir/C variant was developed and tested at UNSC facilities in Essen, Deutschland, and Songnam, Hanguk, respectively, integrating feedback gathered from the Jericho VII Theater.'],
@@ -179,7 +180,7 @@ var armorChestList = [
 	['Tankmode','tankmode_human','The divine creation of Tankmode.'],
 	['Widow Maker','widow_maker','Widow Maker']
 ];
-var armorArmList = [
+var armorSpartanArmList = [
 	['Mark VI','base','Integrated Communications Helmet, Mjolnir: This standard-issue helmet for the Mjolnir Mark VI Powered Assault Armor has been in use since October 2552. It is compatible with all Mjolnir variants.'],
 	['Air Assault','air_assault','Based on a proven Ushuaia Armory design, Naphtali hopes to leverage the AIR ASSAULT\'s all-around excellent performance and combat endurance to compete for the UNSC\'s lucrative Spartan recruit armor contract. AIR ASSAULT armor is a front-runner for the standard armor that future Spartans will be clad in.'],
     ['Renegade','renegade',' Obstentially a strategic reconnaissance variant, users have noticed the RENEGADE\'s sensor suite is calibrated specifically to track other Mjolnir suits; particularly those featuring emissions cloaking.'],
@@ -208,12 +209,12 @@ var armorArmList = [
 	['Strider','strider','Strider'],
 	['Widow Maker','widow_maker','Widow Maker']
 ];
-var armorPelvisList = [
+var armorSpartanPelvisList = [
 	['Mark VI','base','Mjolnir Mark VI Powered Assault Armor: This is the standard issue Powered Assault Armor for Spartans as of October 2552. It is compatible with all certified helmet and pauldron variants.'],
 	['Air Assault','air_assault','Based on a proven Ushuaia Armory design, Naphtali hopes to leverage the AIR ASSAULT\'s all-around excellent performance and combat endurance to compete for the UNSC\'s lucrative Spartan recruit armor contract. AIR ASSAULT armor is a front-runner for the standard armor that future Spartans will be clad in.'],
 	['Tankmode','tankmode_human','The divine creation of Tankmode.']
 ];
-var armorLegList = [
+var armorSpartanLegList = [
 	['Mark VI','base','Integrated Communications Helmet, Mjolnir: This standard-issue helmet for the Mjolnir Mark VI Powered Assault Armor has been in use since October 2552. It is compatible with all Mjolnir variants.'],
 	['Air Assault','air_assault','Based on a proven Ushuaia Armory design, Naphtali hopes to leverage the AIR ASSAULT\'s all-around excellent performance and combat endurance to compete for the UNSC\'s lucrative Spartan recruit armor contract. AIR ASSAULT armor is a front-runner for the standard armor that future Spartans will be clad in.'],
     ['Renegade','renegade',' Obstentially a strategic reconnaissance variant, users have noticed the RENEGADE\'s sensor suite is calibrated specifically to track other Mjolnir suits; particularly those featuring emissions cloaking.'],
@@ -242,16 +243,29 @@ var armorLegList = [
 	['Strider','strider','Strider'],
 	['Widow Maker','widow_maker','Widow Maker']
 ];
-var colorPicker;
-var genderList = [
-    ['Male','male','State your gender. This will not be displayed to other players, but combat effects will be tailored to your gender.'],
-    ['Female','female','State your gender. This will not be displayed to other players, but combat effects will be tailored to your gender.']    
+var armorEliteHelmetList = [
 ];
-
+var armorEliteShoulderList = [
+];
+var armorEliteChestList = [
+];
+var armorEliteArmList = [
+];
+var armorElitePelvisList = [
+];
+var armorEliteLegList = [
+];
+var armorEliteUpperBodyList = [
+];
 var playerRepList = [
     ['Spartan','spartan','Spartans are members of a series of United Nations Space Command projects designed to create physically, genetically, technologically, and mentally superior supersoldiers as special fighting units.'],
     ['Elite','elite','The Sangheili, known to humans as Elites, are a saurian species of strong, proud, and intelligent warriors, as well as skilled combat tacticians.']
 ];
+var genderList = [
+    ['Male','male','State your gender. This will not be displayed to other players, but combat effects will be tailored to your gender.'],
+    ['Female','female','State your gender. This will not be displayed to other players, but combat effects will be tailored to your gender.']    
+];
+var colorPicker;
 
 $(document).ready(function(){
     $(document).keyup(function (e) {
@@ -274,16 +288,16 @@ $(document).ready(function(){
         if(e.keyCode == 192 || e.keyCode == 223){
             dew.show('console');
         }
-        if(e.keyCode == 37 && !(activePage.startsWith('#page2 #color') || activePage.startsWith('#page3 #color'))){ //Left
+        if(e.keyCode == 37 && !(activePage.startsWith('#page3 #color') || activePage.startsWith('#page4 #color'))){ //Left
             leftNav();
         }
-        if(e.keyCode == 38 && !(activePage.startsWith('#page2 #color') || activePage.startsWith('#page3 #color'))){ //Up
+        if(e.keyCode == 38 && !(activePage.startsWith('#page3 #color') || activePage.startsWith('#page4 #color'))){ //Up
             upNav();
         }
-        if(e.keyCode == 39 && !(activePage.startsWith('#page2 #color') || activePage.startsWith('#page3 #color'))){ //Right
+        if(e.keyCode == 39 && !(activePage.startsWith('#page3 #color') || activePage.startsWith('#page4 #color'))){ //Right
             rightNav();
         }
-        if(e.keyCode == 40 && !(activePage.startsWith('#page2 #color') || activePage.startsWith('#page3 #color'))){ //Down
+        if(e.keyCode == 40 && !(activePage.startsWith('#page3 #color') || activePage.startsWith('#page4 #color'))){ //Down
             downNav();
         }
         if(!activePage.endsWith('inputBox')){
@@ -304,7 +318,7 @@ $(document).ready(function(){
     });
 	$("#randomColors").hide();
 	SetupEmblems(false, true, true);
-	
+		
 	dew.command('Weapon.List', {}).then(function(response){
         var weaponList = response.split('\n');
         var weaponArray = [];
@@ -317,15 +331,23 @@ $(document).ready(function(){
         }
         setRadioList('renderWeapon', weaponArray, true);
     });
-    setRadioList('armorHelmet', armorHelmetList, true);
-    setRadioList('armorChest', armorChestList, true);
-    setRadioList('armorRightShoulder', armorShoulderList, true);
-    setRadioList('armorLeftShoulder', armorShoulderList, true);
-	setRadioList('armorArms', armorArmList, true);
-	setRadioList('armorPelvis', armorPelvisList, true);
-    setRadioList('armorLegs', armorLegList, true);
-    setRadioList('gender', genderList, true);
+    setRadioList('armorHelmet', armorSpartanHelmetList, true);
+    setRadioList('armorRightShoulder', armorSpartanShoulderList, true);
+    setRadioList('armorLeftShoulder', armorSpartanShoulderList, true);
+	setRadioList('armorChest', armorSpartanChestList, true);
+    setRadioList('armorArms', armorSpartanArmList, true);
+	setRadioList('armorPelvis', armorSpartanPelvisList, true);
+    setRadioList('armorLegs', armorSpartanLegList, true);
+	setRadioList('armorHelmet', armorEliteHelmetList, true);
+    setRadioList('armorRightShoulder', armorEliteShoulderList, true);
+    setRadioList('armorLeftShoulder', armorEliteShoulderList, true);
+	setRadioList('armorChest', armorEliteChestList, true);
+    setRadioList('armorArms', armorEliteArmList, true);
+	setRadioList('armorPelvis', armorElitePelvisList, true);
+    setRadioList('armorLegs', armorEliteLegList, true);
+	setRadioList('armorUpperBody', armorEliteUpperBodyList, true);
     setRadioList('playerRep', playerRepList, true);
+    setRadioList('gender', genderList, true);
     setRadioList('colorsPrimary', h3ColorArray);
     setRadioList('colorsSecondary', h3ColorArray);
     setRadioList('colorsVisor', h3ColorArray);
@@ -417,16 +439,16 @@ $(document).ready(function(){
                 }
             }
             if(e.data.X == 1){
-                if(activePage.startsWith('#page3')){
+                if(activePage.startsWith('#page4')){
 					toggleIcon();
 				}
             }
 			if(e.data.Y == 1){
-				if(activePage.startsWith('#page1')){
+				if(activePage.startsWith('#page2')){
                     randomArmor();
-                }else if(activePage.startsWith('#page2')){
-                    randomColors();
                 }else if(activePage.startsWith('#page3')){
+                    randomColors();
+                }else if(activePage.startsWith('#page4')){
 					randomEmblem();
 				}
 			}
@@ -452,7 +474,7 @@ $(document).ready(function(){
                 nextPage();
             }
             if(e.data.LeftTrigger != 0){
-				if(activePage.startsWith('#page3')){
+				if(activePage.startsWith('#page4')){
 					if(!hasPressed){
 						if(itemNumber - 5 >= 0) {
 							itemNumber -= 5;
@@ -470,7 +492,7 @@ $(document).ready(function(){
                 }
             }else
             if(e.data.RightTrigger != 0){
-				if(activePage.startsWith('#page3')){
+				if(activePage.startsWith('#page4')){
 					if(!hasPressed){
 						if(itemNumber+5 <= $(activePage + ' label:visible').length-1){
 							itemNumber += 5;
@@ -796,14 +818,14 @@ function setRadioList(ElementID, ArrayVar,hasImage){
 }
 
 function randomArmor(){
-    var armorArray = ['armorHelmet','armorChest','armorRightShoulder','armorLeftShoulder','armorArms','armorPelvis','armorLegs'];
+    var armorArray = ['armorHelmet','armorRightShoulder','armorLeftShoulder','armorChest','armorArms','armorPelvis','armorLegs','armorUpperBody'];
     for(var i = 0; i < armorArray.length; i++) {
         var $options = $('#'+armorArray[i]).find('input'),
             random = ~~(Math.random() * $options.length);
         $options.eq(random).prop('checked', true);
 		$options.eq(random).click();
 		itemNumber = random;
-		updateSelection(itemNumber,false,true, '#page1 #' + armorArray[i]);
+		updateSelection(itemNumber,false,true, '#page2 #' + armorArray[i]);
         $.grep(settingsToLoad, function(result){
             if(result[0] == armorArray[i]){
                 dew.command(result[1] + ' ' + $('#'+armorArray[i]+' input:checked').val());
@@ -820,7 +842,7 @@ function randomEmblem(){
         $options.eq(random).prop('checked', true);
 		$options.eq(random).click();
 		itemNumber = random;
-		updateSelection(itemNumber,false,true, '#page3 #' + emblemArray[i]);
+		updateSelection(itemNumber,false,true, '#page4 #' + emblemArray[i]);
     }
 	var colorArray = ['colorsEmblemPrimary','colorsEmblemSecondary','colorsEmblemImage'];
     for(var i = 0; i < colorArray.length; i++) {
@@ -828,7 +850,7 @@ function randomEmblem(){
 		$('#'+colorArray[i]+' input').eq(random).prop('checked', true);
 		$('#'+colorArray[i]+' input').eq(random).click();
 		itemNumber = random;
-		updateSelection(itemNumber,false,true, '#page3 #' + colorArray[i]);
+		updateSelection(itemNumber,false,true, '#page4 #' + colorArray[i]);
 		
     }
    	setUrl(false);
@@ -878,13 +900,13 @@ function nextPage(){
 }
 
 function upNav(){
-	if(activePage.startsWith('#page3 #color')){
+	if(activePage.startsWith('#page4 #color')){
 		if(itemNumber >= 3){
             itemNumber-=3;
             updateSelection(itemNumber, true, true);
         }  
 	}else
-    if(activePage.startsWith('#page2 #color')){
+    if(activePage.startsWith('#page3 #color')){
         if(itemNumber > 3){
             itemNumber-=3;
             updateSelection(itemNumber, true, true);
@@ -901,13 +923,13 @@ function upNav(){
 }
 
 function downNav(){
-	if(activePage.startsWith('#page3 #color')){
+	if(activePage.startsWith('#page4 #color')){
 		if(itemNumber < $(activePage + ' label:visible').length-3){
 			itemNumber+=3;
             updateSelection(itemNumber, true, true);
         }
 	}else
-    if(activePage.startsWith('#page2 #color') ){
+    if(activePage.startsWith('#page3 #color') ){
         if(itemNumber < $(activePage + ' label:visible').length-3){
             if(itemNumber == 0){
                 itemNumber+=1;
@@ -917,7 +939,7 @@ function downNav(){
             updateSelection(itemNumber, true, true);
         }
     }else{
-        if((activePage.split(' ').length < 2 && itemNumber < 3 && activePage == '#page2') || ((activePage.split(' ').length < 2 && itemNumber < 5 && activePage == '#page3')) || (activePage.split(' ').length < 2 && itemNumber < 7 && activePage == '#page1') ||  (activePage.split(' ').length > 1 && itemNumber < $(activePage + ' label:visible').length-1)){
+        if((activePage.split(' ').length < 2 && itemNumber < 3 && activePage == '#page3') || ((activePage.split(' ').length < 2 && itemNumber < 5 && activePage == '#page4')) || (activePage.split(' ').length < 2 && itemNumber < 7 && activePage == '#page2') ||  (activePage.split(' ').length > 1 && itemNumber < $(activePage + ' label:visible').length-1)){
             itemNumber++;
             updateSelection(itemNumber, true, true);
         }
@@ -972,7 +994,7 @@ function hideInputBox(sound,condition){
 }
 
 function armorShow(showMe, element){
-    activePage = '#page1 #'+showMe;
+    activePage = '#page2 #'+showMe;
     $('.baseNav').removeClass('selectedElement');
     $(activePage+' .selectedElement').removeClass('selectedElement');
     element.addClass('selectedElement');
@@ -986,7 +1008,7 @@ function armorShow(showMe, element){
 }
 
 function colorShow(showMe, element){
-    activePage = '#page2 #'+showMe;
+    activePage = '#page3 #'+showMe;
     $('.baseNav').removeClass('selectedElement');
     $(activePage+' .selectedElement').removeClass('selectedElement');
     element.addClass('selectedElement');
@@ -1006,27 +1028,27 @@ function colorShow(showMe, element){
 }
 
 function leftNav(){
-	if(activePage.startsWith('#page3 #color') ){
+	if(activePage.startsWith('#page4 #color') ){
 		if(itemNumber % 3 != 0){
 			itemNumber--;
 			updateSelection(itemNumber, true, true);
 		}
 	}
-    if((activePage.startsWith('#page2 #color') && itemNumber % 3 != 1)){
+    if((activePage.startsWith('#page3 #color') && itemNumber % 3 != 1)){
          itemNumber--;
          updateSelection(itemNumber, true, true);
     }
 }
 
 function rightNav(){
-	if(activePage.startsWith('#page3 #color')){
+	if(activePage.startsWith('#page4 #color')){
 		if(itemNumber % 3 != 2){
 			itemNumber++;
 			updateSelection(itemNumber, true, true);
 		}
 		
 	}
-    if(activePage.startsWith('#page2 #color') ){
+    if(activePage.startsWith('#page3 #color') ){
         if(itemNumber % 3 != 0){
              itemNumber++;
             updateSelection(itemNumber, true, true);
@@ -1093,7 +1115,7 @@ function SetupEmblems(resetEmblemList, setRadiosLists, setEmblem, onFinish, runF
 			var elem = document.getElementById("EmblemTabLink").href = "#unavailable";
 			hasValidConnection = false;
 		}else{
-			var elem = document.getElementById("EmblemTabLink").href = "#page3";
+			var elem = document.getElementById("EmblemTabLink").href = "#page4";
 						
 			var jsonObj = new Object();
 			dew.command("Player.Name").then(function (name){jsonObj.playerName = name;});
@@ -1274,7 +1296,7 @@ function setEmblemColorRadioList(ElementID, ArrayVar, shouldReset){
 }
 
 function emblemColorShow(showMe, element){
-    activePage = '#page3 #'+showMe;
+    activePage = '#page4 #'+showMe;
     $('.baseNav').removeClass('selectedElement');
     $(activePage+' .selectedElement').removeClass('selectedElement');
     element.addClass('selectedElement');
@@ -1286,7 +1308,7 @@ function emblemColorShow(showMe, element){
 }
 
 function emblemShow(showMe, element){
-    activePage = '#page3 #'+showMe;
+    activePage = '#page4 #'+showMe;
     $('.baseNav').removeClass('selectedElement');
     $(activePage+' .selectedElement').removeClass('selectedElement');
     element.addClass('selectedElement');
@@ -1389,14 +1411,14 @@ function toggleIcon(){
 	setUrl(false);
 }
 
-function page3(){
+function page4(){
 	SetupEmblems(true, false, true);
 	$("#toggleIconButton").show();
 	$("#randomArmor").hide();
 	$("#randomColors").hide();
 	$("#randomEmblem").show();
 }
-function page2(){
+function page3(){
 	$("#toggleIconButton").hide();
 	$("#randomArmor").hide();
 	$("#randomColors").show();
@@ -1405,9 +1427,18 @@ function page2(){
 		ApplyEmblem(false);
 	}
 }
-function page1(){
+function page2(){
 	$("#toggleIconButton").hide();
 	$("#randomArmor").show();
+	$("#randomColors").hide();
+	$("#randomEmblem").hide();
+	if(needApply){
+		ApplyEmblem(false);
+	}
+}
+function page1(){
+	$("#toggleIconButton").hide();
+	$("#randomArmor").hide();
 	$("#randomColors").hide();
 	$("#randomEmblem").hide();
 	if(needApply){

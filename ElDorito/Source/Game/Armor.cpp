@@ -38,7 +38,7 @@ namespace
 	} s_UiPlayerModelState;
 
 	// Used during bitstream operations to automatically calculate the size of each armor component
-	const uint8_t MaxArmorIndices[] = { 81, 82, 82, 50, 52, 24, 4 };
+	const uint8_t MaxArmorIndices[] = { 81, 82, 82, 50, 52, 24, 4, 2 };
 
 	std::map<std::string, uint8_t> helmetIndices;
 	std::map<std::string, uint8_t> chestIndices;
@@ -47,6 +47,7 @@ namespace
 	std::map<std::string, uint8_t> armsIndices;
 	std::map<std::string, uint8_t> legsIndices;
 	std::map<std::string, uint8_t> pelvisIndices;
+	std::map<std::string, uint8_t> upperBodyIndices;
 	std::map<std::string, uint16_t> weaponIndices;
 
 	bool updateUiPlayerArmor = true; // Set to true to update the Spartan on the main menu
@@ -57,7 +58,8 @@ namespace
 		return (it != Indices.end()) ? it->second : 0;
 	}
 
-	void BuildPlayerCustomization(Modules::ModulePlayer &playerVars, PlayerCustomization *out)
+	void BuildPlayerCustomization
+	(Modules::ModulePlayer &playerVars, PlayerCustomization *out)
 	{
 		memset(out, 0, sizeof(PlayerCustomization));
 
@@ -85,6 +87,7 @@ namespace
 		out->Armor[ArmorIndices::Arms] = GetArmorIndex(playerVars.VarArmorArms->ValueString, armsIndices);
 		out->Armor[ArmorIndices::Legs] = GetArmorIndex(playerVars.VarArmorLegs->ValueString, legsIndices);
 		out->Armor[ArmorIndices::Pelvis] = GetArmorIndex(playerVars.VarArmorPelvis->ValueString, pelvisIndices);
+		out->Armor[ArmorIndices::UpperBody] = GetArmorIndex(playerVars.VarArmorUpperBody->ValueString, upperBodyIndices);
 	}
 
 	uint8_t ValidateArmorPiece(const std::map<std::string, uint8_t> &indices, const uint8_t index)
@@ -133,6 +136,7 @@ namespace Game::Armor
 		armorSessionData->Armor[ArmorIndices::Arms] = ValidateArmorPiece(armsIndices, data.Armor[ArmorIndices::Arms]);
 		armorSessionData->Armor[ArmorIndices::Legs] = ValidateArmorPiece(legsIndices, data.Armor[ArmorIndices::Legs]);
 		armorSessionData->Armor[ArmorIndices::Pelvis] = ValidateArmorPiece(pelvisIndices, data.Armor[ArmorIndices::Pelvis]);
+		armorSessionData->Armor[ArmorIndices::UpperBody] = ValidateArmorPiece(upperBodyIndices, data.Armor[ArmorIndices::UpperBody]);
 		memcpy(armorSessionData->Colors, data.Colors, sizeof(data.Colors));
 	}
 
@@ -212,6 +216,28 @@ namespace Game::Armor
 			else if (string == "pelvis")
 				AddArmorPermutations(element, pelvisIndices);
 		}
+
+		for (auto& element : mulg->Universal->EliteArmorCustomization)
+		{
+			auto string = std::string(Blam::Cache::StringIDCache::Instance.GetString(element.PieceRegion));
+
+			if (string == "helmet")
+				AddArmorPermutations(element, helmetIndices);
+			else if (string == "chest")
+				AddArmorPermutations(element, chestIndices);
+			else if (string == "rightshoulder")
+				AddArmorPermutations(element, rightShoulderIndices);
+			else if (string == "leftshoulder")
+				AddArmorPermutations(element, leftShoulderIndices);
+			else if (string == "arms")
+				AddArmorPermutations(element, armsIndices);
+			else if (string == "legs")
+				AddArmorPermutations(element, legsIndices);
+			else if (string == "pelvis")
+				AddArmorPermutations(element, pelvisIndices);
+			else if (string == "upper_body")
+				AddArmorPermutations(element, upperBodyIndices);
+		}
 	}
 
 	static const auto ApplyArmor = (void(*)(PlayerCustomization *customization, uint32_t objectDatum))(0x5A4430);
@@ -228,7 +254,7 @@ namespace Game::Armor
 		return true;
 	}
 
-	__declspec(naked) void PoseWithWeapon(uint32_t unit, uint32_t weaponTag)
+	__declspec(naked) void PoseWithWeapon(uint32_t unit, uint32_t weaponTag, uint32_t bipedObject)
 	{
 		using Blam::Tags::TagInstance;
 

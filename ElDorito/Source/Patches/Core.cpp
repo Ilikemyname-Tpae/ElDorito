@@ -1495,9 +1495,9 @@ namespace
 						break;
 					}
 
-					//ss << ", " << (properties->PlayerRepresentation ? "Spartan" : "Monitor");
-					//ss << ", " << (properties->Gender ? "Female" : "Male");
-					//ss << ", " << std::hex << properties->Uid;
+					ss << ", " << (properties->PlayerRepresentation ? "Spartan" : "Elite");
+					ss << ", " << (properties->Gender ? "Female" : "Male");
+					ss << ", " << std::hex << properties->Uid;
 
 					ss << std::endl;
 				}

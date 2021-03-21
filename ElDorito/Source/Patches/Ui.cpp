@@ -480,11 +480,17 @@ namespace Patches::Ui
 				return;
 			else if (!TagInstance::IsLoaded('chdt', spartanChdtIndex))
 				return;
+			else if (!TagInstance::IsLoaded('chdt', eliteChdtIndex))
+				return;
+			else if (!TagInstance::IsLoaded('chdt', monitorChdtIndex))
+				return;
 
 			auto *gameResolution = reinterpret_cast<int *>(0x19106C0);
 			auto *globals = TagInstance(chgdIndex).GetDefinition<ChudGlobalsDefinition>();
 			auto *spartanChud = Blam::Tags::TagInstance(spartanChdtIndex).GetDefinition<Blam::Tags::UI::ChudDefinition>();
-			if (!globals || !spartanChud || globals->HudGlobals.Count == 0 || globals->HudGlobals[0].HudAttributes.Count == 0)
+			auto* eliteChud = Blam::Tags::TagInstance(eliteChdtIndex).GetDefinition<Blam::Tags::UI::ChudDefinition>();
+			auto* monitorChud = Blam::Tags::TagInstance(monitorChdtIndex).GetDefinition<Blam::Tags::UI::ChudDefinition>();
+			if (!globals || !spartanChud || !eliteChud || !monitorChud || globals->HudGlobals.Count == 0 || globals->HudGlobals[0].HudAttributes.Count == 0)
 				return;
 
 			// Make UI match it's original width of 1920 pixels on non-widescreen monitors.
@@ -680,18 +686,18 @@ namespace
 						case 4376: //mp_spartan
 							spartanChdtIndex = bipd->Unit.HudInterfaces[0].UnitHudInterface.TagIndex;
 							break;
-							//case 4377: //mp_elite
-							//	eliteChdtIndex = bipd->Unit.HudInterfaces[0].UnitHudInterface.TagIndex;
-							//	break;
-							//case 4379: //monitor
-							//	monitorChdtIndex = bipd->Unit.HudInterfaces[0].UnitHudInterface.TagIndex;
-							//	break;
+						case 4377: //mp_elite
+							eliteChdtIndex = bipd->Unit.HudInterfaces[0].UnitHudInterface.TagIndex;
+							break;
+						case 4379: //monitor
+							monitorChdtIndex = bipd->Unit.HudInterfaces[0].UnitHudInterface.TagIndex;
+							break;
 						default:
 							continue;
 						}
 
 						//If all the tag indices are found, move on.
-						if (spartanChdtIndex != NULL /*&& eliteChdtIndex != NULL && monitorChdtIndex != NULL*/)
+						if (spartanChdtIndex != NULL && eliteChdtIndex != NULL && monitorChdtIndex != NULL)
 							goto findPttLsnd;
 					}
 
@@ -789,9 +795,15 @@ namespace
 			return;
 		else if (!TagInstance::IsLoaded('chdt', spartanChdtIndex))
 			return;
+		else if (!TagInstance::IsLoaded('chdt', eliteChdtIndex))
+			return;
+		else if (!TagInstance::IsLoaded('chdt', monitorChdtIndex))
+			return;
 
 		auto *globals = TagInstance(chgdIndex).GetDefinition<ChudGlobalsDefinition>();
 		auto *spartanChud = Blam::Tags::TagInstance(spartanChdtIndex).GetDefinition<Blam::Tags::UI::ChudDefinition>();
+		auto* eliteChud = Blam::Tags::TagInstance(eliteChdtIndex).GetDefinition<Blam::Tags::UI::ChudDefinition>();
+		auto* monitorChud = Blam::Tags::TagInstance(monitorChdtIndex).GetDefinition<Blam::Tags::UI::ChudDefinition>();
 
 		// Store initial HUD resolution values the first time the resolution is changed.
 		HUDResolutionWidth = globals->HudGlobals[0].HudAttributes[0].ResolutionWidth;
@@ -801,6 +813,20 @@ namespace
 		HUDMotionSensorOffsetX = globals->HudGlobals[0].HudAttributes[0].MotionSensorOffsetX;
 		// Store bottom visor offset
 		for (auto &widget : spartanChud->HudWidgets)
+		{
+			if (widget.NameStringID == 0x2ABD) // in_helmet_bottom_new
+			{
+				HUDBottomVisorOffsetY = widget.PlacementData[0].OffsetY;
+			}
+		}
+		for (auto& widget : eliteChud->HudWidgets)
+		{
+			if (widget.NameStringID == 0x2ABD) // in_helmet_bottom_new
+			{
+				HUDBottomVisorOffsetY = widget.PlacementData[0].OffsetY;
+			}
+		}
+		for (auto& widget : monitorChud->HudWidgets)
 		{
 			if (widget.NameStringID == 0x2ABD) // in_helmet_bottom_new
 			{
