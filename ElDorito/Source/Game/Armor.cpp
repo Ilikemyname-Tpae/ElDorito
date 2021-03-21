@@ -58,8 +58,7 @@ namespace
 		return (it != Indices.end()) ? it->second : 0;
 	}
 
-	void BuildPlayerCustomization
-	(Modules::ModulePlayer &playerVars, PlayerCustomization *out)
+	void BuildPlayerCustomization(Modules::ModulePlayer &playerVars, PlayerCustomization *out)
 	{
 		memset(out, 0, sizeof(PlayerCustomization));
 
