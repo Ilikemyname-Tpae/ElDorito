@@ -49,6 +49,7 @@ namespace Patches::Ui
 	//However they make accessing in hooks a whole lot easier...
 	//Probably needs refactoring.
 	extern bool enableCustomHUDColors;
+	extern bool enableAllyBlueWaypointsFix;
 	extern int customPrimaryHUDColor;
 	extern int customSecondaryHUDColor;
 

@@ -52,6 +52,7 @@ namespace
 	int UI_ShowHalo3PauseMenu(uint32_t a1, uint32_t a2, uint32_t a3, uint32_t a4, uint32_t a5);
 	void UI_EndGame();
 	char __fastcall UI_Forge_ButtonPressHandlerHook(void* a1, int unused, uint8_t* controllerStruct);
+	void LocalizedStringHook();
 	void LobbyMenuButtonHandlerHook();
 	void WindowTitleSprintfHook(char* destBuf, char* format, char* version);
 	void ResolutionChangeHook();
@@ -174,6 +175,7 @@ namespace Patches::Ui
 	PlayerMarkersOption playerMarkers;
 
 	bool enableCustomHUDColors = false;
+	bool enableAllyBlueWaypointsFix = false;
 	int customPrimaryHUDColor = -1;
 	int customSecondaryHUDColor = 0;
 
@@ -240,7 +242,7 @@ namespace Patches::Ui
 		Pointer::Base(0x723E1C).Write<uint8_t>(0);
 
 		// Localized string override hook
-		//Hook(0x11E040, LocalizedStringHook).Apply();
+		Hook(0x11E040, LocalizedStringHook).Apply();
 
 		// Hook window title sprintf to replace the dest buf with our string
 		Hook(0x2EB84, WindowTitleSprintfHook, HookFlags::IsCall).Apply();
@@ -295,9 +297,9 @@ namespace Patches::Ui
 		Hook(0x6895E7, UI_GetHUDGlobalsIndexHook, HookFlags::IsJmpIfEqual).Apply();
 		Hook(0x6895FF, UI_GetHUDGlobalsIndexHook, HookFlags::IsJmpIfEqual).Apply();
 
-		/* TODO: Fix these: Various color fixes.
+		//TODO: Fix these: Various color fixes.
 		Hook(0x6D5B5F, GetGlobalDynamicColorHook).Apply();
-		Hook(0x6CA009, GetWeaponOutlineColorHook).Apply();*/
+		Hook(0x6CA009, GetWeaponOutlineColorHook).Apply();
 
 		//Show the talking player's name on the HUD
 		Hook(0x6CA978, chud_talking_player_name_hook, HookFlags::IsCall).Apply();
@@ -932,10 +934,57 @@ namespace
 		return buttonHandler(a1, controllerStruct);
 	}
 
+	bool LocalizedStringHookImpl(int tagIndex, int stringId, wchar_t* outputBuffer)
+	{
+		const size_t MaxStringLength = 0x400;
+
+		switch (stringId)
+		{
+		case 0x1010A: // start_new_campaign
+		{
+			// Get the version string, convert it to uppercase UTF-16, and return it
+			std::string version = Utils::Version::GetVersionString();
+			std::transform(version.begin(), version.end(), version.begin(), toupper);
+			std::wstring unicodeVersion(version.begin(), version.end());
+			swprintf(outputBuffer, MaxStringLength, L"ELDEWRITO %s", unicodeVersion.c_str());
+			return true;
+		}
+		}
+		return false;
+	}
+
 	void WindowTitleSprintfHook(char* destBuf, char* format, char* version)
 	{
 		std::string windowTitle = "ElDewrito | Version: " + Utils::Version::GetVersionString() + " | Build Date: " __DATE__;
 		strcpy_s(destBuf, 0x40, windowTitle.c_str());
+	}
+
+	__declspec(naked) void LocalizedStringHook()
+	{
+		__asm
+		{
+			// Run the hook implementation function and fallback to the original if it returned false
+			push ebp
+			mov ebp, esp
+			push[ebp + 0x10]
+			push[ebp + 0xC]
+			push[ebp + 0x8]
+			call LocalizedStringHookImpl
+			add esp, 0xC
+			test al, al
+			jz fallback
+
+			// Don't run the original function
+			mov esp, ebp
+			pop ebp
+			ret
+
+			fallback :
+			// Execute replaced code and jump back to original function
+			sub esp, 0x800
+				mov edx, 0x51E049
+				jmp edx
+		}
 	}
 
 	__declspec(naked) void LobbyMenuButtonHandlerHook()
@@ -1280,31 +1329,32 @@ namespace
 		if (screenName == 0x10083) // main_menu
 		{
 			uint32_t id;
-			auto itemIndex = (*(int(__thiscall **)(void*))(*(uint8_t**)a4 + 0x18))(a4);
-			if ((*(bool(__thiscall **)(void*, uint32_t, uint32_t, uint32_t*))(*(uint8_t**)a5 + 0x34))(a5, itemIndex, 0x2AA, &id))
+			auto itemIndex = (*(int(__thiscall**)(void*))(*(uint8_t**)a4 + 0x18))(a4);
+			if ((*(bool(__thiscall**)(void*, uint32_t, uint32_t, uint32_t*))(*(uint8_t**)a5 + 0x34))(a5, itemIndex, 0x2AA, &id))
 			{
 				// TODO: Maybe check the menu item's text over the index?
 
-				switch (id)
+				switch (itemIndex)
 				{
-				case 0x10075: // matchmaking: Server Browser
+				case 0: // Server Browser
 					Web::Ui::ScreenLayer::Show("browser", "{}");
 					return;
 
-				case 0x1036A: // local: Local Games
+				case 1: // Host Multiplayer
+					break;
+
+				case 2: // Host Forge
+					break;
+
+				case 3: // Local Games
 					ShowLanBrowser();
 					return;
 
-				/*case 0x1007C: // theater: Customization
+				case 4: // Customization
 					Web::Ui::ScreenLayer::Show("profile_settings", "{}");
-					return;*/
-
-				case 0x3FA3: // settings: Settings
-					//Web::Ui::ScreenLayer::Show("settings", "{}");
-					Patches::Ui::ShowDialog(0x10084);
 					return;
 
-				case 0x55: // exit: Exit
+				case 5: // Exit
 					Web::Ui::ScreenLayer::Show("exit", "{}");
 					return;
 				}
@@ -1638,16 +1688,69 @@ namespace
 		}
 	}
 
+
+	__declspec(naked) void GetGlobalDynamicColorHook()
+	{
+		_asm
+		{
+		ally_blue:
+			cmp enableAllyBlueWaypointsFix, 1
+				jne custom_colors
+				cmp[ebp + 0xC], 0xF
+				jne custom_colors
+				mov eax, [eax + 19 * 4 + 4]
+				jmp eldorado_return
+
+				custom_colors :
+			cmp enableCustomHUDColors, 1
+				jne tag_color
+				cmp[ebp + 0xC], 0x0
+				je secondary_color
+				cmp[ebp + 0xC], 0x1
+				je secondary_color
+				cmp[ebp + 0xC], 0x2
+				je primary_color
+				cmp[ebp + 0xC], 0x4
+				je primary_color
+				cmp[ebp + 0xC], 0x8
+				je primary_color
+				cmp[ebp + 0xC], 0xA
+				je primary_color
+				cmp[ebp + 0xC], 0xB
+				je primary_color
+				cmp[ebp + 0xC], 0xF
+				je primary_color
+
+				tag_color :
+			mov eax, [eax + edi * 4 + 4]
+				jmp eldorado_return
+
+				primary_color :
+			mov eax, Patches::Ui::customPrimaryHUDColor
+				jmp eldorado_return
+				secondary_color :
+			mov eax, Patches::Ui::customSecondaryHUDColor
+				jmp eldorado_return
+				eldorado_return :
+			pop edi
+				pop esi
+				pop ebx
+				pop ebp
+				ret 8
+		}
+	}
+
 	__declspec(naked) void GetWeaponOutlineColorHook()
 	{
 		_asm
 		{
+		custom_colors:
 			cmp enableCustomHUDColors, 1
-			jne tag_color
-			cmp ecx, 0
-			je secondary_color
+				jne tag_color
+				cmp ecx, 0
+				je secondary_color
 
-			tag_color :
+				tag_color :
 			push[eax + ecx * 4 + 0x7C]
 				jmp eldorado_return
 

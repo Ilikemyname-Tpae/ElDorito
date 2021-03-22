@@ -382,7 +382,18 @@ namespace
 		else
 			Patches::Ui::playerMarkers = Patches::Ui::PlayerMarkersOption::Default;
 
-		SSL_SetTeamColor(0);
+		auto intValue = value == "default" ? 0 : value == "blue" ? 1 : 2;
+
+		if (intValue == 1)
+		{
+			Patches::Ui::enableAllyBlueWaypointsFix = true;
+			SSL_SetTeamColor(0);
+		}
+		else
+		{
+			Patches::Ui::enableAllyBlueWaypointsFix = false;
+			SSL_SetTeamColor(intValue);
+		}
 
 		std::stringstream ss;
 		ss << "Player Marker Colors set to " << value << ".";
