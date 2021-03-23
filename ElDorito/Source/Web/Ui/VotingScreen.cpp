@@ -17,6 +17,10 @@ namespace
 	{
 		{ 320, "guardian" },
 		{ 340, "riverworld" },
+		{ 705, "s3d_avalanche" },
+		{ 703, "s3d_edge" },
+		{ 700, "s3d_reactor" },
+		{ 31, "s3d_turf" },
 		{ 390, "cyberdyne" },
 		{ 380, "chill" },
 		{ 310, "deadlock" },

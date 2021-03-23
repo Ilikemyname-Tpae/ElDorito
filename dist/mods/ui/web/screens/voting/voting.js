@@ -393,6 +393,10 @@ dew.on("variable_update", function (e) {
 let GameMaps = [
     { known: ["construct"], value: "construct"},
     { known: ["guardian"],  value: "guardian"},
+	{ known: ["s3d_avalanche", "diamondback"], value: "s3d_avalanche"},
+	{ known: ["s3d_edge", "edge"], value: "s3d_edge"},
+	{ known: ["s3d_reactor", "reactor"], value: "s3d_reactor"},
+	{ known: ["s3d_turf", "icebox"], value: "s3d_turf"},
     { known: ["isolation"], value: "isolation"},
     { known: ["sandbox"],   value: "sandbox"},
     { known: ["snowbound"], value: "snowbound"},

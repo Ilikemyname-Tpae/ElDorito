@@ -39,6 +39,22 @@ namespace Server::Voting
 		{ 410, "Standoff" },
 		{ 400, "Sandtrap" },
 		{ 30, "Last Resort" },
+		{ 730, "Sandbox" },
+		{ 480, "Foundry" },
+		{ 470, "Avalanche" },
+		{ 360, "Snowbound" },
+		{ 500, "Orbital" },
+		{ 720, "Heretic" },
+		{ 330, "Isolation" },
+		{ 590, "Ghost Town" },
+		{ 440, "Longshore" },
+		{ 490, "Assembly" },
+		{ 300, "Construct" },
+		{ 600, "Cold Storage" },
+		{ 580, "Rat's Nest" },
+		{ 350, "Epitaph" },
+		{ 740, "Citadel" },
+		{ 520, "Blackout" },
 	};
 
 	//These are just some default gametypes that get loaded if the user doesnt specify any
