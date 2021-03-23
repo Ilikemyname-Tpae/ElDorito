@@ -38,12 +38,12 @@
  * Don't ruin the fun for everyone else.                                      *
  ******************************************************************************/
 
-#define CURRENT_VERSION V(0, 6, 1, 0)
+#define CURRENT_VERSION V(0, 6, 1, 1)
 
 #ifdef _DEBUG
-#define VERSION_SUFFIX "-debug"
+#define VERSION_SUFFIX ""
 #elif !defined(ELDEWRITO_RELEASE)
-#define VERSION_SUFFIX "-dev"
+#define VERSION_SUFFIX ""
 #else
 #define VERSION_SUFFIX ""
 #endif
