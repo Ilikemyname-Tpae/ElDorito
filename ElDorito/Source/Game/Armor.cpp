@@ -343,7 +343,7 @@ namespace Game::Armor
 			return;
 
 		CustomizeBiped(uiPlayerBiped);
-		updateUiPlayerArmor = false;
+		updateUiPlayerArmor = true;
 	}
 
 	void SetUiPlayerModelTransform(const Blam::Math::RealVector3D * newPosition, const float* rotationAngle)
