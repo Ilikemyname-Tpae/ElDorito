@@ -237,6 +237,16 @@ namespace Game::Armor
 			else if (string == "upper_body")
 				AddArmorPermutations(element, upperBodyIndices);
 		}
+
+		for (auto& element : mulg->Universal->GameVariantWeapons)
+		{
+			if (element.Weapon.TagIndex == -1)
+				continue;
+			
+			weaponIndices.emplace(
+				std::string(Blam::Cache::StringIDCache::Instance.GetString(element.Name)),
+				(uint16_t)element.Weapon.TagIndex);
+		}
 	}
 
 	static const auto ApplyArmor = (void(*)(PlayerCustomization *customization, uint32_t objectDatum))(0x5A4430);
@@ -255,10 +265,6 @@ namespace Game::Armor
 
 	__declspec(naked) void PoseWithWeapon(uint32_t unit, uint32_t weaponTag, uint32_t bipedObject)
 	{
-		using Blam::Tags::TagInstance;
-
-		auto &playerVars = Modules::ModulePlayer::Instance();
-
 		// This is a pretty big hack, basically I don't know where the function pulls the weapon index from
 		// so this lets us skip over the beginning of the function and set the weapon tag to whatever we want
 		__asm
@@ -274,13 +280,6 @@ namespace Game::Armor
 			push 0x7B77DA
 			ret
 		}
-		// Give the biped a weapon (0x151E = tag index for Assault Rifle)
-		auto weaponName = playerVars.VarRenderWeapon->ValueString;
-
-		if (weaponIndices.find(weaponName) == weaponIndices.end())
-			weaponName = (playerVars.VarRenderWeapon->ValueString = "assault_rifle");
-
-		PoseWithWeapon(bipedObject, weaponIndices.find(weaponName)->second);
 	}
 
 	void CustomizeBiped(uint32_t bipedObject)
@@ -309,6 +308,14 @@ namespace Game::Armor
 
 		// Need to call this or else colors don't actually show up
 		UpdateArmorColors(bipedObject);
+
+		// Give the biped a weapon (0x151E = tag index for Assault Rifle)
+		auto weaponName = playerVars.VarRenderWeapon->ValueString;
+
+		if (weaponIndices.find(weaponName) == weaponIndices.end())
+			weaponName = (playerVars.VarRenderWeapon->ValueString = "assault_rifle");
+
+		PoseWithWeapon(bipedObject, weaponIndices.find(weaponName)->second);
 	}
 
 	static const auto Object_SetTransform = (void(*)(int objectIndex, Blam::Math::RealVector3D * position, Blam::Math::RealVector3D * right, Blam::Math::RealVector3D * up, int a5))(0x00B33530);
