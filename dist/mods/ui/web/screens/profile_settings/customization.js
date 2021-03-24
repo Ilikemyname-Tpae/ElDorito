@@ -265,6 +265,8 @@ var genderList = [
     ['Male','male','State your gender. This will not be displayed to other players, but combat effects will be tailored to your gender.'],
     ['Female','female','State your gender. This will not be displayed to other players, but combat effects will be tailored to your gender.']    
 ];
+var renderWeapon = [
+];
 var colorPicker;
 
 $(document).ready(function(){
