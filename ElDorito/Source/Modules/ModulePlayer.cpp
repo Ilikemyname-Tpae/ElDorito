@@ -14,6 +14,7 @@ namespace
 {
 	bool VariablePlayerArmorUpdate(const std::vector<std::string>& Arguments, std::string& returnInfo)
 	{
+		Patches::PlayerRepresentation::UpdateLocalRepresentation();
 		Game::Armor::RefreshUiPlayer();
 		return true;
 	}
