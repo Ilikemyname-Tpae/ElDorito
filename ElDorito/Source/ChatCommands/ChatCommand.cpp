@@ -1,11 +1,14 @@
-#include "ChatCommand.hpp"
-#include "ChatCommandMap.hpp"
-#include "../Server/ServerChat.hpp"
-#include "../Modules/ModuleServer.hpp"
-#include "../Utils/Utils.hpp"
-#include "../Eldorito.hpp"
-#include "../Utils/Logger.hpp"
+#include "Eldorito.hpp"
 
+#include "ChatCommands/ChatCommand.hpp"
+#include "ChatCommands/ChatCommandMap.hpp"
+
+#include "Modules/ModuleServer.hpp"
+
+#include "Server/ServerChat.hpp"
+
+#include "Utils/Logger.hpp"
+#include "Utils/Utils.hpp"
 
 namespace ChatCommands
 {

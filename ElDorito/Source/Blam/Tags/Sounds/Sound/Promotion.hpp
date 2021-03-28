@@ -1,8 +1,9 @@
 #pragma once
 
-#include <Blam\Tags\Tags.hpp>
-#include "PromotionRule.hpp"
-#include "RuntimeTimer.hpp"
+#include "Blam/Tags/Tags.hpp"
+
+#include "Blam/Tags/Sounds/Sound/PromotionRule.hpp"
+#include "Blam/Tags/Sounds/Sound/RuntimeTimer.hpp"
 
 namespace Blam::Tags::Sounds
 {

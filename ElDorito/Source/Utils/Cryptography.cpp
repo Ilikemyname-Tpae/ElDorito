@@ -1,19 +1,19 @@
-#include "String.hpp"
+#include "Utils/String.hpp"
 
 // STL
-#include <string>
-#include <sstream>
 #include <cstdint>
 #include <memory>
+#include <sstream>
+#include <string>
 
 // people will hate me for this, but PHP/node/etc RSA funcs all use openssl, so we'll use it as well to make it easier on us
-#include <openssl\rsa.h>
 #include <openssl\bn.h>
 #include <openssl\pem.h>
+#include <openssl\rsa.h>
 #include <openssl\sha.h>
 
-#include <Windows.h>
 #include <wincrypt.h>
+#include <Windows.h>
 
 namespace
 {

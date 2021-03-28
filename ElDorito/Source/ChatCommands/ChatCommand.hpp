@@ -1,6 +1,6 @@
-#include <vector>
-#include <deque>
 #include <cstdint>
+#include <deque>
+#include <vector>
 
 namespace ChatCommands
 {

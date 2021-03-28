@@ -1,36 +1,43 @@
+#include "ElDorito.hpp"
+#include "Console.hpp"
+
+#include "Blam/BlamNetwork.hpp"
+
+#include "Discord/DiscordRPC.h"
+
+#include "Modules/ModulePlayer.hpp"
+#include "Modules/ModuleServer.hpp"
+
+#include "Patches/Assassination.hpp"
+#include "Patches/BottomlessClip.hpp"
+#include "Patches/Network.hpp"
+#include "Patches/PlayerUid.hpp"
+#include "Patches/Sprint.hpp"
+#include "Patches/Tweaks.hpp"
+
+#include "Server/BanList.hpp"
+#include "Server/ServerChat.hpp"
+#include "Server/Signaling.hpp"
+#include "Server/VariableSynchronization.hpp"
+#include "Server/Voting.hpp"
+
+#include "ThirdParty/HttpRequest.hpp"
+#include "ThirdParty/rapidjson/document.h"
+#include "ThirdParty/rapidjson/stringbuffer.h"
+#include "ThirdParty/rapidjson/writer.h"
+
+#include "Utils/Logger.hpp"
+
+#include "Web/Ui/VotingScreen.hpp"
+
+#include <algorithm>
+#include <fstream>
+#include <iomanip>
+#include <random>
+#include <sstream>
+#include <Windows.h>
 #include <WinSock2.h>
 #include <WS2tcpip.h>
-#include <Windows.h>
-
-#include "ModuleServer.hpp"
-#include <sstream>
-#include <fstream>
-#include <algorithm>
-#include <random>
-#include <iomanip>
-#include "../ElDorito.hpp"
-#include "../Patches/Network.hpp"
-#include "../Patches/PlayerUid.hpp"
-
-#include "../ThirdParty/HttpRequest.hpp"
-#include "../ThirdParty/rapidjson/document.h"
-#include "../ThirdParty/rapidjson/writer.h"
-#include "../ThirdParty/rapidjson/stringbuffer.h"
-#include "../Blam/BlamNetwork.hpp"
-#include "../Console.hpp"
-#include "../Server/Signaling.hpp"
-#include "../Server/VariableSynchronization.hpp"
-#include "../Patches/Assassination.hpp"
-#include "../Web/Ui/VotingScreen.hpp"
-#include "../Patches/Sprint.hpp"
-#include "../Patches/Tweaks.hpp"
-#include "../Patches/BottomlessClip.hpp"
-#include "../Server/BanList.hpp"
-#include "../Server/ServerChat.hpp"
-#include "ModulePlayer.hpp"
-#include "../Server/Voting.hpp"
-#include "../Utils/Logger.hpp"
-#include "../Discord/DiscordRPC.h"
 
 namespace
 {

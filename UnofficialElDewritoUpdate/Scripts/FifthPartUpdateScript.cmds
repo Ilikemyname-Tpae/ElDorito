@@ -1,0 +1,1354 @@
+".\maps\tags.dat"
+
+echo #####################################################################################################
+echo MS23 Armors Renaming
+echo #####################################################################################################
+echo
+echo Air_assault
+nametag 0x000015E3 objects\characters\masterchief\mp_masterchief\armor\air_assault ".\maps\tag_list.csv"
+nametag 0x000015E4 objects\characters\masterchief\mp_masterchief\armor\air_assault ".\maps\tag_list.csv"
+nametag 0x00001530 objects\characters\masterchief\mp_masterchief\armor\air_assault ".\maps\tag_list.csv"
+echo Renegade
+nametag 0x0000161D objects\characters\masterchief\mp_masterchief\armor\renegade ".\maps\tag_list.csv"
+nametag 0x0000161E objects\characters\masterchief\mp_masterchief\armor\renegade ".\maps\tag_list.csv"
+nametag 0x0000154D objects\characters\masterchief\mp_masterchief\armor\renegade ".\maps\tag_list.csv"
+nametag 0x00001532 objects\characters\masterchief\mp_masterchief\armor\renegade ".\maps\tag_list.csv"
+echo Juggernaut
+nametag 0x00001694 objects\characters\masterchief\mp_masterchief\armor\juggernaut ".\maps\tag_list.csv"
+nametag 0x00001695 objects\characters\masterchief\mp_masterchief\armor\juggernaut ".\maps\tag_list.csv"
+nametag 0x00001552 objects\characters\masterchief\mp_masterchief\armor\juggernaut ".\maps\tag_list.csv"
+nametag 0x00001537 objects\characters\masterchief\mp_masterchief\armor\juggernaut ".\maps\tag_list.csv"
+echo Scanner
+nametag 0x0000170C objects\characters\masterchief\mp_masterchief\armor\scanner ".\maps\tag_list.csv"
+nametag 0x0000170D objects\characters\masterchief\mp_masterchief\armor\scanner ".\maps\tag_list.csv"
+nametag 0x00001555 objects\characters\masterchief\mp_masterchief\armor\scanner ".\maps\tag_list.csv"
+nametag 0x0000153C objects\characters\masterchief\mp_masterchief\armor\scanner ".\maps\tag_list.csv"
+echo Chameleon
+nametag 0x000016CA objects\characters\masterchief\mp_masterchief\armor\chameleon ".\maps\tag_list.csv"
+nametag 0x000016CB objects\characters\masterchief\mp_masterchief\armor\chameleon ".\maps\tag_list.csv"
+nametag 0x00001554 objects\characters\masterchief\mp_masterchief\armor\chameleon ".\maps\tag_list.csv"
+nametag 0x00001539 objects\characters\masterchief\mp_masterchief\armor\chameleon ".\maps\tag_list.csv"
+echo Stealth
+nametag 0x000015FD objects\characters\masterchief\mp_masterchief\armor\stealth ".\maps\tag_list.csv"
+nametag 0x000015FE objects\characters\masterchief\mp_masterchief\armor\stealth ".\maps\tag_list.csv"
+nametag 0x0000154C objects\characters\masterchief\mp_masterchief\armor\stealth ".\maps\tag_list.csv"
+nametag 0x00001531 objects\characters\masterchief\mp_masterchief\armor\stealth ".\maps\tag_list.csv"
+echo Omni
+nametag 0x0000181F objects\characters\masterchief\mp_masterchief\armor\omni ".\maps\tag_list.csv"
+nametag 0x00001820 objects\characters\masterchief\mp_masterchief\armor\omni ".\maps\tag_list.csv"
+nametag 0x00001546 objects\characters\masterchief\mp_masterchief\armor\omni ".\maps\tag_list.csv"
+echo Orbital
+nametag 0x000017AE objects\characters\masterchief\mp_masterchief\armor\orbital ".\maps\tag_list.csv"
+nametag 0x000015AF objects\characters\masterchief\mp_masterchief\armor\orbital ".\maps\tag_list.csv"
+nametag 0x0000154B objects\characters\masterchief\mp_masterchief\armor\orbital ".\maps\tag_list.csv"
+nametag 0x00001542 objects\characters\masterchief\mp_masterchief\armor\orbital ".\maps\tag_list.csv"
+echo Shark
+nametag 0x0000167B objects\characters\masterchief\mp_masterchief\armor\shark ".\maps\tag_list.csv"
+nametag 0x0000167C objects\characters\masterchief\mp_masterchief\armor\shark ".\maps\tag_list.csv"
+nametag 0x00001551 objects\characters\masterchief\mp_masterchief\armor\shark ".\maps\tag_list.csv"
+nametag 0x00001546 objects\characters\masterchief\mp_masterchief\armor\shark ".\maps\tag_list.csv"
+echo Halberd
+nametag 0x000016E1 objects\characters\masterchief\mp_masterchief\armor\halberd ".\maps\tag_list.csv"
+nametag 0x000016E2 objects\characters\masterchief\mp_masterchief\armor\halberd ".\maps\tag_list.csv"
+nametag 0x0000153A objects\characters\masterchief\mp_masterchief\armor\halberd ".\maps\tag_list.csv"
+echo Hoplite
+nametag 0x0000174D objects\characters\masterchief\mp_masterchief\armor\hoplite ".\maps\tag_list.csv"
+nametag 0x0000174E objects\characters\masterchief\mp_masterchief\armor\hoplite ".\maps\tag_list.csv"
+nametag 0x0000153E objects\characters\masterchief\mp_masterchief\armor\hoplite ".\maps\tag_list.csv"
+echo Ballista
+nametag 0x00001769 objects\characters\masterchief\mp_masterchief\armor\ballista ".\maps\tag_list.csv"
+nametag 0x0000176A objects\characters\masterchief\mp_masterchief\armor\ballista ".\maps\tag_list.csv"
+nametag 0x0000153F objects\characters\masterchief\mp_masterchief\armor\ballista ".\maps\tag_list.csv"
+echo Cyclops
+nametag 0x000016F9 objects\characters\masterchief\mp_masterchief\armor\cyclops ".\maps\tag_list.csv"
+nametag 0x000016FA objects\characters\masterchief\mp_masterchief\armor\cyclops ".\maps\tag_list.csv"
+nametag 0x0000153B objects\characters\masterchief\mp_masterchief\armor\cyclops ".\maps\tag_list.csv"
+echo Demo
+nametag 0x00001797 objects\characters\masterchief\mp_masterchief\armor\demo ".\maps\tag_list.csv"
+nametag 0x00001798 objects\characters\masterchief\mp_masterchief\armor\demo ".\maps\tag_list.csv"
+nametag 0x00001541 objects\characters\masterchief\mp_masterchief\armor\demo ".\maps\tag_list.csv"
+echo Dutch
+nametag 0x000016B3 objects\characters\masterchief\mp_masterchief\armor\dutch ".\maps\tag_list.csv"
+nametag 0x000016B4 objects\characters\masterchief\mp_masterchief\armor\dutch ".\maps\tag_list.csv"
+nametag 0x00001538 objects\characters\masterchief\mp_masterchief\armor\dutch ".\maps\tag_list.csv"
+echo Gladiator
+nametag 0x0000164D objects\characters\masterchief\mp_masterchief\armor\gladiator ".\maps\tag_list.csv"
+nametag 0x0000164E objects\characters\masterchief\mp_masterchief\armor\gladiator ".\maps\tag_list.csv"
+nametag 0x00001534 objects\characters\masterchief\mp_masterchief\armor\gladiator ".\maps\tag_list.csv"
+echo Gungnir
+nametag 0x000017EC objects\characters\masterchief\mp_masterchief\armor\gungnir ".\maps\tag_list.csv"
+nametag 0x000017ED objects\characters\masterchief\mp_masterchief\armor\gungnir ".\maps\tag_list.csv"
+nametag 0x00001544 objects\characters\masterchief\mp_masterchief\armor\gungnir ".\maps\tag_list.csv"
+echo Hammerhead
+nametag 0x00001808 objects\characters\masterchief\mp_masterchief\armor\hammerhead ".\maps\tag_list.csv"
+nametag 0x00001809 objects\characters\masterchief\mp_masterchief\armor\hammerhead ".\maps\tag_list.csv"
+nametag 0x00001545 objects\characters\masterchief\mp_masterchief\armor\hammerhead ".\maps\tag_list.csv"
+echo Mac
+nametag 0x00001664 objects\characters\masterchief\mp_masterchief\armor\mac ".\maps\tag_list.csv"
+nametag 0x00001665 objects\characters\masterchief\mp_masterchief\armor\mac ".\maps\tag_list.csv"
+nametag 0x00001535 objects\characters\masterchief\mp_masterchief\armor\mac ".\maps\tag_list.csv"
+echo Mercenary
+nametag 0x00001723 objects\characters\masterchief\mp_masterchief\armor\mercenary ".\maps\tag_list.csv"
+nametag 0x00001724 objects\characters\masterchief\mp_masterchief\armor\mercenary ".\maps\tag_list.csv"
+nametag 0x0000153D objects\characters\masterchief\mp_masterchief\armor\mercenary ".\maps\tag_list.csv"
+echo Nihard
+nametag 0x00001636 objects\characters\masterchief\mp_masterchief\armor\nihard ".\maps\tag_list.csv"
+nametag 0x00001637 objects\characters\masterchief\mp_masterchief\armor\nihard ".\maps\tag_list.csv"
+nametag 0x00001533 objects\characters\masterchief\mp_masterchief\armor\nihard ".\maps\tag_list.csv"
+echo Oracle
+nametag 0x0000183A objects\characters\masterchief\mp_masterchief\armor\oracle ".\maps\tag_list.csv"
+nametag 0x0000155D objects\characters\masterchief\mp_masterchief\armor\oracle ".\maps\tag_list.csv"
+nametag 0x0000183B objects\characters\masterchief\mp_masterchief\armor\oracle ".\maps\tag_list.csv"
+nametag 0x00001547 objects\characters\masterchief\mp_masterchief\armor\oracle ".\maps\tag_list.csv"
+echo Silverback
+nametag 0x0000184D objects\characters\masterchief\mp_masterchief\armor\silverback ".\maps\tag_list.csv"
+nametag 0x0000184E objects\characters\masterchief\mp_masterchief\armor\silverback ".\maps\tag_list.csv"
+nametag 0x00001548 objects\characters\masterchief\mp_masterchief\armor\silverback ".\maps\tag_list.csv"
+echo Spectrum
+nametag 0x000017D0 objects\characters\masterchief\mp_masterchief\armor\spectrum ".\maps\tag_list.csv"
+nametag 0x000017D1 objects\characters\masterchief\mp_masterchief\armor\spectrum ".\maps\tag_list.csv"
+nametag 0x00001543 objects\characters\masterchief\mp_masterchief\armor\spectrum ".\maps\tag_list.csv"
+echo Strider
+nametag 0x00001785 objects\characters\masterchief\mp_masterchief\armor\strider ".\maps\tag_list.csv"
+nametag 0x00001786 objects\characters\masterchief\mp_masterchief\armor\strider ".\maps\tag_list.csv"
+nametag 0x00001540 objects\characters\masterchief\mp_masterchief\armor\strider ".\maps\tag_list.csv"
+echo Tankmode_human
+nametag 0x00001887 objects\characters\masterchief\mp_masterchief\armor\tankmode_human ".\maps\tag_list.csv"
+nametag 0x00001888 objects\characters\masterchief\mp_masterchief\armor\tankmode_human ".\maps\tag_list.csv"
+nametag 0x0000154A objects\characters\masterchief\mp_masterchief\armor\tankmode_human ".\maps\tag_list.csv"
+echo Widow_maker
+nametag 0x0000186A objects\characters\masterchief\mp_masterchief\armor\widow_maker ".\maps\tag_list.csv"
+nametag 0x0000186B objects\characters\masterchief\mp_masterchief\armor\widow_maker ".\maps\tag_list.csv"
+nametag 0x00001549 objects\characters\masterchief\mp_masterchief\armor\widow_maker ".\maps\tag_list.csv"
+savetagnames
+echo #####################################################################################################
+echo
+
+echo #####################################################################################################
+echo Multiplayer Globals Spartan Customization Dependencies
+echo #####################################################################################################
+echo
+echo Air_assault (Scenery scen)
+tagdependency add 0x0000028E 0x00001530
+tagdependency add 0x00001530 0x0000028E
+echo Air_assault (Render_model mode)
+tagdependency add 0x0000028E 0x000015E4
+tagdependency add 0x000015E4 0x0000028E
+echo Renegade (Scenery scen)
+tagdependency add 0x0000028E 0x00001532
+tagdependency add 0x00001532 0x0000028E
+echo Renegade (Render_model mode)
+tagdependency add 0x0000028E 0x0000154D
+tagdependency add 0x0000154D 0x0000028E
+echo Juggernaut (Scenery scen)
+tagdependency add 0x0000028E 0x00001537
+tagdependency add 0x00001537 0x0000028E
+echo Juggernaut (Render_model mode)
+tagdependency add 0x0000028E 0x00001552
+tagdependency add 0x00001552 0x0000028E
+tagdependency add 0x0000028E 0x00001695
+tagdependency add 0x00001695 0x0000028E
+echo Scanner (Scenery scen)
+tagdependency add 0x0000028E 0x0000153C
+tagdependency add 0x0000153C 0x0000028E
+echo Scanner (Render_model mode)
+tagdependency add 0x0000028E 0x00001555
+tagdependency add 0x00001555 0x0000028E
+tagdependency add 0x0000028E 0x0000170D
+tagdependency add 0x0000170D 0x0000028E
+echo Chameleon (Scenery scen)
+tagdependency add 0x0000028E 0x00001539
+tagdependency add 0x00001539 0x0000028E
+echo Chameleon (Render_model mode)
+tagdependency add 0x0000028E 0x00001554
+tagdependency add 0x00001554 0x0000028E
+tagdependency add 0x0000028E 0x000016CB
+tagdependency add 0x000016CB 0x0000028E
+echo Stealth (Scenery scen)
+tagdependency add 0x0000028E 0x00001531
+tagdependency add 0x00001531 0x0000028E
+echo Stealth (Render_model mode)
+tagdependency add 0x0000028E 0x0000154C
+tagdependency add 0x0000154C 0x0000028E
+tagdependency add 0x0000028E 0x000015FE
+tagdependency add 0x000015FE 0x0000028E
+echo Omni (Scenery scen)
+tagdependency add 0x0000028E 0x00001546
+tagdependency add 0x00001546 0x0000028E
+echo Omni (Render_model mode)
+tagdependency add 0x0000028E 0x00001820
+tagdependency add 0x00001820 0x0000028E
+echo Orbital (Scenery scen)
+tagdependency add 0x0000028E 0x00001542
+tagdependency add 0x00001542 0x0000028E 
+echo Orbital (Render_model mode)
+tagdependency add 0x0000028E 0x0000154B
+tagdependency add 0x0000154B 0x0000028E
+tagdependency add 0x0000028E 0x000017AF
+tagdependency add 0x000017AF 0x0000028E
+echo Shark (Scenery scen)
+tagdependency add 0x0000028E 0x00001536
+tagdependency add 0x00001536 0x0000028E
+echo Shark (Render_model mode)
+tagdependency add 0x0000028E 0x00001551
+tagdependency add 0x00001551 0x0000028E
+tagdependency add 0x0000028E 0x0000167C
+tagdependency add 0x0000167C 0x0000028E
+echo Halberd (Scenery scen)
+tagdependency add 0x0000028E 0x0000153A
+tagdependency add 0x0000153A 0x0000028E
+echo Halberd (Render_model mode)
+tagdependency add 0x0000028E 0x000016E2
+tagdependency add 0x000016E2 0x0000028E
+echo Hoplite (Scenery scen)
+tagdependency add 0x0000028E 0x0000153E
+tagdependency add 0x0000153E 0x0000028E
+echo Hoplite (Render_model mode)
+tagdependency add 0x0000028E 0x0000174E
+tagdependency add 0x0000174E 0x0000028E
+echo Ballista (Scenery scen)
+tagdependency add 0x0000028E 0x0000153F
+tagdependency add 0x0000153F 0x0000028E
+echo Ballista (Render_model mode)
+tagdependency add 0x0000028E 0x0000176A
+tagdependency add 0x0000176A 0x0000028E
+echo Cyclops (Scenery scen)
+tagdependency add 0x0000028E 0x0000153B
+tagdependency add 0x0000153B 0x0000028E
+echo Cyclops (Render_model mode)
+tagdependency add 0x0000028E 0x000016FA
+tagdependency add 0x000016FA 0x0000028E
+echo Demo (Scenery scen)
+tagdependency add 0x0000028E 0x00001541
+tagdependency add 0x00001541 0x0000028E
+echo Demo (Render_model mode)
+tagdependency add 0x0000028E 0x00001798
+tagdependency add 0x00001798 0x0000028E
+echo Dutch (Scenery scen)
+tagdependency add 0x0000028E 0x00001538
+tagdependency add 0x00001538 0x0000028E
+echo Dutch (Render_model mode)
+tagdependency add 0x0000028E 0x000016B4
+tagdependency add 0x000016B4 0x0000028E
+echo Gladiator (Scenery scen)
+tagdependency add 0x0000028E 0x00001534
+tagdependency add 0x00001534 0x0000028E
+echo Gladiator (Render_model mode)
+tagdependency add 0x0000028E 0x0000164E
+tagdependency add 0x0000164E 0x0000028E
+echo Gungnir (Scenery scen)
+tagdependency add 0x0000028E 0x00001544
+tagdependency add 0x00001544 0x0000028E
+echo Gungnir (Render_model mode)
+tagdependency add 0x0000028E 0x000017ED
+tagdependency add 0x000017ED 0x0000028E
+echo Hammerhead (Scenery scen)
+tagdependency add 0x0000028E 0x00001545
+tagdependency add 0x00001545 0x0000028E
+echo Hammerhead (Render_model mode)
+tagdependency add 0x0000028E 0x00001809
+tagdependency add 0x00001809 0x0000028E
+echo Mac (Scenery scen)
+tagdependency add 0x0000028E 0x00001535
+tagdependency add 0x00001535 0x0000028E
+echo Mac (Render_model mode)
+tagdependency add 0x0000028E 0x00001665
+tagdependency add 0x00001665 0x0000028E
+echo Mercenary (Scenery scen)
+tagdependency add 0x0000028E 0x0000153D
+tagdependency add 0x0000153D 0x0000028E
+echo Mercenary (Render_model mode)
+tagdependency add 0x0000028E 0x00001724
+tagdependency add 0x00001724 0x0000028E
+echo Nihard (Scenery scen)
+tagdependency add 0x0000028E 0x00001533
+tagdependency add 0x00001533 0x0000028E
+echo Nihard (Render_model mode)
+tagdependency add 0x0000028E 0x00001637
+tagdependency add 0x00001637 0x0000028E
+echo Oracle (Scenery scen)
+tagdependency add 0x0000028E 0x00001547
+tagdependency add 0x00001547 0x0000028E
+echo Oracle (Render_model mode)
+tagdependency add 0x0000028E 0x0000155D
+tagdependency add 0x0000155D 0x0000028E
+tagdependency add 0x0000028E 0x0000183B
+tagdependency add 0x0000183B 0x0000028E
+echo Silverback (Scenery scen)
+tagdependency add 0x0000028E 0x00001548
+tagdependency add 0x00001548 0x0000028E
+echo Silverback (Render_model mode)
+tagdependency add 0x0000028E 0x0000184E
+tagdependency add 0x0000184E 0x0000028E
+echo Spectrum (Scenery scen)
+tagdependency add 0x0000028E 0x00001543
+tagdependency add 0x00001543 0x0000028E
+echo Spectrum (Render_model mode)
+tagdependency add 0x0000028E 0x000017D1
+tagdependency add 0x000017D1 0x0000028E
+echo Strider (Scenery scen)
+tagdependency add 0x0000028E 0x00001540
+tagdependency add 0x00001540 0x0000028E
+echo Strider (Render_model mode)
+tagdependency add 0x0000028E 0x00001786
+tagdependency add 0x00001786 0x0000028E
+echo Tankmode_human (Scenery scen)
+tagdependency add 0x0000028E 0x0000154A
+tagdependency add 0x0000154A 0x0000028E
+echo Tankmode_human (Render_model mode)
+tagdependency add 0x0000028E 0x00001888
+tagdependency add 0x00001888 0x0000028E
+echo Widow_maker (Scenery scen)
+tagdependency add 0x0000028E 0x00001549
+tagdependency add 0x00001549 0x0000028E
+echo Widow_maker (Render_model mode)
+tagdependency add 0x0000028E 0x0000186B
+tagdependency add 0x0000186B 0x0000028E
+
+echo #####################################################################################################
+echo 
+
+echo #####################################################################################################
+echo Multiplayer Globals Spartan Customization Menu Attachment
+echo #####################################################################################################
+echo
+edittag 0x0000028E
+editblock universal 0
+echo 
+echo HELMET
+echo 
+editblock spartanarmorcustomization 0
+addblockelements permutations 26 *
+editblock permutations 11
+setfield name air_assault
+setfield thirdpersonarmorobject 0x00001530
+setfield unknown -1
+exit
+editblock permutations 12
+setfield name renegade
+setfield thirdpersonarmorobject 0x00001532
+setfield unknown -1
+exit
+editblock permutations 13
+setfield name juggernaut
+setfield thirdpersonarmorobject 0x00001537
+setfield unknown -1
+exit
+editblock permutations 14
+setfield name scanner
+setfield thirdpersonarmorobject 0x0000153C
+setfield unknown -1
+exit
+editblock permutations 15
+setfield name chameleon
+setfield thirdpersonarmorobject 0x00001539
+setfield unknown -1
+exit
+editblock permutations 16
+setfield name stealth
+setfield thirdpersonarmorobject 0x00001531
+setfield unknown -1
+exit
+editblock permutations 17
+setfield name omni
+setfield thirdpersonarmorobject 0x00001546
+setfield unknown -1
+exit
+editblock permutations 18
+setfield name orbital
+setfield thirdpersonarmorobject 0x00001542
+setfield unknown -1
+exit
+editblock permutations 19
+setfield name shark
+setfield thirdpersonarmorobject 0x00001536
+setfield unknown -1
+exit
+editblock permutations 20
+setfield name halberd
+setfield thirdpersonarmorobject 0x0000153A
+setfield unknown -1
+exit
+editblock permutations 21
+setfield name hoplite
+setfield thirdpersonarmorobject 0x0000153E
+setfield unknown -1
+exit
+editblock permutations 22
+setfield name ballista
+setfield thirdpersonarmorobject 0x0000153F
+setfield unknown -1
+exit
+editblock permutations 23
+setfield name cyclops
+setfield thirdpersonarmorobject 0x0000153B
+setfield unknown -1
+exit
+editblock permutations 24
+setfield name demo
+setfield thirdpersonarmorobject 0x00001541
+setfield unknown -1
+exit
+editblock permutations 25
+setfield name dutch
+setfield thirdpersonarmorobject 0x00001538
+setfield unknown -1
+exit
+editblock permutations 26
+setfield name gladiator
+setfield thirdpersonarmorobject 0x00001534
+setfield unknown -1
+exit
+editblock permutations 27
+setfield name gungnir
+setfield thirdpersonarmorobject 0x00001544
+setfield unknown -1
+exit
+editblock permutations 28
+setfield name hammerhead
+setfield thirdpersonarmorobject 0x00001545
+setfield unknown -1
+exit
+editblock permutations 29
+setfield name mac
+setfield thirdpersonarmorobject 0x00001535
+setfield unknown -1
+exit
+editblock permutations 30
+setfield name mercenary
+setfield thirdpersonarmorobject 0x0000153D
+setfield unknown -1
+exit
+editblock permutations 31
+setfield name nihard
+setfield thirdpersonarmorobject 0x00001533
+setfield unknown -1
+exit
+editblock permutations 32
+setfield name oracle
+setfield thirdpersonarmorobject 0x00001547
+setfield unknown -1
+exit
+editblock permutations 33
+setfield name silverback
+setfield thirdpersonarmorobject 0x00001548
+setfield unknown -1
+exit
+editblock permutations 34
+setfield name spectrum
+setfield thirdpersonarmorobject 0x00001543
+setfield unknown -1
+exit
+editblock permutations 35
+setfield name strider
+setfield thirdpersonarmorobject 0x00001540
+setfield unknown -1
+exit
+editblock permutations 36
+setfield name widow_maker
+setfield thirdpersonarmorobject 0x00001549
+setfield unknown -1
+exit
+savetagchanges
+exit
+echo 
+
+echo CHEST
+echo 
+editblock spartanarmorcustomization 1
+addblockelements permutations 29 *
+editblock permutations 0
+setfield name base
+setfield thirdpersonarmorobject 0x0000002A
+exit
+editblock permutations 1
+setfield name mp_bungie
+setfield thirdpersonarmorobject 0x0000007E
+exit
+editblock permutations 2
+setfield name mp_cobra
+setfield thirdpersonarmorobject 0x00000032
+exit
+editblock permutations 3
+setfield name mp_regulator
+setfield thirdpersonarmorobject 0x0000004A
+exit
+editblock permutations 4
+setfield name mp_intruder
+setfield thirdpersonarmorobject 0x0000003A
+exit
+editblock permutations 5
+setfield name mp_ninja
+setfield thirdpersonarmorobject 0x00000042
+exit
+editblock permutations 6
+setfield name mp_scout
+setfield thirdpersonarmorobject 0x00000063
+exit
+editblock permutations 7
+setfield name mp_ryu
+setfield thirdpersonarmorobject 0x00000052
+exit
+editblock permutations 8
+setfield name mp_katana
+setfield thirdpersonarmorobject 0x00000081
+exit
+editblock permutations 9
+setfield name air_assault
+setfield thirdpersonarmorobject 0x00001530
+exit
+editblock permutations 10
+setfield name renegade
+setfield thirdpersonarmorobject 0x00001532
+exit
+editblock permutations 11
+setfield name juggernaut
+setfield thirdpersonarmorobject 0x00001537
+exit
+editblock permutations 12
+setfield name scanner
+setfield thirdpersonarmorobject 0x0000153C
+exit
+editblock permutations 13
+setfield name chameleon
+setfield thirdpersonarmorobject 0x00001539
+exit
+editblock permutations 14
+setfield name stealth
+setfield thirdpersonarmorobject 0x00001531
+exit
+editblock permutations 15
+setfield name omni
+setfield thirdpersonarmorobject 0x00001546
+exit
+editblock permutations 16
+setfield name orbital
+setfield thirdpersonarmorobject 0x00001542
+exit
+editblock permutations 17
+setfield name shark
+setfield thirdpersonarmorobject 0x00001536
+exit
+editblock permutations 18
+setfield name halberd
+setfield thirdpersonarmorobject 0x0000153A
+exit
+editblock permutations 19
+setfield name hoplite
+setfield thirdpersonarmorobject 0x0000153E
+exit
+editblock permutations 20
+setfield name ballista
+setfield thirdpersonarmorobject 0x0000153F
+exit
+editblock permutations 21
+setfield name cyclops
+setfield thirdpersonarmorobject 0x0000153B
+exit
+editblock permutations 22
+setfield name demo
+setfield thirdpersonarmorobject 0x00001541
+exit
+editblock permutations 23
+setfield name dutch
+setfield thirdpersonarmorobject 0x00001538
+exit
+editblock permutations 24
+setfield name gladiator
+setfield thirdpersonarmorobject 0x00001534
+exit
+editblock permutations 25
+setfield name gungnir
+setfield thirdpersonarmorobject 0x00001544
+exit
+editblock permutations 26
+setfield name hammerhead
+setfield thirdpersonarmorobject 0x00001545
+exit
+editblock permutations 27
+setfield name mac
+setfield thirdpersonarmorobject 0x00001535
+exit
+editblock permutations 28
+setfield name mercenary
+setfield thirdpersonarmorobject 0x0000153D
+exit
+editblock permutations 29
+setfield name nihard
+setfield thirdpersonarmorobject 0x00001533
+exit
+editblock permutations 30
+setfield name oracle
+setfield thirdpersonarmorobject 0x00001547
+exit
+editblock permutations 31
+setfield name silverback
+setfield thirdpersonarmorobject 0x00001548
+exit
+editblock permutations 32
+setfield name spectrum
+setfield thirdpersonarmorobject 0x00001543
+exit
+editblock permutations 33
+setfield name strider
+setfield thirdpersonarmorobject 0x00001540
+exit
+editblock permutations 34
+setfield name tankmode_human
+setfield thirdpersonarmorobject 0x0000154A
+exit
+editblock permutations 35
+setfield name widow_maker
+setfield thirdpersonarmorobject 0x00001549
+exit
+savetagchanges
+exit
+echo 
+
+echo RIGHTSHOULDER
+echo 
+editblock spartanarmorcustomization 2
+addblockelements permutations 27 *
+editblock permutations 8
+setfield name air_assault
+setfield thirdpersonarmorobject 0x00001530
+exit
+editblock permutations 9
+setfield name renegade
+setfield thirdpersonarmorobject 0x00001532
+exit
+editblock permutations 10
+setfield name juggernaut
+setfield thirdpersonarmorobject 0x00001537
+exit
+editblock permutations 11
+setfield name scanner
+setfield thirdpersonarmorobject 0x0000153C
+exit
+editblock permutations 12
+setfield name chameleon
+setfield thirdpersonarmorobject 0x00001539
+exit
+editblock permutations 13
+setfield name stealth
+setfield thirdpersonarmorobject 0x00001531
+exit
+editblock permutations 14
+setfield name omni
+setfield thirdpersonarmorobject 0x00001546
+exit
+editblock permutations 15
+setfield name orbital
+setfield thirdpersonarmorobject 0x00001542
+exit
+editblock permutations 16
+setfield name shark
+setfield thirdpersonarmorobject 0x00001536
+exit
+editblock permutations 17
+setfield name halberd
+setfield thirdpersonarmorobject 0x0000153A
+exit
+editblock permutations 18
+setfield name hoplite
+setfield thirdpersonarmorobject 0x0000153E
+exit
+editblock permutations 19
+setfield name ballista
+setfield thirdpersonarmorobject 0x0000153F
+exit
+editblock permutations 20
+setfield name cyclops
+setfield thirdpersonarmorobject 0x0000153B
+exit
+editblock permutations 21
+setfield name demo
+setfield thirdpersonarmorobject 0x00001541
+exit
+editblock permutations 22
+setfield name dutch
+setfield thirdpersonarmorobject 0x00001538
+exit
+editblock permutations 23
+setfield name gladiator
+setfield thirdpersonarmorobject 0x00001534
+exit
+editblock permutations 24
+setfield name gungnir
+setfield thirdpersonarmorobject 0x00001544
+exit
+editblock permutations 25
+setfield name hammerhead
+setfield thirdpersonarmorobject 0x00001545
+exit
+editblock permutations 26
+setfield name mac
+setfield thirdpersonarmorobject 0x00001535
+exit
+editblock permutations 27
+setfield name mercenary
+setfield thirdpersonarmorobject 0x0000153D
+exit
+editblock permutations 28
+setfield name nihard
+setfield thirdpersonarmorobject 0x00001533
+exit
+editblock permutations 29
+setfield name oracle
+setfield thirdpersonarmorobject 0x00001547
+exit
+editblock permutations 30
+setfield name silverback
+setfield thirdpersonarmorobject 0x00001548
+exit
+editblock permutations 31
+setfield name spectrum
+setfield thirdpersonarmorobject 0x00001543
+exit
+editblock permutations 32
+setfield name strider
+setfield thirdpersonarmorobject 0x00001540
+exit
+editblock permutations 33
+setfield name tankmode_human
+setfield thirdpersonarmorobject 0x0000154A
+exit
+editblock permutations 34
+setfield name widow_maker
+setfield thirdpersonarmorobject 0x00001549
+exit
+savetagchanges
+exit
+echo 
+
+echo LEFTSHOULDER
+echo 
+editblock spartanarmorcustomization 3
+addblockelements permutations 27 *
+editblock permutations 8
+setfield name air_assault
+setfield thirdpersonarmorobject 0x00001530
+exit
+editblock permutations 9
+setfield name renegade
+setfield thirdpersonarmorobject 0x00001532
+exit
+editblock permutations 10
+setfield name juggernaut
+setfield thirdpersonarmorobject 0x00001537
+exit
+editblock permutations 11
+setfield name scanner
+setfield thirdpersonarmorobject 0x0000153C
+exit
+editblock permutations 12
+setfield name chameleon
+setfield thirdpersonarmorobject 0x00001539
+exit
+editblock permutations 13
+setfield name stealth
+setfield thirdpersonarmorobject 0x00001531
+exit
+editblock permutations 14
+setfield name omni
+setfield thirdpersonarmorobject 0x00001546
+exit
+editblock permutations 15
+setfield name orbital
+setfield thirdpersonarmorobject 0x00001542
+exit
+editblock permutations 16
+setfield name shark
+setfield thirdpersonarmorobject 0x00001536
+exit
+editblock permutations 17
+setfield name halberd
+setfield thirdpersonarmorobject 0x0000153A
+exit
+editblock permutations 18
+setfield name hoplite
+setfield thirdpersonarmorobject 0x0000153E
+exit
+editblock permutations 19
+setfield name ballista
+setfield thirdpersonarmorobject 0x0000153F
+exit
+editblock permutations 20
+setfield name cyclops
+setfield thirdpersonarmorobject 0x0000153B
+exit
+editblock permutations 21
+setfield name demo
+setfield thirdpersonarmorobject 0x00001541
+exit
+editblock permutations 22
+setfield name dutch
+setfield thirdpersonarmorobject 0x00001538
+exit
+editblock permutations 23
+setfield name gladiator
+setfield thirdpersonarmorobject 0x00001534
+exit
+editblock permutations 24
+setfield name gungnir
+setfield thirdpersonarmorobject 0x00001544
+exit
+editblock permutations 25
+setfield name hammerhead
+setfield thirdpersonarmorobject 0x00001545
+exit
+editblock permutations 26
+setfield name mac
+setfield thirdpersonarmorobject 0x00001535
+exit
+editblock permutations 27
+setfield name mercenary
+setfield thirdpersonarmorobject 0x0000153D
+exit
+editblock permutations 28
+setfield name nihard
+setfield thirdpersonarmorobject 0x00001533
+exit
+editblock permutations 29
+setfield name oracle
+setfield thirdpersonarmorobject 0x00001547
+exit
+editblock permutations 30
+setfield name silverback
+setfield thirdpersonarmorobject 0x00001548
+exit
+editblock permutations 31
+setfield name spectrum
+setfield thirdpersonarmorobject 0x00001543
+exit
+editblock permutations 32
+setfield name strider
+setfield thirdpersonarmorobject 0x00001540
+exit
+editblock permutations 33
+setfield name tankmode_human
+setfield thirdpersonarmorobject 0x0000154A
+exit
+editblock permutations 34
+setfield name widow_maker
+setfield thirdpersonarmorobject 0x00001549
+exit
+savetagchanges
+exit
+exitto tags
+
+echo #####################################################################################################
+echo
+
+echo #####################################################################################################
+echo MS23 Armors Models Patches
+echo #####################################################################################################
+echo
+edittag 0x15e3
+editblock collisionregions 4
+setfield name leftshoulder
+exit
+editblock collisionregions 0
+setfield name rightshoulder
+savetagchanges
+exitto tags
+
+edittag 0x15e4 
+editblock regions 4
+setfield name leftshoulder
+exit
+editblock regions 0
+setfield name rightshoulder
+savetagchanges
+exitto tags
+
+edittag 0x1694
+editblock collisionregions 4
+setfield name leftshoulder
+exit
+editblock collisionregions 0
+setfield name rightshoulder
+savetagchanges
+exitto tags
+
+edittag 0x1695 
+editblock regions 4
+setfield name leftshoulder
+exit
+editblock regions 0
+setfield name rightshoulder
+savetagchanges
+exitto tags
+
+edittag 0x16ca
+editblock collisionregions 4
+setfield name leftshoulder
+exit
+editblock collisionregions 0
+setfield name rightshoulder
+savetagchanges
+exitto tags
+
+edittag 0x16cb
+editblock regions 4
+setfield name leftshoulder
+exit
+editblock regions 0
+setfield name rightshoulder
+savetagchanges
+exitto tags
+
+edittag 0x17ae
+editblock collisionregions 4
+setfield name leftshoulder
+exit
+editblock collisionregions 0
+setfield name rightshoulder
+savetagchanges
+exitto tags
+
+edittag 0x17af
+editblock regions 4
+setfield name leftshoulder
+exit
+editblock regions 0
+setfield name rightshoulder
+savetagchanges
+exitto tags
+
+edittag 0x170c
+editblock collisionregions 4
+setfield name leftshoulder
+exit
+editblock collisionregions 0
+setfield name rightshoulder
+savetagchanges
+exitto tags
+
+edittag 0x170d
+editblock regions 4
+setfield name leftshoulder
+exit
+editblock regions 0
+setfield name rightshoulder
+savetagchanges
+exitto tags
+
+edittag 0x167b
+editblock collisionregions 4
+setfield name leftshoulder
+exit
+editblock collisionregions 0
+setfield name rightshoulder
+savetagchanges
+exitto tags
+
+edittag 0x167c
+editblock regions 4
+setfield name leftshoulder
+exit
+editblock regions 0
+setfield name rightshoulder
+savetagchanges
+exitto tags
+
+edittag 0x181f
+editblock collisionregions 4
+setfield name leftshoulder
+exit
+editblock collisionregions 0
+setfield name rightshoulder
+savetagchanges
+exitto tags
+
+edittag 0x1820
+editblock regions 4
+setfield name leftshoulder
+exit
+editblock regions 0
+setfield name rightshoulder
+savetagchanges
+exitto tags
+
+edittag 0x1887
+editblock collisionregions 4
+setfield name leftshoulder
+exit
+editblock collisionregions 0
+setfield name rightshoulder
+savetagchanges
+exitto tags
+
+edittag 0x1888
+editblock regions 4
+setfield name leftshoulder
+exit
+editblock regions 0
+setfield name rightshoulder
+savetagchanges
+exitto tags
+
+edittag 0x15fd
+editblock collisionregions 4
+setfield name leftshoulder
+exit
+editblock collisionregions 0
+setfield name rightshoulder
+savetagchanges
+exitto tags
+
+edittag 0x15fe
+editblock regions 4
+setfield name leftshoulder
+exit
+editblock regions 0
+setfield name rightshoulder
+savetagchanges
+exitto tags
+
+edittag 0x17ae
+editblock collisionregions 4
+setfield name leftshoulder
+exit
+editblock collisionregions 0
+setfield name rightshoulder
+savetagchanges
+exitto tags
+
+edittag 0x17af
+editblock regions 4
+setfield name leftshoulder
+exit
+editblock regions 0
+setfield name rightshoulder
+savetagchanges
+exitto tags
+
+edittag 0x161d
+editblock collisionregions 4
+setfield name leftshoulder
+exit
+editblock collisionregions 0
+setfield name rightshoulder
+savetagchanges
+exitto tags
+
+edittag 0x161e
+editblock regions 4
+setfield name leftshoulder
+exit
+editblock regions 0
+setfield name rightshoulder
+savetagchanges
+exitto tags
+
+edittag 0x000016E1
+editblock collisionregions 4
+setfield name leftshoulder
+exit
+editblock collisionregions 0
+setfield name rightshoulder
+savetagchanges
+exitto tags
+
+edittag 0x000016E2
+editblock regions 4
+setfield name leftshoulder
+exit
+editblock regions 0
+setfield name rightshoulder
+savetagchanges
+exitto tags
+
+edittag 0x0000174D
+editblock collisionregions 4
+setfield name leftshoulder
+exit
+editblock collisionregions 0
+setfield name rightshoulder
+savetagchanges
+exitto tags
+
+edittag 0x0000174E
+editblock regions 4
+setfield name leftshoulder
+exit
+editblock regions 0
+setfield name rightshoulder
+savetagchanges
+exitto tags
+
+edittag 0x00001769
+editblock collisionregions 4
+setfield name leftshoulder
+exit
+editblock collisionregions 0
+setfield name rightshoulder
+savetagchanges
+exitto tags
+
+edittag 0x0000176A
+editblock regions 4
+setfield name leftshoulder
+exit
+editblock regions 0
+setfield name rightshoulder
+savetagchanges
+exitto tags
+
+edittag 0x000016F9
+editblock collisionregions 4
+setfield name leftshoulder
+exit
+editblock collisionregions 0
+setfield name rightshoulder
+savetagchanges
+exitto tags
+
+edittag 0x000016FA
+editblock regions 4
+setfield name leftshoulder
+exit
+editblock regions 0
+setfield name rightshoulder
+savetagchanges
+exitto tags
+
+edittag 0x00001797
+editblock collisionregions 4
+setfield name leftshoulder
+exit
+editblock collisionregions 0
+setfield name rightshoulder
+savetagchanges
+exitto tags
+
+edittag 0x00001798
+editblock regions 4
+setfield name leftshoulder
+exit
+editblock regions 0
+setfield name rightshoulder
+savetagchanges
+exitto tags
+
+edittag 0x000016B3
+editblock collisionregions 4
+setfield name leftshoulder
+exit
+editblock collisionregions 0
+setfield name rightshoulder
+savetagchanges
+exitto tags
+
+edittag 0x000016B4
+editblock regions 4
+setfield name leftshoulder
+exit
+editblock regions 0
+setfield name rightshoulder
+savetagchanges
+exitto tags
+
+edittag 0x0000164D
+editblock collisionregions 4
+setfield name leftshoulder
+exit
+editblock collisionregions 0
+setfield name rightshoulder
+savetagchanges
+exitto tags
+
+edittag 0x0000164E
+editblock regions 4
+setfield name leftshoulder
+exit
+editblock regions 0
+setfield name rightshoulder
+savetagchanges
+exitto tags
+
+edittag 0x000017EC
+editblock collisionregions 4
+setfield name leftshoulder
+exit
+editblock collisionregions 0
+setfield name rightshoulder
+savetagchanges
+exitto tags
+
+edittag 0x000017ED
+editblock regions 4
+setfield name leftshoulder
+exit
+editblock regions 0
+setfield name rightshoulder
+savetagchanges
+exitto tags
+
+edittag 0x00001808
+editblock collisionregions 4
+setfield name leftshoulder
+exit
+editblock collisionregions 0
+setfield name rightshoulder
+savetagchanges
+exitto tags
+
+edittag 0x00001809
+editblock regions 4
+setfield name leftshoulder
+exit
+editblock regions 0
+setfield name rightshoulder
+savetagchanges
+exitto tags
+
+edittag 0x00001664
+editblock collisionregions 4
+setfield name leftshoulder
+exit
+editblock collisionregions 0
+setfield name rightshoulder
+savetagchanges
+exitto tags
+
+edittag 0x00001665
+editblock regions 4
+setfield name leftshoulder
+exit
+editblock regions 0
+setfield name rightshoulder
+savetagchanges
+exitto tags
+
+edittag 0x00001723
+editblock collisionregions 4
+setfield name leftshoulder
+exit
+editblock collisionregions 0
+setfield name rightshoulder
+savetagchanges
+exitto tags
+
+edittag 0x00001724
+editblock regions 4
+setfield name leftshoulder
+exit
+editblock regions 0
+setfield name rightshoulder
+savetagchanges
+exitto tags
+
+edittag 0x00001636
+editblock collisionregions 4
+setfield name leftshoulder
+exit
+editblock collisionregions 0
+setfield name rightshoulder
+savetagchanges
+exitto tags
+
+edittag 0x00001637
+editblock regions 4
+setfield name leftshoulder
+exit
+editblock regions 0
+setfield name rightshoulder
+savetagchanges
+exitto tags
+
+edittag 0x0000183A
+editblock collisionregions 4
+setfield name leftshoulder
+exit
+editblock collisionregions 0
+setfield name rightshoulder
+savetagchanges
+exitto tags
+
+edittag 0x0000183B
+editblock regions 4
+setfield name leftshoulder
+exit
+editblock regions 0
+setfield name rightshoulder
+savetagchanges
+exitto tags
+
+edittag 0x0000184D
+editblock collisionregions 4
+setfield name leftshoulder
+exit
+editblock collisionregions 0
+setfield name rightshoulder
+savetagchanges
+exitto tags
+
+edittag 0x0000184E
+editblock regions 4
+setfield name leftshoulder
+exit
+editblock regions 0
+setfield name rightshoulder
+savetagchanges
+exitto tags
+
+edittag 0x000017D0
+editblock collisionregions 4
+setfield name leftshoulder
+exit
+editblock collisionregions 0
+setfield name rightshoulder
+savetagchanges
+exitto tags
+
+edittag 0x000017D1
+editblock regions 4
+setfield name leftshoulder
+exit
+editblock regions 0
+setfield name rightshoulder
+savetagchanges
+exitto tags
+
+edittag 0x00001785
+editblock collisionregions 4
+setfield name leftshoulder
+exit
+editblock collisionregions 0
+setfield name rightshoulder
+savetagchanges
+exitto tags
+
+edittag 0x00001786
+editblock regions 4
+setfield name leftshoulder
+exit
+editblock regions 0
+setfield name rightshoulder
+savetagchanges
+exitto tags
+
+edittag 0x0000186A
+editblock collisionregions 4
+setfield name leftshoulder
+exit
+editblock collisionregions 0
+setfield name rightshoulder
+savetagchanges
+exitto tags
+
+edittag 0x0000186B
+editblock regions 4
+setfield name leftshoulder
+exit
+editblock regions 0
+setfield name rightshoulder
+savetagchanges
+exitto tags
+echo #####################################################################################################
+echo
+
+dumplog FifthPartLogs.log
+exit

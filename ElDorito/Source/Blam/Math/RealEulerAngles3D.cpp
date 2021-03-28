@@ -1,4 +1,4 @@
-#include "RealEulerAngles3D.hpp"
+#include "Blam/Math/RealEulerAngles3D.hpp"
 
 namespace Blam::Math
 {
@@ -24,4 +24,3 @@ namespace Blam::Math
 		return !(*this == other);
 	}
 }
-

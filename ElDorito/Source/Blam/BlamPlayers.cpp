@@ -1,5 +1,7 @@
-#include "BlamPlayers.hpp"
-#include "../ElDorito.hpp"
+#include "ElDorito.hpp"
+
+#include "Blam/BlamPlayers.hpp"
+
 #include <iomanip>
 
 namespace

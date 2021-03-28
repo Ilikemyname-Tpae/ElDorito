@@ -1,5 +1,6 @@
 #pragma once
-#include "Angle.hpp"
+
+#include "Blam/Math/Angle.hpp"
 
 namespace Blam::Math
 {
@@ -15,4 +16,3 @@ namespace Blam::Math
 		bool operator!=(const RealEulerAngles2D &other) const;
 	};
 }
-

@@ -6,10 +6,11 @@
 // Disable warnings about signed/unsigned comparisons
 #pragma warning (disable : 4018)
 
-#include <map>
+#include "Pointer.hpp"
 
 #include "Utils/Utils.hpp"
-#include "Pointer.hpp"
+
+#include <map>
 
 class ElDorito : public Utils::Singleton < ElDorito >
 {

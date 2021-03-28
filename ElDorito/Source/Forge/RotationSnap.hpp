@@ -1,7 +1,8 @@
 #pragma once
 
-#include "../Blam/Math/RealVector3D.hpp"
-#include "../Blam/Math/RealQuaternion.hpp"
+#include "Blam/Math/RealQuaternion.hpp"
+#include "Blam/Math/RealVector3D.hpp"
+
 #include <cstdint>
 
 namespace Forge::RotationSnap

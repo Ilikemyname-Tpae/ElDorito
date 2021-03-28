@@ -1,9 +1,12 @@
 #pragma once
+
+#include "Modules/ModuleServer.hpp"
+
+#include "Server/VotingPackets.hpp"
+
+#include <map>
 #include <string>
 #include <vector>
-#include <map>
-#include "../Server/VotingPackets.hpp"
-#include "../Modules/ModuleServer.hpp"
 
 namespace Server::Voting
 {
@@ -195,9 +198,3 @@ namespace Server::Voting
 		int currentNumberOfVotes = 0;
 	};
 }
-
-
-	
-
-
-

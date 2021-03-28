@@ -1,7 +1,9 @@
+#include "Utils/Singleton.hpp"
+
 #include <discord-rpc.h>
-#include "../Utils/Singleton.hpp"
-#include <string>
 #include <mutex>
+#include <string>
+
 namespace Discord
 {
 	class DiscordRPC : public Utils::Singleton<DiscordRPC>

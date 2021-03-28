@@ -1,4 +1,4 @@
-#include "Point2D.hpp"
+#include "Blam/Math/Point2D.hpp"
 
 namespace Blam::Math
 {
@@ -152,4 +152,3 @@ namespace Blam::Math
 		return Point2D(a / b.X, a / b.Y);
 	}
 }
-

@@ -1,49 +1,58 @@
+#include "Console.hpp"
 #include "ElDorito.hpp"
+#include "ElModules.hpp"
+#include "ElPatches.hpp"
+#include "Patch.hpp"
+
+#include "Blam/Cache/StringIdCache.hpp"
+
+#include "ChatCommands/ChatCommandMap.hpp"
+
+#include "Discord/DiscordRPC.h"
+
+#include "Modules/ModuleCamera.hpp"
+#include "Modules/ModuleGame.hpp"
+#include "Modules/ModuleInput.hpp"
+
+#include "Patches/Camera.hpp"
+#include "Patches/Core.hpp"
+#include "Patches/Maps.hpp"
+#include "Patches/Memory.hpp"
+#include "Patches/Network.hpp"
+#include "Patches/Weapon.hpp"
+
+#include "Server/BanList.hpp"
+#include "Server/BanListSync.hpp"
+#include "Server/DedicatedServer.hpp"
+#include "Server/PostgameController.hpp"
+#include "Server/Rcon.hpp"
+#include "Server/ReportHandler.hpp"
+#include "Server/ServerChat.hpp"
+#include "Server/Signaling.hpp"
+#include "Server/Stats.hpp"
+#include "Server/VariableSynchronization.hpp"
+
+#include "Server/Voting.hpp"
+
+#include "ThirdParty/SOP.hpp"
 
 #include "Utils/Utils.hpp"
-#include "ElPatches.hpp"
-#include "Patches/Network.hpp"
-#include "Server/DedicatedServer.hpp"
-#include "Server/Stats.hpp"
-#include "Server/ServerChat.hpp"
-#include "Server/VariableSynchronization.hpp"
-#include "Server/BanList.hpp"
-#include "Server/Rcon.hpp"
-#include "Server/Signaling.hpp"
-#include "Server/BanListSync.hpp"
-#include "Server/ReportHandler.hpp"
-#include "Server/PostgameController.hpp"
-#include "Patches/Core.hpp"
-#include "Console.hpp"
-#include "Web/Ui/WebScoreboard.hpp"
+
+#include "Web/Ui/MpEventDispatcher.hpp"
 #include "Web/Ui/ScreenLayer.hpp"
+#include "Web/Ui/VotingScreen.hpp"
 #include "Web/Ui/WebChat.hpp"
 #include "Web/Ui/WebConsole.hpp"
 #include "Web/Ui/WebLoadingScreen.hpp"
-#include "Web/Ui/VotingScreen.hpp"
-#include "Web/Ui/MpEventDispatcher.hpp"
+#include "Web/Ui/WebScoreboard.hpp"
+#include "Web/Ui/WebSettings.hpp"
 #include "Web/Ui/WebVirtualKeyboard.hpp"
-#include "ElModules.hpp"
-#include "Modules/ModuleGame.hpp"
-#include "Patch.hpp"
-#include "Modules/ModuleCamera.hpp"
-#include "Modules/ModuleInput.hpp"
-#include "Server/Voting.hpp"
-#include "ChatCommands/ChatCommandMap.hpp"
-#include "Patches/Maps.hpp"
-#include "Patches/Weapon.hpp"
-#include "Patches/Memory.hpp"
-#include "Patches/Camera.hpp"
-#include "Discord/DiscordRPC.h"
-#include "ThirdParty/SOP.hpp"
-#include "Blam/Cache/StringIdCache.hpp"
 
-#include <Windows.h>
-#include <TlHelp32.h>
-#include <ShlObj.h>
 #include <codecvt>
 #include <detours.h>
-#include "Web/Ui/WebSettings.hpp"
+#include <ShlObj.h>
+#include <TlHelp32.h>
+#include <Windows.h>
 
 size_t ElDorito::MainThreadID = 0;
 

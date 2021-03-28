@@ -1,4 +1,4 @@
-#include "RealRectangle2D.hpp"
+#include "Blam/Math/RealRectangle2D.hpp"
 
 namespace Blam::Math
 {
@@ -25,4 +25,3 @@ namespace Blam::Math
 		return !(*this == other);
 	}
 }
-

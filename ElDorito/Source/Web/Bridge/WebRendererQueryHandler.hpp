@@ -1,11 +1,13 @@
 #pragma once
 
-#include <include/wrapper/cef_message_router.h>
-#include <boost/lockfree/queue.hpp>
-#include <unordered_map>
+#include "ThirdParty/rapidjson/document.h"
+
+#include "Web/Bridge/WebRendererQuery.hpp"
+
 #include <string>
-#include "../../ThirdParty/rapidjson/document.h"
-#include "WebRendererQuery.hpp"
+#include <unordered_map>
+#include <boost/lockfree/queue.hpp>
+#include <include/wrapper/cef_message_router.h>
 
 namespace Anvil::Client::Rendering::Bridge
 {

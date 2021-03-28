@@ -1,17 +1,23 @@
 #define _CRT_SECURE_NO_WARNINGS
 
-#include "ServerChat.hpp"
-#include "Rcon.hpp"
-#include "../Patches/CustomPackets.hpp"
-#include "../Modules/ModuleServer.hpp"
-#include "../Modules/ModuleGame.hpp"
-#include "../Utils/String.hpp"
-#include <unordered_map>
-#include <fstream>
+#include "ChatCommands/ChatCommandMap.hpp"
+
+#include "Modules/ModuleGame.hpp"
+#include "Modules/ModuleServer.hpp"
+
+#include "Patches/CustomPackets.hpp"
+
+#include "Server/Rcon.hpp"
+#include "Server/ServerChat.hpp"
+
+#include "Utils/String.hpp"
+
 #include <chrono>
+#include <fstream>
 #include <iomanip>
+#include <unordered_map>
 #include <Windows.h>
-#include "../ChatCommands/ChatCommandMap.hpp"
+
 namespace
 {
 	using namespace Server::Chat;

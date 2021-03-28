@@ -1,12 +1,15 @@
-#include "RawInput.hpp"
+#include "ElDorito.hpp"
+#include "Patch.hpp"
 
-#include "../ElDorito.hpp"
-#include "../Patch.hpp"
-#include "../Blam/BlamTypes.hpp"
-#include "../Blam/BlamPlayers.hpp"
-#include "../Blam/Sandbox/Sandbox.hpp"
-#include "../Modules/ModuleInput.hpp"
-#include "../Modules/ModuleCamera.hpp"
+#include "Blam/BlamPlayers.hpp"
+#include "Blam/BlamTypes.hpp"
+
+#include "Blam/Sandbox/Sandbox.hpp"
+
+#include "Modules/ModuleCamera.hpp"
+#include "Modules/ModuleInput.hpp"
+
+#include "Patches/RawInput.hpp"
 
 namespace
 {

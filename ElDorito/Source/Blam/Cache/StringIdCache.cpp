@@ -1,5 +1,6 @@
+#include "Blam/Cache/StringIDCache.hpp"
+
 #include <fstream>
-#include "StringIDCache.hpp"
 
 namespace Blam::Cache
 {
@@ -83,4 +84,3 @@ namespace Blam::Cache
 		return 0;
 	}
 }
-

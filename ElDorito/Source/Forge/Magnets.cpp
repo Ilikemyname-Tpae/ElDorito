@@ -1,25 +1,33 @@
-#include "Magnets.hpp"
-#include "../Blam/Math/RealVector3D.hpp"
-#include "../Blam/Math/RealQuaternion.hpp"
-#include "../Blam/BlamPlayers.hpp"
-#include "../Blam/BlamObjects.hpp"
-#include "../Blam/Tags/TagInstance.hpp"
-#include "../Blam/Tags/Objects/Object.hpp"
-#include "../Blam/BlamTime.hpp"
-#include "../Blam/Cache/StringIdCache.hpp"
-#include "../Utils/Logger.hpp"
-#include "../Modules/ModuleForge.hpp"
-#include "../ThirdParty/rapidjson/document.h"
-#include "../ThirdParty/rapidjson/error/en.h"
-#include "ObjectSet.hpp"
-#include "ForgeUtil.hpp"
-#include "Selection.hpp"
-#include "Geoemetry.hpp"
-#include <vector>
-#include <sstream>
+#include "Blam/BlamObjects.hpp"
+#include "Blam/BlamPlayers.hpp"
+#include "Blam/BlamTime.hpp"
+
+#include "Blam/Cache/StringIdCache.hpp"
+
+#include "Blam/Math/RealQuaternion.hpp"
+#include "Blam/Math/RealVector3D.hpp"
+
+#include "Blam/Tags/TagInstance.hpp"
+#include "Blam/Tags/Objects/Object.hpp"
+
+#include "Forge/ForgeUtil.hpp"
+#include "Forge/Geoemetry.hpp"
+#include "Forge/Magnets.hpp"
+#include "Forge/ObjectSet.hpp"
+#include "Forge/Selection.hpp"
+
+#include "Modules/ModuleForge.hpp"
+
+#include "ThirdParty/rapidjson/document.h"
+#include "ThirdParty/rapidjson/error/en.h"
+
+#include "Utils/Logger.hpp"
+
 #include <fstream>
 #include <memory>
+#include <sstream>
 #include <unordered_map>
+#include <vector>
 
 using namespace Forge;
 using namespace Blam;

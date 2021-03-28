@@ -1,7 +1,8 @@
-#include "VirtualKeyboard.hpp"
+#include "Patch.hpp"
 
-#include "../Blam/BlamInput.hpp"
-#include "../Patch.hpp"
+#include "Blam/BlamInput.hpp"
+
+#include "Patches/VirtualKeyboard.hpp"
 
 namespace
 {

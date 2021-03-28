@@ -52,4 +52,3 @@ namespace Blam::Math
 			
 	};
 }
-

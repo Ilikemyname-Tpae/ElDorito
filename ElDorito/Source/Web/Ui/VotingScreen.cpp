@@ -1,11 +1,15 @@
-#include "VotingScreen.hpp"
-#include "ScreenLayer.hpp"
-#include "../../Server/VotingPackets.hpp"
-#include "../../Patches/Network.hpp"
-#include "../../ThirdParty/rapidjson/writer.h"
-#include "../../ThirdParty/rapidjson/stringbuffer.h"
+#include "Patches/Input.hpp"
+#include "Patches/Network.hpp"
+
+#include "Server/VotingPackets.hpp"
+
+#include "ThirdParty/rapidjson/stringbuffer.h"
+#include "ThirdParty/rapidjson/writer.h"
+
+#include "Web/Ui/ScreenLayer.hpp"
+#include "Web/Ui/VotingScreen.hpp"
+
 #include <unordered_map>
-#include "../../Patches/Input.hpp"
 
 using namespace Server::Voting;
 

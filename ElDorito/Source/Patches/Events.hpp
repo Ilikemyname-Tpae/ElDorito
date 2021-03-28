@@ -1,5 +1,7 @@
 #pragma once
-#include "../Blam/BlamData.hpp"
+
+#include "Blam/BlamData.hpp"
+
 #include <functional>
 
 namespace Blam::Events

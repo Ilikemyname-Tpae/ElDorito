@@ -1,8 +1,10 @@
-#include "PrematchCamera.hpp"
-#include "../Blam/Math/RealVector3D.hpp"
-#include "../Blam/BlamObjects.hpp"
-#include "../Blam/BlamPlayers.hpp"
-#include "../Forge/ForgeUtil.hpp"
+#include "Blam/BlamObjects.hpp"
+#include "Blam/BlamPlayers.hpp"
+
+#include "Blam/Math/RealVector3D.hpp"
+
+#include "Forge/ForgeUtil.hpp"
+#include "Forge/PrematchCamera.hpp"
 
 namespace Forge::PrematchCamera
 {

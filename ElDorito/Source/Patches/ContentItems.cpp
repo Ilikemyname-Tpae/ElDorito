@@ -1,10 +1,11 @@
-#include "ContentItems.hpp"
+#include "ElDorito.hpp"
+#include "Patch.hpp"
 
-#include "../ElDorito.hpp"
-#include "../Patch.hpp"
-#include "../Blam/BlamData.hpp"
+#include "Blam/BlamData.hpp"
 
-#include "../ThirdParty/dirent.h"
+#include "Patches/ContentItems.hpp"
+
+#include "ThirdParty/dirent.h"
 
 #include <ShlObj.h>
 

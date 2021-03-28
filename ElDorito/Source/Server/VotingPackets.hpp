@@ -1,9 +1,11 @@
 #pragma once
 
+#include "Blam/BlamNetwork.hpp"
+
 #include <string>
 #include <bitset>
 #include <memory>
-#include "../Blam/BlamNetwork.hpp"
+
 namespace Server::Voting
 {
 	// Chat message types.

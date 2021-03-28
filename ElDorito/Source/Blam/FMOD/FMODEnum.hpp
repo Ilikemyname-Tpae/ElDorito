@@ -1,4 +1,5 @@
 #pragma once
+
 namespace FMOD {
 
 #define FMOD_CHANNEL_FREE -1;

@@ -186,15 +186,15 @@
 
 #pragma once
 
-#include "../Blam/BitStream.hpp"
-#include "../Blam/BlamNetwork.hpp"
+#include "Blam/BitStream.hpp"
+#include "Blam/BlamNetwork.hpp"
 
-#include <string>
 #include <cstdint>
-#include <memory>
-#include <vector>
-#include <type_traits>
 #include <limits>
+#include <memory>
+#include <string>
+#include <type_traits>
+#include <vector>
 
 namespace Patches::CustomPackets
 {

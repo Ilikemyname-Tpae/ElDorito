@@ -1,31 +1,41 @@
-#include "ModuleGame.hpp"
-#include <sstream>
-#include <fstream>
-#include <type_traits>
+#include "ElDorito.hpp"
+#include "Patch.hpp"
+
+#include "Blam/BlamGraphics.hpp"
+#include "Blam/BlamNetwork.hpp"
+#include "Blam/BlamTypes.hpp"
+
+#include "Blam/Tags/Camera/AreaScreenEffect.hpp"
+
+#include "Blam/Tags/Game/GameEngineSettings.hpp"
+
+#include "Blam/Tags/Scenario/Scenario.hpp"
+
+#include "Modules/ModuleGame.hpp"
+#include "Modules/ModuleServer.hpp"
+
+#include "Patches/Core.hpp"
+#include "Patches/Logging.hpp"
+#include "Patches/Maps.hpp"
+#include "Patches/Ui.hpp"
+
+#include "Utils/Logger.hpp"
+
+#include "ThirdParty/rapidjson/document.h"
+#include "ThirdParty/rapidjson/rapidjson.h"
+#include "ThirdParty/rapidjson/stringbuffer.h"
+#include "ThirdParty/rapidjson/writer.h"
+
+#include "Web/WebRenderer.hpp"
+#include "Web/Ui/ScreenLayer.hpp"
+
 #include <algorithm>
-#include "../ElDorito.hpp"
-#include "../Patches/Ui.hpp"
-#include "../Patches/Logging.hpp"
-#include "../Blam/BlamTypes.hpp"
-#include "../Blam/BlamNetwork.hpp"
-#include "../Blam/BlamGraphics.hpp"
-#include "../Blam/Tags/Game/GameEngineSettings.hpp"
-#include "../Blam/Tags/Scenario/Scenario.hpp"
-#include "../Patches/Core.hpp"
-#include "../Patches/Maps.hpp"
-#include "../Web/WebRenderer.hpp"
-#include "../Web/Ui/ScreenLayer.hpp"
-#include "ModuleServer.hpp"
-#include "../Patch.hpp"
-#include "boost/filesystem.hpp"
-#include "../Utils/Logger.hpp"
-#include "../ThirdParty/rapidjson/rapidjson.h"
-#include "../ThirdParty/rapidjson/document.h"
-#include "../ThirdParty/rapidjson/stringbuffer.h"
-#include "../ThirdParty/rapidjson/writer.h"
-#include <unordered_map>
 #include <codecvt>
-#include "../Blam/Tags/Camera/AreaScreenEffect.hpp"
+#include <fstream>
+#include <sstream>
+#include <type_traits>
+#include <unordered_map>
+#include <boost/filesystem.hpp>
 
 namespace
 {

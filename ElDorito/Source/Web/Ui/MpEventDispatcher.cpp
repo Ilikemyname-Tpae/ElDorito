@@ -1,11 +1,15 @@
-#include "MpEventDispatcher.hpp"
-#include "../../Blam/BlamEvents.hpp"
-#include "../../Patches/Events.hpp"
-#include "ScreenLayer.hpp"
-#include "../../ThirdParty/rapidjson/writer.h"
-#include "../../ThirdParty/rapidjson/stringbuffer.h"
-#include <unordered_map>
+#include "Blam/BlamEvents.hpp"
+
+#include "Patches/Events.hpp"
+
+#include "ThirdParty/rapidjson/stringbuffer.h"
+#include "ThirdParty/rapidjson/writer.h"
+
+#include "Web/Ui/MpEventDispatcher.hpp"
+#include "Web/Ui/ScreenLayer.hpp"
+
 #include <sstream>
+#include <unordered_map>
 
 using namespace Blam::Events;
 

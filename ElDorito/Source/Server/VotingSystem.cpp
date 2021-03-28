@@ -1,27 +1,32 @@
-#include <sstream>
-#include <iostream>
-#include <fstream>
-#include <set>
-#include <map>
+#include "ElDorito.hpp"
+#include "Patch.hpp"
+
+#include "Blam/BlamNetwork.hpp"
+
+#include "Modules/ModuleGame.hpp"
+#include "Modules/ModuleServer.hpp"
+
+#include "Patches/Network.hpp"
+
+#include "Server/VotingSystem.hpp"
+
+#include "ThirdParty/rapidjson/document.h"
+#include "ThirdParty/rapidjson/writer.h"
+
+#include "Utils/Logger.hpp"
+#include "Utils/Utils.hpp"
+
+#include <algorithm>
 #include <cstring>
+#include <fstream>
 #include <io.h>
 #include <iostream>
+#include <map>
+#include <set>
+#include <sstream>
 #include <stdio.h>
-#include <algorithm>
 #include <unordered_map>
-
-#include "../Utils/Logger.hpp"
-#include "../Utils/Utils.hpp"
-#include "VotingSystem.hpp"
-#include "boost/filesystem.hpp"
-#include "../patch.hpp"
-#include "../Modules/ModuleServer.hpp"
-#include "../Modules/ModuleGame.hpp"
-#include "../Patches/Network.hpp"
-#include "../Blam/BlamNetwork.hpp"
-#include "../ElDorito.hpp"
-#include "../ThirdParty/rapidjson/writer.h"
-#include "../ThirdParty/rapidjson/document.h"
+#include <boost/filesystem.hpp>
 
 namespace Server::Voting
 {
@@ -894,5 +899,3 @@ namespace Server::Voting
 		currentPlaylist = entirePlaylist;
 	}
 }
-
-

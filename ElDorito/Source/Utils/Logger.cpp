@@ -1,9 +1,11 @@
-#include "Logger.hpp"
-#include <iomanip>
+#include "Modules/ModuleGame.hpp"
+
+#include "Utils/Logger.hpp"
+
 #include <fstream>
+#include <iomanip>
 #include <sstream>
 #include <thread>
-#include "../Modules/ModuleGame.hpp"
 
 namespace Utils
 {

@@ -1,8 +1,12 @@
 #pragma once
+
+#include "Blam/Tags/Tags.hpp"
+
+#include "Blam/Tags/Game/GameVariant.hpp"
+
+#include "Blam/Text/StringID.hpp"
+
 #include <cstdint>
-#include "../Tags.hpp"
-#include "../../Text/StringID.hpp"
-#include "GameVariant.hpp"
 
 namespace Blam::Tags::Game
 {
@@ -16,4 +20,3 @@ namespace Blam::Tags::Game
 	};
 	TAG_STRUCT_SIZE_ASSERT(struct SandboxVariant, 0x64);
 }
-

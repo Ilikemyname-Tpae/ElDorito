@@ -1,7 +1,8 @@
 #pragma once
-#include <cstdint>
 
-#include "../BlamTypes.hpp"
+#include "Blam/BlamTypes.hpp"
+
+#include <cstdint>
 
 namespace Blam
 {

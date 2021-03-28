@@ -40,4 +40,3 @@ namespace Blam::Math
 		friend RealVector2D operator/(const float a, const RealVector2D &b);
 	};
 }
-

@@ -1,7 +1,10 @@
+#include "Blam/BlamNetwork.hpp"
+
+#include "Modules/ModuleBase.hpp"
+
+#include "Server/DedicatedServer.hpp"
+
 #include <WS2tcpip.h>
-#include "DedicatedServer.hpp"
-#include "../Modules/ModuleBase.hpp"
-#include "../Blam/BlamNetwork.hpp"
 
 namespace Server::DedicatedServer
 {

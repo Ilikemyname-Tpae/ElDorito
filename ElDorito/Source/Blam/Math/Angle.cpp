@@ -1,4 +1,4 @@
-#include "Angle.hpp"
+#include "Blam/Math/Angle.hpp"
 
 namespace Blam::Math
 {
@@ -143,4 +143,3 @@ namespace Blam::Math
 		return Angle(a / b.Value);
 	}
 }
-

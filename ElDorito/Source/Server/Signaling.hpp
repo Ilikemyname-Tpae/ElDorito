@@ -12,4 +12,3 @@ namespace Server::Signaling
 	std::string GetPassword();
 	uint16_t GetPort();
 }
-

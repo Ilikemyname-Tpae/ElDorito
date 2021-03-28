@@ -1,5 +1,3 @@
-
-
 namespace Patches::BottomlessClip
 {
 	void ApplyAll();

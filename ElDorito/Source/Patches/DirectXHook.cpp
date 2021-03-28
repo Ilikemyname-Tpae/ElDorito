@@ -1,11 +1,15 @@
-#include "DirectXHook.hpp"
+#include "ElDorito.hpp"
+#include "Patch.hpp"
+
+#include "Modules/ModuleGame.hpp"
+
+#include "Patches/DirectXHook.hpp"
+
+#include "Web/WebRenderer.hpp"
+
+#include <d3d9.h>
 #include <Windows.h>
 #include <detours.h>
-#include <d3d9.h>
-#include "../Web/WebRenderer.hpp"
-#include "../Patch.hpp"
-#include "../ElDorito.hpp"
-#include "../Modules/ModuleGame.hpp"
 
 // Disable warnings about possible data loss
 #pragma warning (disable : 4244)

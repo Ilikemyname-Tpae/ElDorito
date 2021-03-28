@@ -1,13 +1,17 @@
-#include "../Patch.hpp"
-#include "Audio.hpp"
-#include "../Modules/ModuleSettings.hpp"
-#include "../Blam/FMOD/FMODFunctions.hpp"
-#include "../Blam/FMOD/FMODEnum.hpp"
-#include "../Blam/Sounds/SoundDatum.hpp"
-#include "../Blam/Sounds/Functions.hpp"
-#include "../Blam/Sounds/SoundGlobals.hpp"
-#include <iostream>
+#include "Patch.hpp"
 
+#include "Blam/FMOD/FMODEnum.hpp"
+#include "Blam/FMOD/FMODFunctions.hpp"
+
+#include "Blam/Sounds/Functions.hpp"
+#include "Blam/Sounds/SoundDatum.hpp"
+#include "Blam/Sounds/SoundGlobals.hpp"
+
+#include "Modules/ModuleSettings.hpp"
+
+#include "Patches/Audio.hpp"
+
+#include <iostream>
 
 namespace
 {

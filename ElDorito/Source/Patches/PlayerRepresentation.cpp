@@ -1,14 +1,21 @@
+#include "Patch.hpp"
+
+#include "Blam/BlamData.hpp"
+#include "Blam/BlamNetwork.hpp"
+#include "Blam/BlamPlayers.hpp"
+
+#include "Blam/Cache/StringIdCache.hpp"
+
+#include "Blam/Tags/Game/Globals.hpp"
+
+#include "Modules/ModulePlayer.hpp"
+
+#include "Patches/PlayerPropertiesExtension.hpp"
+#include "Patches/PlayerRepresentation.hpp"
+
+#include "Utils/String.hpp"
+
 #include <cstdint>
-#include "../Blam/BlamData.hpp"
-#include "../Blam/BlamPlayers.hpp"
-#include "../Blam/Tags/Game/Globals.hpp"
-#include "PlayerRepresentation.hpp"
-#include "../Patches/PlayerPropertiesExtension.hpp"
-#include "../Blam/BlamNetwork.hpp"
-#include "../Modules/ModulePlayer.hpp"
-#include "../Blam/Cache/StringIdCache.hpp"
-#include "../Patch.hpp"
-#include "../Utils/String.hpp"
 
 namespace
 {

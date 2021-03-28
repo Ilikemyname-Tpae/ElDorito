@@ -1,24 +1,35 @@
-#include "WebForge.hpp"
-#include "../../Blam/Tags/TagInstance.hpp"
-#include "../../Blam/Tags/TagBlock.hpp"
-#include "../../Blam/Tags/Objects/Object.hpp"
-#include "../../Blam/Tags/TagReference.hpp"
-#include "../../Blam/Tags/Globals/ForgeGlobalsDefinition.hpp"
-#include "../../Blam/Math/RealVector3D.hpp"
-#include "../../Blam/BlamPlayers.hpp"
-#include "../../Blam/BlamObjects.hpp"
-#include "../../Blam/BlamTypes.hpp"
-#include "../../Patches/Input.hpp"
-#include "../../ThirdParty/rapidjson/writer.h"
-#include "../../ThirdParty/rapidjson/document.h"
-#include "../../ThirdParty/rapidjson/stringbuffer.h"
-#include "../../Forge/ForgeUtil.hpp"
-#include "ScreenLayer.hpp"
-#include "../../ElDorito.hpp"
-#include "../Bridge/WebRendererQuery.hpp"
-#include "../../Pointer.hpp"
-#include "../../Forge/Selection.hpp"
-#include "../../Forge/ObjectSet.hpp"
+#include "ElDorito.hpp"
+#include "Pointer.hpp"
+
+#include "Blam/BlamObjects.hpp"
+#include "Blam/BlamPlayers.hpp"
+#include "Blam/BlamTypes.hpp"
+
+#include "Blam/Math/RealVector3D.hpp"
+
+#include "Blam/Tags/TagBlock.hpp"
+#include "Blam/Tags/TagInstance.hpp"
+#include "Blam/Tags/TagReference.hpp"
+
+#include "Blam/Tags/Globals/ForgeGlobalsDefinition.hpp"
+
+#include "Blam/Tags/Objects/Object.hpp"
+
+#include "Forge/ForgeUtil.hpp"
+#include "Forge/ObjectSet.hpp"
+#include "Forge/Selection.hpp"
+
+#include "Patches/Input.hpp"
+
+#include "ThirdParty/rapidjson/document.h"
+#include "ThirdParty/rapidjson/stringbuffer.h"
+#include "ThirdParty/rapidjson/writer.h"
+
+#include "Web/Bridge/WebRendererQuery.hpp"
+
+#include "Web/Ui/ScreenLayer.hpp"
+#include "Web/Ui/WebForge.hpp"
+
 #include <unordered_map>
 
 using namespace Blam::Math;

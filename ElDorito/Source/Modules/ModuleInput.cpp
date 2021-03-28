@@ -1,14 +1,20 @@
-#include "ModuleInput.hpp"
-#include <sstream>
-#include <algorithm>
-#include "../ElDorito.hpp"
-#include "../Patches/Input.hpp"
-#include "../Console.hpp"
-#include "../Blam/BlamInput.hpp"
-#include "../Utils/NameValueTable.hpp"
+#include "ElDorito.hpp"
+#include "Console.hpp"
 
-#include "../ThirdParty/rapidjson/writer.h"
-#include "../ThirdParty/rapidjson/stringbuffer.h"
+#include "Blam/BlamInput.hpp"
+
+#include "Modules/ModuleInput.hpp"
+
+#include "Patches/Input.hpp"
+
+#include "Utils/NameValueTable.hpp"
+
+#include "ThirdParty/rapidjson/stringbuffer.h"
+#include "ThirdParty/rapidjson/writer.h"
+
+#include <algorithm>
+#include <sstream>
+
 using namespace Blam::Input;
 
 namespace

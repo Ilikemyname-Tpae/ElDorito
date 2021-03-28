@@ -1,13 +1,16 @@
-#include "VariableSynchronization.hpp"
+#include "Console.hpp"
 
+#include "Blam/BlamNetwork.hpp"
+
+#include "Patches/CustomPackets.hpp"
+
+#include "Server/VariableSynchronization.hpp"
+
+#include "Utils/Cryptography.hpp"
+
+#include <bitset>
 #include <cstdint>
 #include <unordered_map>
-#include <bitset>
-
-#include "../Console.hpp"
-#include "../Blam/BlamNetwork.hpp"
-#include "../Utils/Cryptography.hpp"
-#include "../Patches/CustomPackets.hpp"
 
 namespace
 {

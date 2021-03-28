@@ -1,19 +1,19 @@
 #pragma once
 
-#include "../Tags/Sounds/Sound/Sound.hpp"
-#include "..\Tags\Sounds\SoundClasses/SoundClasses.hpp"
-#include "..\Math\Random.hpp"
+#include "Blam/FMOD/FMODGlobals.hpp"
+#include "Blam/FMOD/FMODEnum.hpp"
+#include "Blam/FMOD/FMODFunctions.hpp"
 
-#include <math.h>
+#include "Blam/Math/Random.hpp"
+
+#include "Blam/Sounds/SoundCache.hpp"
+#include "Blam/Sounds/SoundGlobals.hpp"
+
+#include "Blam/Tags/Sounds/Sound/Sound.hpp"
+#include "Blam/Tags/Sounds/SoundClasses/SoundClasses.hpp"
+
 #include <iostream>
-
-#include "SoundCache.hpp"
-#include "SoundGlobals.hpp"
-
-#include "../FMOD/FMODGlobals.hpp"
-#include "../FMOD/FMODEnum.hpp"
-#include "../FMOD/FMODFunctions.hpp"
-
+#include <math.h>
 
 namespace Blam::Sounds
 {

@@ -1,4 +1,4 @@
-#include "RealPlane2D.hpp"
+#include "Blam/Math/RealPlane2D.hpp"
 
 namespace Blam::Math
 {
@@ -28,4 +28,3 @@ namespace Blam::Math
 		return !(*this == other);
 	}
 }
-

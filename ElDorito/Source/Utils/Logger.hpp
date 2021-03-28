@@ -1,9 +1,11 @@
 #pragma once
-#include "Singleton.hpp"
-#include <string>
-#include <boost/lockfree/queue.hpp>
+
+#include "Utils/Singleton.hpp"
+
 #include <mutex>
+#include <string>
 #include <windows.h>
+#include <boost/lockfree/queue.hpp>
 
 namespace Utils
 {

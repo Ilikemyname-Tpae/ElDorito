@@ -1,0 +1,136 @@
+generatetagnames tag_list.csv
+
+echo #####################################################################################################
+echo MS23 Armors Porting
+echo #####################################################################################################
+echo
+echo Air_assault (Scenery scen)
+converttag 0x00001530 tag_list.csv output.csv ".\maps\"
+echo Air_assault (Render_model mode)
+converttag 0x000015E4 tag_list.csv output.csv ".\maps\"
+echo Renegade (Scenery scen)
+converttag 0x00001532 tag_list.csv output.csv ".\maps\"
+echo Renegade (Render_model mode)
+converttag 0x0000161E tag_list.csv output.csv ".\maps\"
+echo Renegade (Render_model mode)
+converttag 0x0000154D tag_list.csv output.csv ".\maps\"
+echo Juggernaut (Scenery scen)
+converttag 0x00001537 tag_list.csv output.csv ".\maps\"
+echo Juggernaut (Render_model mode)
+converttag 0x00001695 tag_list.csv output.csv ".\maps\"
+echo Juggernaut (Render_model mode)
+converttag 0x00001552 tag_list.csv output.csv ".\maps\"
+echo Scanner (Scenery scen)
+converttag 0x0000153C tag_list.csv output.csv ".\maps\"
+echo Scanner (Render_model mode)
+converttag 0x0000170D tag_list.csv output.csv ".\maps\"
+echo Scanner (Render_model mode)
+converttag 0x00001555 tag_list.csv output.csv ".\maps\"
+echo Chameleon (Scenery scen)
+converttag 0x00001539 tag_list.csv output.csv ".\maps\"
+echo Chameleon (Render_model mode)
+converttag 0x000016CB tag_list.csv output.csv ".\maps\"
+echo Chameleon (Render_model mode)
+converttag 0x00001554 tag_list.csv output.csv ".\maps\"
+echo Stealth (Scenery scen)
+converttag 0x00001531 tag_list.csv output.csv ".\maps\"
+echo Stealth (Render_model mode)
+converttag 0x000015FE tag_list.csv output.csv ".\maps\"
+echo Stealth (Render_model mode)
+converttag 0x0000154C tag_list.csv output.csv ".\maps\"
+echo Omni (Scenery scen)
+converttag 0x00001546 tag_list.csv output.csv ".\maps\"
+echo Omni (Render_model mode)
+converttag 0x00001820 tag_list.csv output.csv ".\maps\"
+echo Orbital (Scenery scen)
+converttag 0x00001542 tag_list.csv output.csv ".\maps\"
+echo Orbital (Render_model mode)
+converttag 0x000017AF tag_list.csv output.csv ".\maps\"
+echo Orbital (Render_model mode)
+converttag 0x0000154B tag_list.csv output.csv ".\maps\"
+echo Shark (Scenery scen)
+converttag 0x00001536 tag_list.csv output.csv ".\maps\"
+echo Shark (Render_model mode)
+converttag 0x0000167C tag_list.csv output.csv ".\maps\"
+echo Shark (Render_model mode)
+converttag 0x00001551 tag_list.csv output.csv ".\maps\"
+echo Halberd (Scenery scen)
+converttag 0x0000153A tag_list.csv output.csv ".\maps\"
+echo Halberd (Render_model mode)
+converttag 0x000016E2 tag_list.csv output.csv ".\maps\"
+echo Hoplite (Scenery scen)
+converttag 0x0000153E tag_list.csv output.csv ".\maps\"
+echo Hoplite (Render_model mode)
+converttag 0x0000174E tag_list.csv output.csv ".\maps\"
+echo Ballista (Scenery scen)
+converttag 0x0000153F tag_list.csv output.csv ".\maps\"
+echo Ballista (Render_model mode)
+converttag 0x0000176A tag_list.csv output.csv ".\maps\"
+echo Cyclops (Scenery scen)
+converttag 0x0000153B tag_list.csv output.csv ".\maps\"
+echo Cyclops (Render_model mode)
+converttag 0x000016FA tag_list.csv output.csv ".\maps\"
+echo Demo (Scenery scen)
+converttag 0x00001541 tag_list.csv output.csv ".\maps\"
+echo Demo (Render_model mode)
+converttag 0x00001798 tag_list.csv output.csv ".\maps\"
+echo Dutch (Scenery scen)
+converttag 0x00001538 tag_list.csv output.csv ".\maps\"
+echo Dutch (Render_model mode)
+converttag 0x000016B4 tag_list.csv output.csv ".\maps\"
+echo Gladiator (Scenery scen)
+converttag 0x00001534 tag_list.csv output.csv ".\maps\"
+echo Gladiator (Render_model mode)
+converttag 0x0000164E tag_list.csv output.csv ".\maps\"
+echo Gungnir (Scenery scen)
+converttag 0x00001544 tag_list.csv output.csv ".\maps\"
+echo Gungnir (Render_model mode)
+converttag 0x000017ED tag_list.csv output.csv ".\maps\"
+echo Hammerhead (Scenery scen)
+converttag 0x00001545 tag_list.csv output.csv ".\maps\"
+echo Hammerhead (Render_model mode)
+converttag 0x00001809 tag_list.csv output.csv ".\maps\"
+echo Mac (Scenery scen)
+converttag 0x00001535 tag_list.csv output.csv ".\maps\"
+echo Mac (Render_model mode)
+converttag 0x00001665 tag_list.csv output.csv ".\maps\"
+echo Mercenary (Scenery scen)
+converttag 0x0000153D tag_list.csv output.csv ".\maps\"
+echo Mercenary (Render_model mode)
+converttag 0x00001724 tag_list.csv output.csv ".\maps\"
+echo Nihard (Scenery scen)
+converttag 0x00001533 tag_list.csv output.csv ".\maps\"
+echo Nihard (Render_model mode)
+converttag 0x00001637 tag_list.csv output.csv ".\maps\"
+echo Oracle (Scenery scen)
+converttag 0x00001547 tag_list.csv output.csv ".\maps\"
+echo Oracle (Render_model mode)
+converttag 0x0000155D tag_list.csv output.csv ".\maps\"
+echo Oracle (Render_model mode)
+converttag 0x0000183B tag_list.csv output.csv ".\maps\"
+echo Silverback (Scenery scen)
+converttag 0x00001548 tag_list.csv output.csv ".\maps\"
+echo Silverback (Render_model mode)
+converttag 0x0000184E tag_list.csv output.csv ".\maps\"
+echo Spectrum (Scenery scen)
+converttag 0x00001543 tag_list.csv output.csv ".\maps\"
+echo Spectrum (Render_model mode)
+converttag 0x000017D1 tag_list.csv output.csv ".\maps\"
+echo Strider (Scenery scen)
+converttag 0x00001540 tag_list.csv output.csv ".\maps\"
+echo Strider (Render_model mode)
+converttag 0x00001786 tag_list.csv output.csv ".\maps\"
+echo Tankmode_human (Scenery scen)
+converttag 0x0000154A tag_list.csv output.csv ".\maps\"
+echo Tankmode_human (Render_model mode)
+converttag 0x00001888 tag_list.csv output.csv ".\maps\"
+echo Widow_maker (Scenery scen)
+converttag 0x00001549 tag_list.csv output.csv ".\maps\"
+echo Widow_maker (Render_model mode)
+converttag 0x0000186B tag_list.csv output.csv ".\maps\"
+
+echo #####################################################################################################
+echo
+
+dumplog FourthPartLogs.log
+exit

@@ -2,8 +2,8 @@
 
 #include "Pointer.hpp"
 
-#include <initializer_list>
 #include <array>
+#include <initializer_list>
 #include <vector>
 
 // Todo: Stray away from vectors, use initializer list to stick to compile-time constant data

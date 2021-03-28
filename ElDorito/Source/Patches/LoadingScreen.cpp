@@ -1,5 +1,6 @@
-#include "LoadingScreen.hpp"
-#include "../Patch.hpp"
+#include "Patch.hpp"
+
+#include "Patches/LoadingScreen.hpp"
 
 using namespace Patches::LoadingScreen;
 

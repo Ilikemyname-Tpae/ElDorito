@@ -1,7 +1,9 @@
-#include "ModuleDebug.hpp"
-#include "../ElDorito.hpp"
-#include "../Patch.hpp"
-#include "../Utils/Logger.hpp"
+#include "ElDorito.hpp"
+#include "Patch.hpp"
+
+#include "Modules/ModuleDebug.hpp"
+
+#include "Utils/Logger.hpp"
 
 namespace
 {

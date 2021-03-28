@@ -1,4 +1,4 @@
-#include "SoundCache.hpp"
+#include "Blam/Sounds/SoundCache.hpp"
 
 namespace Blam::SoundCache {
 

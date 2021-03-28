@@ -1,5 +1,6 @@
 #pragma once
-#include "../WebRendererQuery.hpp"
+
+#include "Web/Bridge/WebRendererQuery.hpp"
 
 namespace Anvil::Client::Rendering::Bridge::ClientFunctions
 {

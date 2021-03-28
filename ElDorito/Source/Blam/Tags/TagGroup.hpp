@@ -1,6 +1,8 @@
 #pragma once
-#include "Blam\Tags\Tag.hpp"
-#include "Definitions\StructDefinition.hpp"
+
+#include "Blam/Tags/Tag.hpp"
+
+#include "Definitions/StructDefinition.hpp"
 
 namespace Blam::Tags
 {

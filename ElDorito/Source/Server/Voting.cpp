@@ -1,15 +1,19 @@
-#include <sstream>
+#include "ElDorito.hpp"
+
+#include "Modules/ModuleGame.hpp"
+
+#include "Patches/Core.hpp"
+#include "Patches/Network.hpp"
+
+#include "Server/Voting.hpp"
+#include "Server/VotingSystem.hpp"
+
+#include "Utils/Utils.hpp"
+
 #include <io.h>
 #include <iostream>
-
-#include "../Utils/Utils.hpp"
-#include "Voting.hpp"
-#include "VotingSystem.hpp"
-#include "boost/filesystem.hpp"
-#include "../Modules/ModuleGame.hpp"
-#include "../Patches/Network.hpp"
-#include "../Patches/Core.hpp"
-#include "../ElDorito.hpp"
+#include <sstream>
+#include <boost/filesystem.hpp>
 
 namespace Server::Voting
 {

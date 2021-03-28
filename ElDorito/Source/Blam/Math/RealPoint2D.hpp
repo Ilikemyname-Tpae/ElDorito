@@ -40,4 +40,3 @@ namespace Blam::Math
 		friend RealPoint2D operator/(const float a, const RealPoint2D &b);
 	};
 }
-

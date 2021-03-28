@@ -1,8 +1,12 @@
-#include "PostgameController.hpp"
+#include "Modules/ModuleServer.hpp"
+
+#include "Patches/Network.hpp"
+
+#include "Server/PostgameController.hpp"
+
+#include "Utils/Logger.hpp"
+
 #include <ctime>
-#include "../Patches/Network.hpp"
-#include "../Modules/ModuleServer.hpp"
-#include "../Utils/Logger.hpp"
 
 namespace
 {

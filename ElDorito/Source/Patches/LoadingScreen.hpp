@@ -1,7 +1,8 @@
 #pragma once
-#include <string>
+
 #include <cstdint>
 #include <memory>
+#include <string>
 
 namespace Patches::LoadingScreen
 {

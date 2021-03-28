@@ -1,6 +1,8 @@
 #pragma once
+
+#include "Blam/Padding.hpp"
+
 #include <cstdint>
-#include "../Padding.hpp"
 
 namespace Blam::Math
 {
@@ -18,4 +20,3 @@ namespace Blam::Math
 		bool operator!=(const ColorRGB &other) const;
 	};
 }
-

@@ -1,4 +1,4 @@
-#include "RealPoint3D.hpp"
+#include "Blam/Math/RealPoint3D.hpp"
 
 namespace Blam::Math
 {
@@ -161,4 +161,3 @@ namespace Blam::Math
 		return RealPoint3D(a / b.X, a / b.Y, a / b.Z);
 	}
 }
-

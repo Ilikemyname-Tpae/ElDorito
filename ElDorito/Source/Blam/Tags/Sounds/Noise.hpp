@@ -1,4 +1,5 @@
 #pragma once
+
 #include <cstdint>
 
 namespace Blam::Tags::Sounds
@@ -12,4 +13,3 @@ namespace Blam::Tags::Sounds
 		Quiet
 	};
 }
-

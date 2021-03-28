@@ -1,8 +1,11 @@
 #pragma once
 
-#include "ModuleBase.hpp"
-#include "../Patch.hpp"
-#include "../Blam/BlamTypes.hpp"
+#include "Patch.hpp"
+
+#include "Blam/BlamTypes.hpp"
+
+#include "Modules/ModuleBase.hpp"
+
 #include <unordered_map>
 
 namespace Modules

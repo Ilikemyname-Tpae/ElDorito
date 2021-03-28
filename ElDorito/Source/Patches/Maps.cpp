@@ -1,6 +1,8 @@
-#include "Maps.hpp"
-#include "../Patch.hpp"
-#include "../Blam/BlamTypes.hpp"
+#include "Patch.hpp"
+
+#include "Blam/BlamTypes.hpp"
+
+#include "Patches/Maps.hpp"
 
 namespace
 {

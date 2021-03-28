@@ -1,21 +1,31 @@
-#include "Equipment.hpp"
-#include "../Pointer.hpp"
-#include "../Blam/BlamTypes.hpp"
-#include "../Blam/BlamPlayers.hpp"
-#include "../Blam/BlamData.hpp"
-#include "../Blam/BlamObjects.hpp"
-#include "../Blam/BlamTime.hpp"
-#include "../Blam/Math/RealVector3D.hpp"
-#include "../Blam/Tags/TagBlock.hpp"
-#include "../Blam/Tags/TagInstance.hpp"
-#include "../Blam/Tags/Items/Item.hpp"
-#include "../Blam/Tags/Game/MultiplayerGlobals.hpp"
-#include "../Blam/Tags/Items/DefinitionEquipment.hpp"
-#include "../Blam/Memory/TlsData.hpp"
-#include "../ElDorito.hpp"
-#include "../Patch.hpp"
-#include <cstdint>
+#include "ElDorito.hpp"
+#include "Patch.hpp"
+#include "Pointer.hpp"
+
+
+#include "Blam/BlamData.hpp"
+#include "Blam/BlamObjects.hpp"
+#include "Blam/BlamPlayers.hpp"
+#include "Blam/BlamTime.hpp"
+#include "Blam/BlamTypes.hpp"
+
+#include "Blam/Math/RealVector3D.hpp"
+
+#include "Blam/Memory/TlsData.hpp"
+
+#include "Blam/Tags/TagBlock.hpp"
+#include "Blam/Tags/TagInstance.hpp"
+
+
+#include "Blam/Tags/Game/MultiplayerGlobals.hpp"
+
+#include "Blam/Tags/Items/DefinitionEquipment.hpp"
+#include "Blam/Tags/Items/Item.hpp"
+
+#include "Patches/Equipment.hpp"
+
 #include <cassert>
+#include <cstdint>
 #include <unordered_map>
 
 namespace

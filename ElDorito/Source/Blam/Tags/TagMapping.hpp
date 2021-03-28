@@ -1,5 +1,6 @@
 #pragma once
-#include "TagFunction.hpp"
+
+#include "Blam/Tags/TagFunction.hpp"
 
 namespace Blam::Tags
 {

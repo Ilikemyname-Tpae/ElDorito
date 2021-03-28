@@ -1,10 +1,12 @@
 #pragma once
+
+#include "Blam/BlamData.hpp"
+
+#include "Blam/Tags/Sounds/Sound/Sound.hpp"
+
 #include <stdint.h>
-#include "../Tags/Sounds/Sound/Sound.hpp"
-#include "../BlamData.hpp"
 
-
-//using namespace Blam::Tags::Sounds;
+using namespace Blam::Tags::Sounds;
 
 namespace Blam {
 

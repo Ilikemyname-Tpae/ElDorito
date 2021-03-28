@@ -1,0 +1,256 @@
+".\maps\tags.dat"
+
+echo #####################################################################################################
+echo Halo 3 Maps Porting
+echo #####################################################################################################
+echo
+nametag 0x000027AE globals\global_shield_impact_settings ".\maps\tag_list.csv"
+savetagnames
+echo Armory
+opencachefile ".\ElDewritoUpdate\Datas\Halo3Tags\armory.map"
+porttag recursive usenull audio !elites forgepalette squads scripts shadertest matchshaders rmhg ms30 print levels\dlc\armory\armory.scnr
+exit
+echo Chillout
+opencachefile ".\ElDewritoUpdate\Datas\Halo3Tags\chillout.map"
+porttag recursive usenull audio !elites forgepalette squads scripts shadertest matchshaders rmhg ms30 print levels\dlc\chillout\chillout.scnr
+exit
+echo Construct
+opencachefile ".\ElDewritoUpdate\Datas\Halo3Tags\construct.map"
+porttag recursive usenull audio !elites forgepalette squads scripts shadertest matchshaders rmhg ms30 print levels\multi\construct\construct.scnr
+exit
+echo Descent
+opencachefile ".\ElDewritoUpdate\Datas\Halo3Tags\descent.map"
+porttag recursive usenull audio !elites forgepalette squads scripts shadertest matchshaders rmhg ms30 print levels\dlc\descent\descent.scnr
+exit
+echo Docks
+opencachefile ".\ElDewritoUpdate\Datas\Halo3Tags\docks.map"
+porttag recursive usenull audio !elites forgepalette squads scripts shadertest matchshaders rmhg ms30 print levels\dlc\docks\docks.scnr
+exit
+echo Fortress
+opencachefile ".\ElDewritoUpdate\Datas\Halo3Tags\fortress.map"
+porttag recursive usenull audio !elites forgepalette squads scripts shadertest matchshaders rmhg ms30 print levels\dlc\fortress\fortress.scnr
+exit
+echo Ghosttown
+opencachefile ".\ElDewritoUpdate\Datas\Halo3Tags\ghosttown.map"
+porttag recursive usenull audio !elites forgepalette squads scripts shadertest matchshaders rmhg ms30 print levels\dlc\ghosttown\ghosttown.scnr
+exit
+echo Isolation
+opencachefile ".\ElDewritoUpdate\Datas\Halo3Tags\isolation.map"
+porttag recursive usenull audio !elites forgepalette squads scripts shadertest matchshaders rmhg ms30 print levels\multi\isolation\isolation.scnr
+exit
+echo Lockout
+opencachefile ".\ElDewritoUpdate\Datas\Halo3Tags\lockout.map"
+porttag recursive usenull audio !elites forgepalette squads scripts shadertest matchshaders rmhg ms30 print levels\dlc\lockout\lockout.scnr
+exit
+echo Midship
+opencachefile ".\ElDewritoUpdate\Datas\Halo3Tags\midship.map"
+porttag recursive usenull audio !elites forgepalette squads scripts shadertest matchshaders rmhg ms30 print levels\dlc\midship\midship.scnr
+exit
+echo Salvation
+opencachefile ".\ElDewritoUpdate\Datas\Halo3Tags\salvation.map"
+porttag recursive usenull audio !elites forgepalette squads scripts shadertest matchshaders rmhg ms30 print levels\multi\salvation\salvation.scnr
+exit
+echo Sandbox
+opencachefile ".\ElDewritoUpdate\Datas\Halo3Tags\sandbox.map"
+porttag recursive usenull audio !elites forgepalette squads scripts shadertest matchshaders rmhg ms30 print levels\dlc\sandbox\sandbox.scnr
+exit
+echo Sidewinder
+opencachefile ".\ElDewritoUpdate\Datas\Halo3Tags\sidewinder.map"
+porttag recursive usenull audio !elites forgepalette squads scripts shadertest matchshaders rmhg ms30 print levels\dlc\sidewinder\sidewinder.scnr
+exit
+echo Snowbound
+opencachefile ".\ElDewritoUpdate\Datas\Halo3Tags\snowbound.map"
+porttag recursive usenull audio !elites forgepalette squads scripts shadertest matchshaders rmhg ms30 print levels\multi\snowbound\snowbound.scnr
+exit
+echo Spacecamp
+opencachefile ".\ElDewritoUpdate\Datas\Halo3Tags\spacecamp.map"
+porttag recursive usenull audio !elites forgepalette squads scripts shadertest matchshaders rmhg ms30 print levels\dlc\spacecamp\spacecamp.scnr
+exit
+echo Warehouse
+opencachefile ".\ElDewritoUpdate\Datas\Halo3Tags\warehouse.map"
+porttag recursive usenull audio !elites forgepalette squads scripts shadertest matchshaders rmhg ms30 print levels\dlc\warehouse\warehouse.scnr
+exit
+
+edittag 0x00002E8A
+copyforgepalette levels\dlc\armory\armory.scnr
+copyforgepalette levels\dlc\chillout\chillout.scnr
+copyforgepalette levels\multi\construct\construct.scnr
+copyforgepalette levels\dlc\descent\descent.scnr
+copyforgepalette levels\dlc\docks\docks.scnr
+copyforgepalette levels\dlc\fortress\fortress.scnr
+copyforgepalette levels\dlc\ghosttown\ghosttown.scnr
+copyforgepalette levels\multi\isolation\isolation.scnr
+copyforgepalette levels\dlc\lockout\lockout.scnr
+copyforgepalette levels\dlc\midship\midship.scnr
+copyforgepalette levels\multi\salvation\salvation.scnr
+copyforgepalette levels\dlc\sandbox\sandbox.scnr
+copyforgepalette levels\dlc\sidewinder\sidewinder.scnr
+copyforgepalette levels\multi\snowbound\snowbound.scnr
+copyforgepalette levels\dlc\spacecamp\spacecamp.scnr
+copyforgepalette levels\dlc\warehouse\warehouse.scnr
+exit
+
+updatemapfiles ".\ElDewritoUpdate\Datas\Halo3Tags\info"
+
+echo #####################################################################################################
+echo
+
+echo #####################################################################################################
+echo Maps Patches
+echo #####################################################################################################
+echo
+echo Midship patch
+nametag 0x00006E87 0x00006E87
+savetagnames
+opencachefile ".\ElDewritoUpdate\Datas\Halo3Tags\midship.map"
+porttag replace recursive !audio !elites usenull forgepalette squads scripts shadertest matchshaders rmhg ms30 print levels\dlc\midship\shaders\midship_glass_int.rmsh
+exit
+edittag levels\dlc\midship\shaders\midship_glass_int.rmsh
+copyblockelements shaderproperties
+exit
+edittag 0x00006E87
+removeblockelements shaderproperties
+pasteblockelements shaderproperties
+savetagchanges
+exit
+deletetag levels\dlc\midship\shaders\midship_glass_int.rmsh
+nametag 0x00006E87 levels\dlc\midship\shaders\midship_glass_int
+savetagnames
+
+echo Sandbox patch
+edittag 0x000070D0
+editblock shaderproperties[0]
+addblockelements unknown
+savetagchanges
+exitto tags
+edittag 0x000070D3
+editblock shaderproperties[0]
+addblockelements unknown
+savetagchanges
+exitto tags
+edittag 0x000071AF
+setargument blend_map 500
+savetagchanges
+exit
+edittag 0x00007136
+setargument blend_map 500
+savetagchanges
+exit
+edittag 0x00007126
+setargument blend_map 500
+savetagchanges
+exit
+edittag 0x000070FB
+setargument blend_map 500
+savetagchanges
+exit
+edittag 0x0000712F
+setargument blend_map 500
+savetagchanges
+exit
+edittag 0x00007091
+setargument blend_map 500
+savetagchanges
+exit
+nametag 0x00007091 0x00007091
+nametag 0x00007098 0x00007098
+savetagnames
+opencachefile ".\ElDewritoUpdate\Datas\Halo3Tags\sandbox.map"
+porttag replace recursive !audio !elites usenull forgepalette squads scripts shadertest matchshaders rmhg ms30 print levels\dlc\sandbox\shaders\sand_tiling.rmtr
+porttag replace recursive !audio !elites usenull forgepalette squads scripts shadertest matchshaders rmhg ms30 print levels\dlc\sandbox\shaders\sand_tiling02.rmtr
+exit
+edittag levels\dlc\sandbox\shaders\sand_tiling.rmtr
+copyblockelements shaderproperties
+exit
+edittag 0x00007091
+removeblockelements shaderproperties
+pasteblockelements shaderproperties
+savetagchanges
+exit
+edittag levels\dlc\sandbox\shaders\sand_tiling02.rmtr
+copyblockelements shaderproperties
+exit
+edittag 0x00007098
+removeblockelements shaderproperties
+pasteblockelements shaderproperties
+savetagchanges
+exit
+deletetag levels\dlc\sandbox\shaders\sand_tiling.rmtr
+deletetag levels\dlc\sandbox\shaders\sand_tiling02.rmtr
+nametag 0x00007091 levels\dlc\sandbox\shaders\sand_tiling
+nametag 0x00007098 levels\dlc\sandbox\shaders\sand_tiling02
+savetagnames
+
+echo Sidewinder patch
+nametag 0x00007345 0x00007345
+nametag 0x00007342 0x00007342
+savetagnames
+opencachefile ".\ElDewritoUpdate\Datas\Halo3Tags\sidewinder.map"
+porttag replace recursive !audio !elites usenull forgepalette squads scripts shadertest matchshaders rmhg ms30 print levels\dlc\sidewinder\shaders\justin\sw_icepond_glow.rmhg
+porttag replace recursive !audio !elites usenull forgepalette squads scripts shadertest matchshaders rmhg ms30 print levels\dlc\sidewinder\shaders\justin\sw_icepond_glow_shadowed.rmhg
+exit
+edittag levels\dlc\sidewinder\shaders\justin\sw_icepond_glow.rmhg
+copyblockelements shaderproperties
+exit
+edittag 0x00007345
+removeblockelements shaderproperties
+pasteblockelements shaderproperties
+savetagchanges
+exit
+edittag levels\dlc\sidewinder\shaders\justin\sw_icepond_glow_shadowed.rmhg
+copyblockelements shaderproperties
+exit
+edittag 0x00007342
+removeblockelements shaderproperties
+pasteblockelements shaderproperties
+savetagchanges
+exit
+deletetag levels\dlc\sidewinder\shaders\justin\sw_icepond_glow.rmhg
+deletetag levels\dlc\sidewinder\shaders\justin\sw_icepond_glow_shadowed.rmhg
+nametag 0x00007345 levels\dlc\sidewinder\shaders\justin\sw_icepond_glow
+nametag 0x00007342 levels\dlc\sidewinder\shaders\justin\sw_icepond_glow_shadowed
+savetagnames
+
+echo Snowbound patch
+edittag 0x00007540
+editblock shaderproperties 0
+editblock shadermaps 0
+setfield bitmap 0x0000756A
+savetagchanges
+exitto tags
+edittag 0x000075D2
+editblock shaderproperties 0
+setfield template 0x00003206
+setargument bump_detail_coefficient 5 5 5 5
+setargument specular_coefficient 0.2 0.2 0.2 0.2
+setargument analytical_specular_contribution 100 100 100 100
+setargument roughness 0.2 0.2 0.2 0.2
+setargument area_specular_contribution 0.1 0.1 0.1 0.1
+setargument specular_tint 0.5 0.3 0.1 1
+savetagchanges
+exitto tags
+
+echo Spacecamp patch
+edittag 0x00007845
+editblock shaderproperties 0
+setfield template 0x000024E1
+savetagchanges
+exitto tags
+edittag 0x0000783F
+editblock shaderproperties 0
+setfield template 0x000024E1
+savetagchanges
+exitto tags
+
+echo Edge patch
+edittag 0x00003DDA
+editblock skyreferences 0
+setfield nameindex -1
+savetagchanges
+exitto tags
+
+echo #####################################################################################################
+echo
+
+dumplog ThirdPartLogs.log
+exitto tags

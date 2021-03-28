@@ -14,4 +14,3 @@ namespace Forge::SelectionRenderer
 	void SetEnabled(bool enabled);
 	void SetRendererType(RendererImplementationType type);
 }
-

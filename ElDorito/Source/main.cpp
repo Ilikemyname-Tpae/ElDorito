@@ -1,8 +1,10 @@
-#include <windows.h>
-#include <IPTypes.h> // for proxy
-#include "Utils/VersionInfo.hpp"
 #include "ElDorito.hpp"
 #include "ElPatches.hpp"
+
+#include "Utils/VersionInfo.hpp"
+
+#include <IPTypes.h> // for proxy
+#include <windows.h>
 
 /*LONG WINAPI TopLevelExceptionHandler(unsigned int code, EXCEPTION_POINTERS *pExceptionInfo)
 {

@@ -1,8 +1,11 @@
-#include "Sprint.hpp"
-#include "../Patch.hpp"
-#include "../ElDorito.hpp"
-#include "../Blam/BlamTypes.hpp"
-#include "../Blam/Memory/TlsData.hpp"
+#include "ElDorito.hpp"
+#include "Patch.hpp"
+
+#include "Blam/BlamTypes.hpp"
+
+#include "Blam/Memory/TlsData.hpp"
+
+#include "Patches/Sprint.hpp"
 
 namespace
 {

@@ -1,15 +1,14 @@
-#include "String.h"
+#include "Utils/String.hpp"
 
 // STL
-#include <string>
 #include <algorithm>
-#include <vector>
-#include <sstream>
-#include <functional>
 #include <cctype>
 #include <codecvt>
+#include <functional>
 #include <iomanip>
-
+#include <sstream>
+#include <string>
+#include <vector>
 #include <openssl\evp.h>
 #include <boost/algorithm/string/trim.hpp>
 

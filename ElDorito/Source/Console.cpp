@@ -1,7 +1,9 @@
 #include "Console.hpp"
-#include "Utils/String.hpp"
-#include <vector>
+
 #include "Utils/Logger.hpp"
+#include "Utils/String.hpp"
+
+#include <vector>
 
 using namespace Console;
 

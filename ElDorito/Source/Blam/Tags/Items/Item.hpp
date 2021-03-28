@@ -1,8 +1,12 @@
 #pragma once
-#include "../../Math/Bounds.hpp"
-#include "../Tags.hpp"
-#include "../../Text/StringID.hpp"
-#include "../Objects/Object.hpp"
+
+#include "Blam/Math/Bounds.hpp"
+
+#include "Blam/Tags/Tags.hpp"
+
+#include "Blam/Tags/Objects/Object.hpp"
+
+#include "Blam/Text/StringID.hpp"
 
 namespace Blam::Tags::Items
 {
@@ -68,4 +72,3 @@ namespace Blam::Tags::Items
 	};
 	TAG_STRUCT_SIZE_ASSERT(Item, 0x1D4);
 }
-

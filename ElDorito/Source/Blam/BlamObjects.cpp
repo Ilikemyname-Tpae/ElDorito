@@ -1,5 +1,6 @@
-#include "BlamObjects.hpp"
-#include "../ElDorito.hpp"
+#include "ElDorito.hpp"
+
+#include "Blam/BlamObjects.hpp"
 
 namespace Blam::Objects
 {

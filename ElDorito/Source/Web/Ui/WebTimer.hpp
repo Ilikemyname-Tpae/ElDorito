@@ -1,4 +1,5 @@
 #pragma once
+
 #include <string>
 
 namespace Web::Ui::WebTimer

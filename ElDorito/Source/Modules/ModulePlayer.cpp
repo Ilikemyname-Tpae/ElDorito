@@ -1,13 +1,17 @@
-#include <ctime>
-#include "ModulePlayer.hpp"
-#include "../ElDorito.hpp"
-#include "../Game/Armor.hpp"
-#include "../Patches/PlayerRepresentation.hpp"
-#include "../Patches/PlayerUid.hpp"
-#include "../Patches/Tweaks.hpp"
-#include "../Patches/Ui.hpp"
-#include <iomanip>
+#include "ElDorito.hpp"
+
+#include "Game/Armor.hpp"
+
+#include "Modules/ModulePlayer.hpp"
+
+#include "Patches/PlayerRepresentation.hpp"
+#include "Patches/PlayerUid.hpp"
+#include "Patches/Tweaks.hpp"
+#include "Patches/Ui.hpp"
+
 #include <algorithm>
+#include <ctime>
+#include <iomanip>
 #include <unordered_set>
 
 namespace

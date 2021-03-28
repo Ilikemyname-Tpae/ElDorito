@@ -1,0 +1,63 @@
+".\maps\tags.dat"
+
+echo #####################################################################################################
+echo Halo 3 Maps Porting
+echo #####################################################################################################
+echo
+nametag 0x000027AE globals\global_shield_impact_settings ".\maps\tag_list.csv"
+savetagnames
+echo 005_intro
+opencachefile "C:\Users\HP\Desktop\HaloOnlineGameFiles\ElDewritoUpdate\Datas\Halo3Tags\005_intro.map"
+porttag replace recursive usenull audio !elites !forgepalette squads scripts shadertest matchshaders rmhg ms30 print levels\solo\005_intro\005_intro.scnr
+exit
+echo 010_jungle
+opencachefile "C:\Users\HP\Desktop\HaloOnlineGameFiles\ElDewritoUpdate\Datas\Halo3Tags\010_jungle.map"
+porttag replace recursive usenull audio !elites !forgepalette squads scripts shadertest matchshaders rmhg ms30 print levels\solo\010_jungle\010_jungle.scnr
+exit
+echo 020_base
+opencachefile "C:\Users\HP\Desktop\HaloOnlineGameFiles\ElDewritoUpdate\Datas\Halo3Tags\020_base.map"
+porttag replace recursive usenull audio !elites !forgepalette squads scripts shadertest matchshaders rmhg ms30 print levels\solo\020_base\020_base.scnr
+exit
+echo 030_outskirts
+opencachefile "C:\Users\HP\Desktop\HaloOnlineGameFiles\ElDewritoUpdate\Datas\Halo3Tags\030_outskirts.map"
+porttag replace recursive usenull audio !elites !forgepalette squads scripts shadertest matchshaders rmhg ms30 print levels\solo\030_outskirts\030_outskirts.scnr
+exit
+echo 040_voi
+opencachefile "C:\Users\HP\Desktop\HaloOnlineGameFiles\ElDewritoUpdate\Datas\Halo3Tags\040_voi.map"
+porttag replace recursive usenull audio !elites !forgepalette squads scripts shadertest matchshaders rmhg ms30 print levels\solo\040_voi\040_voi.scnr
+exit
+echo 050_floodvoi
+opencachefile "C:\Users\HP\Desktop\HaloOnlineGameFiles\ElDewritoUpdate\Datas\Halo3Tags\050_floodvoi.map"
+porttag replace recursive usenull audio !elites !forgepalette squads scripts shadertest matchshaders rmhg ms30 print levels\solo\050_floodvoi\050_floodvoi.scnr
+exit
+echo 070_waste
+opencachefile "C:\Users\HP\Desktop\HaloOnlineGameFiles\ElDewritoUpdate\Datas\Halo3Tags\070_waste.map"
+porttag replace recursive usenull audio !elites !forgepalette squads scripts shadertest matchshaders rmhg ms30 print levels\solo\070_waste\070_waste.scnr
+exit
+echo 100_citadel
+opencachefile "C:\Users\HP\Desktop\HaloOnlineGameFiles\ElDewritoUpdate\Datas\Halo3Tags\100_citadel.map"
+porttag replace recursive usenull audio !elites !forgepalette squads scripts shadertest matchshaders rmhg ms30 print levels\solo\100_citadel\100_citadel.scnr
+exit
+echo 110_hc
+opencachefile "C:\Users\HP\Desktop\HaloOnlineGameFiles\ElDewritoUpdate\Datas\Halo3Tags\110_hc.map"
+porttag replace recursive usenull audio !elites !forgepalette squads scripts shadertest matchshaders rmhg ms30 print levels\solo\110_hc\110_hc.scnr
+exit
+echo 120_halo
+opencachefile "C:\Users\HP\Desktop\HaloOnlineGameFiles\ElDewritoUpdate\Datas\Halo3Tags\120_halo.map"
+porttag replace recursive usenull audio !elites !forgepalette squads scripts shadertest matchshaders rmhg ms30 print levels\solo\120_halo\120_halo.scnr
+exit
+echo 130_epilogue
+opencachefile "C:\Users\HP\Desktop\HaloOnlineGameFiles\ElDewritoUpdate\Datas\Halo3Tags\130_epilogue.map"
+porttag replace recursive usenull audio !elites !forgepalette squads scripts shadertest matchshaders rmhg ms30 print levels\solo\130_epilogue\130_epilogue.scnr
+exit
+echo Mainmenu
+opencachefile "C:\Users\HP\Desktop\HaloOnlineGameFiles\ElDewritoUpdate\Datas\Halo3Tags\mainmenu.map"
+porttag replace recursive usenull audio !elites !forgepalette squads scripts shadertest matchshaders rmhg ms30 print levels\ui\mainmenu\mainmenu.scnr
+exit
+
+updatemapfiles "C:\Users\HP\Desktop\HaloOnlineGameFiles\ElDewritoUpdate\Datas\Halo3Tags\info"
+echo #####################################################################################################
+echo
+
+dumplog FirstPartLogs.log
+exit

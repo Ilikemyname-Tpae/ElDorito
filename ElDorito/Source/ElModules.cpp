@@ -1,24 +1,26 @@
-#include "ElModules.hpp"
-#include <sstream>
-#include <iostream>
-#include <fstream>
 #include "ElDorito.hpp"
-#include "Modules/ModuleGame.hpp"
-#include "Modules/ModulePlayer.hpp"
-#include "Modules/ModuleWeapon.hpp"
-#include "Modules/ModuleServer.hpp"
-#include "Modules/ModuleSettings.hpp"
+#include "ElModules.hpp"
+
 #include "Modules/ModuleCamera.hpp"
-#include "Modules/ModuleInput.hpp"
-#include "Modules/ModuleTime.hpp"
-#include "Modules/ModuleGraphics.hpp"
-#include "Modules/ModuleUPnP.hpp"
+#include "Modules/ModuleCampaign.hpp"
 #include "Modules/ModuleDebug.hpp"
 #include "Modules/ModuleForge.hpp"
-#include "Modules/ModuleVoIP.hpp"
+#include "Modules/ModuleGame.hpp"
+#include "Modules/ModuleGraphics.hpp"
+#include "Modules/ModuleInput.hpp"
+#include "Modules/ModulePlayer.hpp"
+#include "Modules/ModuleServer.hpp"
+#include "Modules/ModuleSettings.hpp"
+#include "Modules/ModuleTime.hpp"
 #include "Modules/ModuleTweaks.hpp"
-#include "Modules/ModuleCampaign.hpp"
+#include "Modules/ModuleUPnP.hpp"
+#include "Modules/ModuleVoIP.hpp"
+#include "Modules/ModuleWeapon.hpp"
+
+#include <fstream>
+#include <iostream>
 #include <ShlObj.h>
+#include <sstream>
 
 namespace
 {

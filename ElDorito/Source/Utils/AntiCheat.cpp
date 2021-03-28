@@ -1,11 +1,12 @@
+#include "CommandMap.hpp"
+
+#include "Blam/BlamNetwork.hpp"
+
 #include <chrono>
+#include <Psapi.h>
 #include <tchar.h>
 #include <thread>
 #include <Windows.h>
-#include <Psapi.h>
-
-#include "../Blam/BlamNetwork.hpp"
-#include "../CommandMap.hpp"
 
 namespace Utils::AntiCheat
 {

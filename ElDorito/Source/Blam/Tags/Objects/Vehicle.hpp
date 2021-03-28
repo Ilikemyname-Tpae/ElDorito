@@ -1,8 +1,12 @@
 #pragma once
-#include "../../Math/RealPoint3D.hpp"
-#include "../../Text/StringID.hpp"
-#include "../Tags.hpp"
-#include "Unit.hpp"
+
+#include "Blam/Math/RealPoint3D.hpp"
+
+#include "Blam/Tags/Tags.hpp"
+
+#include "Blam/Tags/Objects/Unit.hpp"
+
+#include "Blam/Text/StringID.hpp"
 
 namespace Blam::Tags::Objects
 {

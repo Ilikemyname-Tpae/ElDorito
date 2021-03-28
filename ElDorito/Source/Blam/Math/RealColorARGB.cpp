@@ -1,4 +1,4 @@
-#include "RealColorARGB.hpp"
+#include "Blam/Math/RealColorARGB.hpp"
 
 namespace Blam::Math
 {
@@ -30,4 +30,3 @@ namespace Blam::Math
 		return &Alpha;
 	}
 }
-

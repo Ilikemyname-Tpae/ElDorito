@@ -1,5 +1,6 @@
-#include "Blam\Tags\Camera\AreaScreenEffect.hpp"
-#include "Definitions\EnumDefinition.hpp"
+#include "Blam/Tags/Camera/AreaScreenEffect.hpp"
+
+#include "Definitions/EnumDefinition.hpp"
 
 using namespace Blam::Tags::Camera;
 using namespace Definitions;

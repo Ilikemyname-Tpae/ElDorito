@@ -1,9 +1,10 @@
-#include "Debug.hpp"
-#include <vector>
+#include "Utils/Debug.hpp"
+#include "Utils/Logger.hpp"
+
 #include <cstdint>
-#include <windows.h>
-#include "Logger.hpp"
 #include <iphlpapi.h>
+#include <vector>
+#include <windows.h>
 
 namespace Utils
 {

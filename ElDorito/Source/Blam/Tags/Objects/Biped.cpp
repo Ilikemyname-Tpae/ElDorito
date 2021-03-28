@@ -1,5 +1,6 @@
-#include "Blam\Tags\Objects\Biped.hpp"
-#include "Definitions\EnumDefinition.hpp"
+#include "Blam/Tags/Objects/Biped.hpp"
+
+#include "Definitions/EnumDefinition.hpp"
 
 using namespace Blam::Tags::Objects;
 using namespace Definitions;

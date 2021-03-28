@@ -1,28 +1,32 @@
-
 // Disable warnings about using "safe" C functions
 #pragma warning (disable : 4996)
 
-#include "Signaling.hpp"
+#include "Blam/BlamEvents.hpp"
+
+#include "Modules/ModuleServer.hpp"
+#include "Modules/ModuleUPnP.hpp"
+
+#include "Patches/Core.hpp"
+#include "Patches/CustomPackets.hpp"
+#include "Patches/Events.hpp"
+#include "Patches/Network.hpp"
+
+#include "Server/Signaling.hpp"
+
+#include "ThirdParty/rapidjson/document.h"
+#include "ThirdParty/rapidjson/stringbuffer.h"
+#include "ThirdParty/rapidjson/writer.h"
+
+#include "Utils/Cryptography.hpp"
+#include "Utils/Utils.hpp"
+#include "Utils/WebSocket.hpp"
+
+#include "Web/Ui/ScreenLayer.hpp"
 
 #include <algorithm>
 #include <map>
-#include <websocketpp/server.hpp>
 #include <Windows.h>
-
-#include "../Patches/CustomPackets.hpp"
-#include "../Patches/Network.hpp"
-#include "../ThirdParty/rapidjson/document.h"
-#include "../ThirdParty/rapidjson/stringbuffer.h"
-#include "../ThirdParty/rapidjson/writer.h"
-#include "../Utils/WebSocket.hpp"
-#include "../Utils/Cryptography.hpp"
-#include "../Blam/BlamEvents.hpp"
-#include "../Patches/Events.hpp"
-#include "../Utils/Utils.hpp"
-#include "../Patches/Core.hpp"
-#include "../Modules/ModuleServer.hpp"
-#include "../Modules/ModuleUPnP.hpp"
-#include "../Web/Ui/ScreenLayer.hpp"
+#include <websocketpp/server.hpp>
 
 #define PASSWORD_LENGTH (8)
 

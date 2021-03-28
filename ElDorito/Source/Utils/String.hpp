@@ -1,9 +1,9 @@
 #pragma once
 
+#include <iterator>
+#include <sstream>
 #include <string>
 #include <vector>
-#include <sstream>
-#include <iterator>
 
 namespace Utils::String
 {

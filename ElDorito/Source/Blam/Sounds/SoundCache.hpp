@@ -1,14 +1,17 @@
 #pragma once
-#include "..\Tags\Sounds\Sound\Sound.hpp"
-#include "..\Tags\Sounds\SoundClasses\SoundClasses.hpp"
-#include "..\Math\Random.hpp"
+
+#include "Blam/Math/Random.hpp"
+
+#include "Blam/Memory/Align.hpp"
+#include "Blam/Memory/DatumHandle.hpp"
+
+#include "Blam/Sounds/SoundDatum.hpp"
+#include "Blam/Sounds/SoundGlobals.hpp"
+
+#include "Blam/Tags/Sounds/Sound/Sound.hpp"
+#include "Blam/Tags/Sounds/SoundClasses/SoundClasses.hpp"
+
 #include <math.h>
-#include "..\Memory\Align.hpp"
-#include "..\Sounds\SoundDatum.hpp"
-#include "..\Memory\DatumHandle.hpp"
-#include "SoundGlobals.hpp"
-
-
 
 namespace Blam::SoundCache {
 

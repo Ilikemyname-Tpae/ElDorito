@@ -1,9 +1,10 @@
 #include "CommandMap.hpp"
+#include "ElDorito.hpp"
+
+#include "Blam/BlamNetwork.hpp"
+
 #include <algorithm>
 #include <sstream>
-#include "ElDorito.hpp"
-#include "Blam\BlamNetwork.hpp"
-
 
 namespace Modules
 {

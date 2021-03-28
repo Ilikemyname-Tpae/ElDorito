@@ -1,4 +1,5 @@
-#include "Rectangle.hpp"
+#include "Utils/Rectangle.hpp"
+
 #include <algorithm>
 
 using namespace Utils;
