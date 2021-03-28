@@ -1,6 +1,7 @@
+#include "App.hpp"
+
 #include <Windows.h>
 #include <include/cef_app.h>
-#include "App.hpp"
 
 // Disable warnings about missing PDB files
 #pragma warning(disable:4099)

@@ -7,67 +7,67 @@ echo
 nametag 0x000027AE globals\global_shield_impact_settings ".\maps\tag_list.csv"
 savetagnames
 echo Armory
-opencachefile ".\ElDewritoUpdate\Datas\Halo3Tags\armory.map"
+opencachefile ".\UnofficialElDewritoUpdate\Data\Halo3Tags\armory.map"
 porttag recursive usenull audio !elites forgepalette squads scripts shadertest matchshaders rmhg ms30 print levels\dlc\armory\armory.scnr
 exit
 echo Chillout
-opencachefile ".\ElDewritoUpdate\Datas\Halo3Tags\chillout.map"
+opencachefile ".\UnofficialElDewritoUpdate\Data\Halo3Tags\chillout.map"
 porttag recursive usenull audio !elites forgepalette squads scripts shadertest matchshaders rmhg ms30 print levels\dlc\chillout\chillout.scnr
 exit
 echo Construct
-opencachefile ".\ElDewritoUpdate\Datas\Halo3Tags\construct.map"
+opencachefile ".\UnofficialElDewritoUpdate\Data\Halo3Tags\construct.map"
 porttag recursive usenull audio !elites forgepalette squads scripts shadertest matchshaders rmhg ms30 print levels\multi\construct\construct.scnr
 exit
 echo Descent
-opencachefile ".\ElDewritoUpdate\Datas\Halo3Tags\descent.map"
+opencachefile ".\UnofficialElDewritoUpdate\Data\Halo3Tags\descent.map"
 porttag recursive usenull audio !elites forgepalette squads scripts shadertest matchshaders rmhg ms30 print levels\dlc\descent\descent.scnr
 exit
 echo Docks
-opencachefile ".\ElDewritoUpdate\Datas\Halo3Tags\docks.map"
+opencachefile ".\UnofficialElDewritoUpdate\Data\Halo3Tags\docks.map"
 porttag recursive usenull audio !elites forgepalette squads scripts shadertest matchshaders rmhg ms30 print levels\dlc\docks\docks.scnr
 exit
 echo Fortress
-opencachefile ".\ElDewritoUpdate\Datas\Halo3Tags\fortress.map"
+opencachefile ".\UnofficialElDewritoUpdate\Data\Halo3Tags\fortress.map"
 porttag recursive usenull audio !elites forgepalette squads scripts shadertest matchshaders rmhg ms30 print levels\dlc\fortress\fortress.scnr
 exit
 echo Ghosttown
-opencachefile ".\ElDewritoUpdate\Datas\Halo3Tags\ghosttown.map"
+opencachefile ".\UnofficialElDewritoUpdate\Data\Halo3Tags\ghosttown.map"
 porttag recursive usenull audio !elites forgepalette squads scripts shadertest matchshaders rmhg ms30 print levels\dlc\ghosttown\ghosttown.scnr
 exit
 echo Isolation
-opencachefile ".\ElDewritoUpdate\Datas\Halo3Tags\isolation.map"
+opencachefile ".\UnofficialElDewritoUpdate\Data\Halo3Tags\isolation.map"
 porttag recursive usenull audio !elites forgepalette squads scripts shadertest matchshaders rmhg ms30 print levels\multi\isolation\isolation.scnr
 exit
 echo Lockout
-opencachefile ".\ElDewritoUpdate\Datas\Halo3Tags\lockout.map"
+opencachefile ".\UnofficialElDewritoUpdate\Data\Halo3Tags\lockout.map"
 porttag recursive usenull audio !elites forgepalette squads scripts shadertest matchshaders rmhg ms30 print levels\dlc\lockout\lockout.scnr
 exit
 echo Midship
-opencachefile ".\ElDewritoUpdate\Datas\Halo3Tags\midship.map"
+opencachefile ".\UnofficialElDewritoUpdate\Data\Halo3Tags\midship.map"
 porttag recursive usenull audio !elites forgepalette squads scripts shadertest matchshaders rmhg ms30 print levels\dlc\midship\midship.scnr
 exit
 echo Salvation
-opencachefile ".\ElDewritoUpdate\Datas\Halo3Tags\salvation.map"
+opencachefile ".\UnofficialElDewritoUpdate\Data\Halo3Tags\salvation.map"
 porttag recursive usenull audio !elites forgepalette squads scripts shadertest matchshaders rmhg ms30 print levels\multi\salvation\salvation.scnr
 exit
 echo Sandbox
-opencachefile ".\ElDewritoUpdate\Datas\Halo3Tags\sandbox.map"
+opencachefile ".\UnofficialElDewritoUpdate\Data\Halo3Tags\sandbox.map"
 porttag recursive usenull audio !elites forgepalette squads scripts shadertest matchshaders rmhg ms30 print levels\dlc\sandbox\sandbox.scnr
 exit
 echo Sidewinder
-opencachefile ".\ElDewritoUpdate\Datas\Halo3Tags\sidewinder.map"
+opencachefile ".\UnofficialElDewritoUpdate\Data\Halo3Tags\sidewinder.map"
 porttag recursive usenull audio !elites forgepalette squads scripts shadertest matchshaders rmhg ms30 print levels\dlc\sidewinder\sidewinder.scnr
 exit
 echo Snowbound
-opencachefile ".\ElDewritoUpdate\Datas\Halo3Tags\snowbound.map"
+opencachefile ".\UnofficialElDewritoUpdate\Data\Halo3Tags\snowbound.map"
 porttag recursive usenull audio !elites forgepalette squads scripts shadertest matchshaders rmhg ms30 print levels\multi\snowbound\snowbound.scnr
 exit
 echo Spacecamp
-opencachefile ".\ElDewritoUpdate\Datas\Halo3Tags\spacecamp.map"
+opencachefile ".\UnofficialElDewritoUpdate\Data\Halo3Tags\spacecamp.map"
 porttag recursive usenull audio !elites forgepalette squads scripts shadertest matchshaders rmhg ms30 print levels\dlc\spacecamp\spacecamp.scnr
 exit
 echo Warehouse
-opencachefile ".\ElDewritoUpdate\Datas\Halo3Tags\warehouse.map"
+opencachefile ".\UnofficialElDewritoUpdate\Data\Halo3Tags\warehouse.map"
 porttag recursive usenull audio !elites forgepalette squads scripts shadertest matchshaders rmhg ms30 print levels\dlc\warehouse\warehouse.scnr
 exit
 
@@ -90,7 +90,7 @@ copyforgepalette levels\dlc\spacecamp\spacecamp.scnr
 copyforgepalette levels\dlc\warehouse\warehouse.scnr
 exit
 
-updatemapfiles ".\ElDewritoUpdate\Datas\Halo3Tags\info"
+updatemapfiles ".\UnofficialElDewritoUpdate\Data\Halo3Tags\info"
 
 echo #####################################################################################################
 echo
@@ -102,7 +102,7 @@ echo
 echo Midship patch
 nametag 0x00006E87 0x00006E87
 savetagnames
-opencachefile ".\ElDewritoUpdate\Datas\Halo3Tags\midship.map"
+opencachefile ".\UnofficialElDewritoUpdate\Data\Halo3Tags\midship.map"
 porttag replace recursive !audio !elites usenull forgepalette squads scripts shadertest matchshaders rmhg ms30 print levels\dlc\midship\shaders\midship_glass_int.rmsh
 exit
 edittag levels\dlc\midship\shaders\midship_glass_int.rmsh
@@ -155,7 +155,7 @@ exit
 nametag 0x00007091 0x00007091
 nametag 0x00007098 0x00007098
 savetagnames
-opencachefile ".\ElDewritoUpdate\Datas\Halo3Tags\sandbox.map"
+opencachefile ".\UnofficialElDewritoUpdate\Data\Halo3Tags\sandbox.map"
 porttag replace recursive !audio !elites usenull forgepalette squads scripts shadertest matchshaders rmhg ms30 print levels\dlc\sandbox\shaders\sand_tiling.rmtr
 porttag replace recursive !audio !elites usenull forgepalette squads scripts shadertest matchshaders rmhg ms30 print levels\dlc\sandbox\shaders\sand_tiling02.rmtr
 exit
@@ -185,7 +185,7 @@ echo Sidewinder patch
 nametag 0x00007345 0x00007345
 nametag 0x00007342 0x00007342
 savetagnames
-opencachefile ".\ElDewritoUpdate\Datas\Halo3Tags\sidewinder.map"
+opencachefile ".\UnofficialElDewritoUpdate\Data\Halo3Tags\sidewinder.map"
 porttag replace recursive !audio !elites usenull forgepalette squads scripts shadertest matchshaders rmhg ms30 print levels\dlc\sidewinder\shaders\justin\sw_icepond_glow.rmhg
 porttag replace recursive !audio !elites usenull forgepalette squads scripts shadertest matchshaders rmhg ms30 print levels\dlc\sidewinder\shaders\justin\sw_icepond_glow_shadowed.rmhg
 exit
