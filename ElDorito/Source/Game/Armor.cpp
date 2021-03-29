@@ -85,14 +85,23 @@ namespace
 		if (boost::regex_match(playerVars.VarColorsHolo->ValueString.c_str(), what, expression))
 			out->Colors[ColorIndices::Holo] = std::stoi(playerVars.VarColorsHolo->ValueString.substr(1), 0, 16);
 
-		out->Armor[ArmorIndices::Helmet] = GetArmorIndex(playerVars.VarArmorHelmet->ValueString, helmetIndices);
-		out->Armor[ArmorIndices::Chest] = GetArmorIndex(playerVars.VarArmorChest->ValueString, chestIndices);
-		out->Armor[ArmorIndices::RightShoulder] = GetArmorIndex(playerVars.VarArmorRightShoulder->ValueString, rightShoulderIndices);
-		out->Armor[ArmorIndices::LeftShoulder] = GetArmorIndex(playerVars.VarArmorLeftShoulder->ValueString, leftShoulderIndices);
-		out->Armor[ArmorIndices::Arms] = GetArmorIndex(playerVars.VarArmorArms->ValueString, armsIndices);
-		out->Armor[ArmorIndices::Legs] = GetArmorIndex(playerVars.VarArmorLegs->ValueString, legsIndices);
-		out->Armor[ArmorIndices::Pelvis] = GetArmorIndex(playerVars.VarArmorPelvis->ValueString, pelvisIndices);
-		out->Armor[ArmorIndices::UpperBody] = GetArmorIndex(playerVars.VarArmorUpperBody->ValueString, upperBodyIndices);
+		out->Armor[ArmorIndices::Helmet] = GetArmorIndex(playerVars.VarArmorSpartanHelmet->ValueString, helmetIndices);
+		out->Armor[ArmorIndices::Chest] = GetArmorIndex(playerVars.VarArmorSpartanChest->ValueString, chestIndices);
+		out->Armor[ArmorIndices::RightShoulder] = GetArmorIndex(playerVars.VarArmorSpartanRightShoulder->ValueString, rightShoulderIndices);
+		out->Armor[ArmorIndices::LeftShoulder] = GetArmorIndex(playerVars.VarArmorSpartanLeftShoulder->ValueString, leftShoulderIndices);
+		out->Armor[ArmorIndices::Arms] = GetArmorIndex(playerVars.VarArmorSpartanArms->ValueString, armsIndices);
+		out->Armor[ArmorIndices::Legs] = GetArmorIndex(playerVars.VarArmorSpartanLegs->ValueString, legsIndices);
+		out->Armor[ArmorIndices::Pelvis] = GetArmorIndex(playerVars.VarArmorSpartanPelvis->ValueString, pelvisIndices);
+		out->Armor[ArmorIndices::UpperBody] = GetArmorIndex(playerVars.VarArmorSpartanUpperBody->ValueString, upperBodyIndices);
+
+		out->Armor[ArmorIndices::Helmet] = GetArmorIndex(playerVars.VarArmorEliteHelmet->ValueString, helmetIndices);
+		out->Armor[ArmorIndices::Chest] = GetArmorIndex(playerVars.VarArmorEliteChest->ValueString, chestIndices);
+		out->Armor[ArmorIndices::RightShoulder] = GetArmorIndex(playerVars.VarArmorEliteRightShoulder->ValueString, rightShoulderIndices);
+		out->Armor[ArmorIndices::LeftShoulder] = GetArmorIndex(playerVars.VarArmorEliteLeftShoulder->ValueString, leftShoulderIndices);
+		out->Armor[ArmorIndices::Arms] = GetArmorIndex(playerVars.VarArmorEliteArms->ValueString, armsIndices);
+		out->Armor[ArmorIndices::Legs] = GetArmorIndex(playerVars.VarArmorEliteLegs->ValueString, legsIndices);
+		out->Armor[ArmorIndices::Pelvis] = GetArmorIndex(playerVars.VarArmorElitePelvis->ValueString, pelvisIndices);
+		out->Armor[ArmorIndices::UpperBody] = GetArmorIndex(playerVars.VarArmorEliteUpperBody->ValueString, upperBodyIndices);
 	}
 
 	uint8_t ValidateArmorPiece(const std::map<std::string, uint8_t> &indices, const uint8_t index)

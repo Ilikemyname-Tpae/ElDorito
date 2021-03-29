@@ -50,17 +50,25 @@ var h3ColorArray = [
 var settingsToLoad = [
     ['playerName', 'Player.Name','Name','', 2],
     ['serviceTag', 'Player.ServiceTag','Service Tag','', 3],
-    ['armorHelmet', 'Player.Armor.Helmet','Helmet','The thing that goes on your head.', 2],
-    ['armorRightShoulder', 'Player.Armor.RightShoulder','Right Shoulder','Right there on that shoulder.', 4],
-    ['armorLeftShoulder', 'Player.Armor.LeftShoulder','Left Shoulder','The only shoulder that\'s left.', 5],
-	['armorChest', 'Player.Armor.Chest','Body','From arm to arm.', 3],
-	['armorArms', 'Player.Armor.Arms','Arms','Arms.', 3],
-	['armorPelvis', 'Player.Armor.Pelvis','Pelvis','Pelvis.', 3],
-	['armorLegs', 'Player.Armor.Legs','Legs','Legs.', 3],
-	['armorUpperBody', 'Player.Armor.UpperBody','Upper Body','Upper Body.', 3],
+    ['armorSpartanHelmet', 'Player.Armor.Helmet','Helmet','The thing that goes on your head.', 2],
+    ['armorSpartanRightShoulder', 'Player.Armor.RightShoulder','Right Shoulder','Right there on that shoulder.', 4],
+    ['armorSpartanLeftShoulder', 'Player.Armor.LeftShoulder','Left Shoulder','The only shoulder that\'s left.', 5],
+	['armorSpartanChest', 'Player.Armor.Chest','Body','From arm to arm.', 3],
+	['armorSpartanArms', 'Player.Armor.Arms','Arms','Arms.', 3],
+	['armorSpartanPelvis', 'Player.Armor.Pelvis','Pelvis','Pelvis.', 3],
+	['armorSpartanLegs', 'Player.Armor.Legs','Legs','Legs.', 3],
+	['armorSpartanUpperBody', 'Player.Armor.UpperBody','Upper Body','Upper Body.', 3],
+	['armorEliteHelmet', 'Player.Armor.Helmet','Helmet','The thing that goes on your head.', 2],
+    ['armorEliteRightShoulder', 'Player.Armor.RightShoulder','Right Shoulder','Right there on that shoulder.', 4],
+    ['armorEliteLeftShoulder', 'Player.Armor.LeftShoulder','Left Shoulder','The only shoulder that\'s left.', 5],
+	['armorEliteChest', 'Player.Armor.Chest','Body','From arm to arm.', 3],
+	['armorEliteArms', 'Player.Armor.Arms','Arms','Arms.', 3],
+	['armorElitePelvis', 'Player.Armor.Pelvis','Pelvis','Pelvis.', 3],
+	['armorEliteLegs', 'Player.Armor.Legs','Legs','Legs.', 3],
+	['armorEliteUpperBody', 'Player.Armor.UpperBody','Upper Body','Upper Body.', 3],
 	['playerRep', 'Player.Representation', 'Player Representation','', 6],
     ['gender', 'Player.Gender','Gender','', 6],
-	['renderWeapon', 'Player.RenderWeapon','Podium Weapon','Podium Weapon.',3],
+	['renderWeapon', 'Player.RenderWeapon','Render Weapon','The weapon to display on the player\'s render mannequin.',3],
     ['colorsPrimary', 'Player.Colors.Primary','Armor Primary','The primary armor color will serve you in individual combat but will be overwritten in team scenarios.',0],
     ['colorsSecondary', 'Player.Colors.Secondary','Armor Secondary','The secondary armor color accents your primary color and will be overwritten in team scenarios.',1],
     ['colorsVisor', 'Player.Colors.Visor','Armor Detail','The armor detail color preserves your individual identity in all multiplayer scenarios.',2],
@@ -318,7 +326,26 @@ $(document).ready(function(){
     });
 	$("#randomColors").hide();
 	SetupEmblems(false, true, true);
+	
+	while(playerRep == 'spartan') {
+		if(getComputedStyle(eliteArmory).display != "none"){
+			eliteArmory.style.display = "none";
+		}
 		
+		if(getComputedStyle(spartanArmory).display == "none"){
+			spartanArmory.style.display = "block";
+		}
+	}
+	
+	while(playerRep == 'elite') {
+		if(getComputedStyle(spartanArmory).display != "none"){
+			spartanArmory.style.display = "none";
+		}
+		if(getComputedStyle(eliteArmory).display == "none"){
+			eliteArmory.style.display = "block";
+		}
+	}
+	
 	dew.command('Weapon.List', {}).then(function(response){
         var weaponList = response.split('\n');
         var weaponArray = [];
@@ -331,21 +358,22 @@ $(document).ready(function(){
         }
         setRadioList('renderWeapon', weaponArray, true);
     });
-    setRadioList('armorHelmet', armorSpartanHelmetList, true);
-    setRadioList('armorRightShoulder', armorSpartanShoulderList, true);
-    setRadioList('armorLeftShoulder', armorSpartanShoulderList, true);
-	setRadioList('armorChest', armorSpartanChestList, true);
-    setRadioList('armorArms', armorSpartanArmList, true);
-	setRadioList('armorPelvis', armorSpartanPelvisList, true);
-    setRadioList('armorLegs', armorSpartanLegList, true);
-	setRadioList('armorHelmet', armorEliteHelmetList, true);
-    setRadioList('armorRightShoulder', armorEliteShoulderList, true);
-    setRadioList('armorLeftShoulder', armorEliteShoulderList, true);
-	setRadioList('armorChest', armorEliteChestList, true);
-    setRadioList('armorArms', armorEliteArmList, true);
-	setRadioList('armorPelvis', armorElitePelvisList, true);
-    setRadioList('armorLegs', armorEliteLegList, true);
-	setRadioList('armorUpperBody', armorEliteUpperBodyList, true);
+    setRadioList('armorSpartanHelmet', armorSpartanHelmetList, true);
+    setRadioList('armorSpartanRightShoulder', armorSpartanShoulderList, true);
+    setRadioList('armorSpartanLeftShoulder', armorSpartanShoulderList, true);
+	setRadioList('armorSpartanChest', armorSpartanChestList, true);
+    setRadioList('armorSpartanArms', armorSpartanArmList, true);
+	setRadioList('armorSpartanPelvis', armorSpartanPelvisList, true);
+    setRadioList('armorSpartanLegs', armorSpartanLegList, true);
+	setRadioList('armorSpartanUpperBody', armorSpartanUpperBodyList, true);
+	setRadioList('armorEliteHelmet', armorEliteHelmetList, true);
+    setRadioList('armorEliteRightShoulder', armorEliteShoulderList, true);
+    setRadioList('armorEliteLeftShoulder', armorEliteShoulderList, true);
+	setRadioList('armorEliteChest', armorEliteChestList, true);
+    setRadioList('armorEliteArms', armorEliteArmList, true);
+	setRadioList('armorElitePelvis', armorElitePelvisList, true);
+    setRadioList('armorEliteLegs', armorEliteLegList, true);
+	setRadioList('armorEliteUpperBody', armorEliteUpperBodyList, true);
     setRadioList('playerRep', playerRepList, true);
     setRadioList('gender', genderList, true);
     setRadioList('colorsPrimary', h3ColorArray);
@@ -818,8 +846,13 @@ function setRadioList(ElementID, ArrayVar,hasImage){
 }
 
 function randomArmor(){
-    var armorArray = ['armorHelmet','armorRightShoulder','armorLeftShoulder','armorChest','armorArms','armorPelvis','armorLegs','armorUpperBody'];
-    for(var i = 0; i < armorArray.length; i++) {
+	if (playerRep == 'spartan') {	
+		var armorArray = ['armorSpartanHelmet','armorSpartanRightShoulder','armorSpartanLeftShoulder','armorSpartanChest','armorSpartanArms','armorSpartanPelvis','armorSpartanLegs','armorSpartanUpperBody'];
+    }
+	else {
+		var armorArray = ['armorEliteHelmet','armorEliteRightShoulder','armorEliteLeftShoulder','armorEliteChest','armorEliteArms','armorElitePelvis','armorEliteLegs','armorEliteUpperBody'];
+	}
+	for(var i = 0; i < armorArray.length; i++) {
         var $options = $('#'+armorArray[i]).find('input'),
             random = ~~(Math.random() * $options.length);
         $options.eq(random).prop('checked', true);
