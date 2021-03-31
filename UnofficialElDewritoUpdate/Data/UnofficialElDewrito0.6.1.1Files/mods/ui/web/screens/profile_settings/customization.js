@@ -251,6 +251,8 @@ var armorSpartanLegList = [
 	['Strider','strider','Strider'],
 	['Widow Maker','widow_maker','Widow Maker']
 ];
+var armorSpartanUpperBodyList = [
+];
 var armorEliteHelmetList = [
 ];
 var armorEliteShoulderList = [
@@ -264,6 +266,8 @@ var armorElitePelvisList = [
 var armorEliteLegList = [
 ];
 var armorEliteUpperBodyList = [
+];
+var weaponArray = [
 ];
 var playerRepList = [
     ['Spartan','spartan','Spartans are members of a series of United Nations Space Command projects designed to create physically, genetically, technologically, and mentally superior supersoldiers as special fighting units.'],
@@ -296,16 +300,16 @@ $(document).ready(function(){
         if(e.keyCode == 192 || e.keyCode == 223){
             dew.show('console');
         }
-        if(e.keyCode == 37 && !(activePage.startsWith('#page3 #color') || activePage.startsWith('#page4 #color'))){ //Left
+        if(e.keyCode == 37 && !(activePage.startsWith('#page2 #color') || activePage.startsWith('#page3 #color'))){ //Left
             leftNav();
         }
-        if(e.keyCode == 38 && !(activePage.startsWith('#page3 #color') || activePage.startsWith('#page4 #color'))){ //Up
+        if(e.keyCode == 38 && !(activePage.startsWith('#page2 #color') || activePage.startsWith('#page3 #color'))){ //Up
             upNav();
         }
-        if(e.keyCode == 39 && !(activePage.startsWith('#page3 #color') || activePage.startsWith('#page4 #color'))){ //Right
+        if(e.keyCode == 39 && !(activePage.startsWith('#page2 #color') || activePage.startsWith('#page3 #color'))){ //Right
             rightNav();
         }
-        if(e.keyCode == 40 && !(activePage.startsWith('#page3 #color') || activePage.startsWith('#page4 #color'))){ //Down
+        if(e.keyCode == 40 && !(activePage.startsWith('#page2 #color') || activePage.startsWith('#page3 #color'))){ //Down
             downNav();
         }
         if(!activePage.endsWith('inputBox')){
@@ -358,7 +362,8 @@ $(document).ready(function(){
         }
         setRadioList('renderWeapon', weaponArray, true);
     });
-    setRadioList('armorSpartanHelmet', armorSpartanHelmetList, true);
+	
+	setRadioList('armorSpartanHelmet', armorSpartanHelmetList, true);
     setRadioList('armorSpartanRightShoulder', armorSpartanShoulderList, true);
     setRadioList('armorSpartanLeftShoulder', armorSpartanShoulderList, true);
 	setRadioList('armorSpartanChest', armorSpartanChestList, true);
@@ -467,16 +472,16 @@ $(document).ready(function(){
                 }
             }
             if(e.data.X == 1){
-                if(activePage.startsWith('#page4')){
+                if(activePage.startsWith('#page3')){
 					toggleIcon();
 				}
             }
 			if(e.data.Y == 1){
-				if(activePage.startsWith('#page2')){
+				if(activePage.startsWith('#page1')){
                     randomArmor();
-                }else if(activePage.startsWith('#page3')){
+                }else if(activePage.startsWith('#page2')){
                     randomColors();
-                }else if(activePage.startsWith('#page4')){
+                }else if(activePage.startsWith('#page3')){
 					randomEmblem();
 				}
 			}
@@ -502,7 +507,7 @@ $(document).ready(function(){
                 nextPage();
             }
             if(e.data.LeftTrigger != 0){
-				if(activePage.startsWith('#page4')){
+				if(activePage.startsWith('#page3')){
 					if(!hasPressed){
 						if(itemNumber - 5 >= 0) {
 							itemNumber -= 5;
@@ -520,7 +525,7 @@ $(document).ready(function(){
                 }
             }else
             if(e.data.RightTrigger != 0){
-				if(activePage.startsWith('#page4')){
+				if(activePage.startsWith('#page3')){
 					if(!hasPressed){
 						if(itemNumber+5 <= $(activePage + ' label:visible').length-1){
 							itemNumber += 5;
@@ -852,13 +857,13 @@ function randomArmor(){
 	else {
 		var armorArray = ['armorEliteHelmet','armorEliteRightShoulder','armorEliteLeftShoulder','armorEliteChest','armorEliteArms','armorElitePelvis','armorEliteLegs','armorEliteUpperBody'];
 	}
-	for(var i = 0; i < armorArray.length; i++) {
+    for(var i = 0; i < armorArray.length; i++) {
         var $options = $('#'+armorArray[i]).find('input'),
             random = ~~(Math.random() * $options.length);
         $options.eq(random).prop('checked', true);
 		$options.eq(random).click();
 		itemNumber = random;
-		updateSelection(itemNumber,false,true, '#page2 #' + armorArray[i]);
+		updateSelection(itemNumber,false,true, '#page1 #' + armorArray[i]);
         $.grep(settingsToLoad, function(result){
             if(result[0] == armorArray[i]){
                 dew.command(result[1] + ' ' + $('#'+armorArray[i]+' input:checked').val());
@@ -875,7 +880,7 @@ function randomEmblem(){
         $options.eq(random).prop('checked', true);
 		$options.eq(random).click();
 		itemNumber = random;
-		updateSelection(itemNumber,false,true, '#page4 #' + emblemArray[i]);
+		updateSelection(itemNumber,false,true, '#page3 #' + emblemArray[i]);
     }
 	var colorArray = ['colorsEmblemPrimary','colorsEmblemSecondary','colorsEmblemImage'];
     for(var i = 0; i < colorArray.length; i++) {
@@ -883,7 +888,7 @@ function randomEmblem(){
 		$('#'+colorArray[i]+' input').eq(random).prop('checked', true);
 		$('#'+colorArray[i]+' input').eq(random).click();
 		itemNumber = random;
-		updateSelection(itemNumber,false,true, '#page4 #' + colorArray[i]);
+		updateSelection(itemNumber,false,true, '#page3 #' + colorArray[i]);
 		
     }
    	setUrl(false);
@@ -933,13 +938,13 @@ function nextPage(){
 }
 
 function upNav(){
-	if(activePage.startsWith('#page4 #color')){
+	if(activePage.startsWith('#page3 #color')){
 		if(itemNumber >= 3){
             itemNumber-=3;
             updateSelection(itemNumber, true, true);
         }  
 	}else
-    if(activePage.startsWith('#page3 #color')){
+    if(activePage.startsWith('#page2 #color')){
         if(itemNumber > 3){
             itemNumber-=3;
             updateSelection(itemNumber, true, true);
@@ -956,13 +961,13 @@ function upNav(){
 }
 
 function downNav(){
-	if(activePage.startsWith('#page4 #color')){
+	if(activePage.startsWith('#page3 #color')){
 		if(itemNumber < $(activePage + ' label:visible').length-3){
 			itemNumber+=3;
             updateSelection(itemNumber, true, true);
         }
 	}else
-    if(activePage.startsWith('#page3 #color') ){
+    if(activePage.startsWith('#page2 #color') ){
         if(itemNumber < $(activePage + ' label:visible').length-3){
             if(itemNumber == 0){
                 itemNumber+=1;
@@ -972,7 +977,7 @@ function downNav(){
             updateSelection(itemNumber, true, true);
         }
     }else{
-        if((activePage.split(' ').length < 2 && itemNumber < 3 && activePage == '#page3') || ((activePage.split(' ').length < 2 && itemNumber < 5 && activePage == '#page4')) || (activePage.split(' ').length < 2 && itemNumber < 7 && activePage == '#page2') ||  (activePage.split(' ').length > 1 && itemNumber < $(activePage + ' label:visible').length-1)){
+        if((activePage.split(' ').length < 2 && itemNumber < 3 && activePage == '#page2') || ((activePage.split(' ').length < 2 && itemNumber < 5 && activePage == '#page3')) || (activePage.split(' ').length < 2 && itemNumber < 7 && activePage == '#page1') ||  (activePage.split(' ').length > 1 && itemNumber < $(activePage + ' label:visible').length-1)){
             itemNumber++;
             updateSelection(itemNumber, true, true);
         }
@@ -1027,7 +1032,7 @@ function hideInputBox(sound,condition){
 }
 
 function armorShow(showMe, element){
-    activePage = '#page2 #'+showMe;
+    activePage = '#page1 #'+showMe;
     $('.baseNav').removeClass('selectedElement');
     $(activePage+' .selectedElement').removeClass('selectedElement');
     element.addClass('selectedElement');
@@ -1041,7 +1046,7 @@ function armorShow(showMe, element){
 }
 
 function colorShow(showMe, element){
-    activePage = '#page3 #'+showMe;
+    activePage = '#page2 #'+showMe;
     $('.baseNav').removeClass('selectedElement');
     $(activePage+' .selectedElement').removeClass('selectedElement');
     element.addClass('selectedElement');
@@ -1061,27 +1066,27 @@ function colorShow(showMe, element){
 }
 
 function leftNav(){
-	if(activePage.startsWith('#page4 #color') ){
+	if(activePage.startsWith('#page3 #color') ){
 		if(itemNumber % 3 != 0){
 			itemNumber--;
 			updateSelection(itemNumber, true, true);
 		}
 	}
-    if((activePage.startsWith('#page3 #color') && itemNumber % 3 != 1)){
+    if((activePage.startsWith('#page2 #color') && itemNumber % 3 != 1)){
          itemNumber--;
          updateSelection(itemNumber, true, true);
     }
 }
 
 function rightNav(){
-	if(activePage.startsWith('#page4 #color')){
+	if(activePage.startsWith('#page3 #color')){
 		if(itemNumber % 3 != 2){
 			itemNumber++;
 			updateSelection(itemNumber, true, true);
 		}
 		
 	}
-    if(activePage.startsWith('#page3 #color') ){
+    if(activePage.startsWith('#page2 #color') ){
         if(itemNumber % 3 != 0){
              itemNumber++;
             updateSelection(itemNumber, true, true);
@@ -1148,7 +1153,7 @@ function SetupEmblems(resetEmblemList, setRadiosLists, setEmblem, onFinish, runF
 			var elem = document.getElementById("EmblemTabLink").href = "#unavailable";
 			hasValidConnection = false;
 		}else{
-			var elem = document.getElementById("EmblemTabLink").href = "#page4";
+			var elem = document.getElementById("EmblemTabLink").href = "#page3";
 						
 			var jsonObj = new Object();
 			dew.command("Player.Name").then(function (name){jsonObj.playerName = name;});
@@ -1329,7 +1334,7 @@ function setEmblemColorRadioList(ElementID, ArrayVar, shouldReset){
 }
 
 function emblemColorShow(showMe, element){
-    activePage = '#page4 #'+showMe;
+    activePage = '#page3 #'+showMe;
     $('.baseNav').removeClass('selectedElement');
     $(activePage+' .selectedElement').removeClass('selectedElement');
     element.addClass('selectedElement');
@@ -1341,7 +1346,7 @@ function emblemColorShow(showMe, element){
 }
 
 function emblemShow(showMe, element){
-    activePage = '#page4 #'+showMe;
+    activePage = '#page3 #'+showMe;
     $('.baseNav').removeClass('selectedElement');
     $(activePage+' .selectedElement').removeClass('selectedElement');
     element.addClass('selectedElement');
@@ -1444,14 +1449,14 @@ function toggleIcon(){
 	setUrl(false);
 }
 
-function page4(){
+function page3(){
 	SetupEmblems(true, false, true);
 	$("#toggleIconButton").show();
 	$("#randomArmor").hide();
 	$("#randomColors").hide();
 	$("#randomEmblem").show();
 }
-function page3(){
+function page2(){
 	$("#toggleIconButton").hide();
 	$("#randomArmor").hide();
 	$("#randomColors").show();
@@ -1460,18 +1465,9 @@ function page3(){
 		ApplyEmblem(false);
 	}
 }
-function page2(){
-	$("#toggleIconButton").hide();
-	$("#randomArmor").show();
-	$("#randomColors").hide();
-	$("#randomEmblem").hide();
-	if(needApply){
-		ApplyEmblem(false);
-	}
-}
 function page1(){
 	$("#toggleIconButton").hide();
-	$("#randomArmor").hide();
+	$("#randomArmor").show();
 	$("#randomColors").hide();
 	$("#randomEmblem").hide();
 	if(needApply){

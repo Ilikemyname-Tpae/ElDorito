@@ -63,7 +63,7 @@ body{
     color: var(--color-iceblue)
 }
 
-#buttonConatiner{
+#buttonContainer{
     height:230px;
 }
 
@@ -114,4 +114,12 @@ form.emblemColorForm {
 .emblemColorForm span {
     box-sizing: border-box;
     display: block;
+}
+
+.elite-armory{
+	display: none;
+}
+
+.spartan-armory{
+	display: block;
 }
