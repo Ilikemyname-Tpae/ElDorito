@@ -1,19 +1,14 @@
-#include "Blam/Tags/TagBlock.hpp"
-#include "Blam/Tags/TagInstance.hpp"
-#include "Blam/Tags/TagReference.hpp"
-
-#include "Blam/Tags/Objects/Object.hpp"
-
-#include "Forge/ForgeUtil.hpp"
-#include "Forge/Prefab.hpp"
-#include "Forge/Selection.hpp"
-
-#include "Modules/ModuleForge.hpp"
-
-#include "ThirdParty/rapidjson/stringbuffer.h"
-#include "ThirdParty/rapidjson/writer.h"
-
-#include <boost/filesystem.hpp>
+#include "ModuleForge.hpp"
+#include "boost\filesystem.hpp"
+#include "../ThirdParty/rapidjson/stringbuffer.h"
+#include "../ThirdParty/rapidjson/writer.h"
+#include "../Forge/Selection.hpp"
+#include "../Forge/ForgeUtil.hpp"
+#include "../Forge/Prefab.hpp"
+#include "../Blam/Tags/TagReference.hpp"
+#include "../Blam/Tags/TagBlock.hpp"
+#include "../Blam/Tags/TagInstance.hpp"
+#include "../Blam/Tags/Objects/Object.hpp"
 
 namespace
 {

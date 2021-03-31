@@ -1,8 +1,7 @@
 #include "Pointer.hpp"
-
-#include <memory>
-#include <TlHelp32.h> //GetModuleBase
 #include <Windows.h>
+#include <TlHelp32.h> //GetModuleBase
+#include <memory>
 
 size_t GetMainThreadId()
 {

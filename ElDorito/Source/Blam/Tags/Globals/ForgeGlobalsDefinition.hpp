@@ -1,8 +1,7 @@
 #pragma once
 
-#include "Blam/Math/RealVector3D.hpp"
-
-#include "Blam/Tags/Tags.hpp"
+#include "../Tags.hpp"
+#include "../../Math/RealVector3D.hpp"
 
 namespace Blam::Tags::Globals
 {

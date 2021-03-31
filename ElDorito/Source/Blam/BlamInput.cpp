@@ -1,11 +1,10 @@
 #define _CRT_SECURE_NO_WARNINGS
 
-#include "Blam/BlamInput.hpp"
+#include "BlamInput.hpp"
 
-#include "Utils/Macros.hpp"
-
-#include <cstring>
 #include <cwchar>
+#include <cstring>
+#include "../Utils/Macros.hpp"
 
 namespace Blam::Input
 {

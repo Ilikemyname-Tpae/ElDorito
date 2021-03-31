@@ -1,15 +1,11 @@
 /*
 Code was used from NoFaTe (http://nofate.me)
 */
-#include "Utils/Rectangle.hpp"
-
-#include "Web/Logger.hpp"
-#include "Web/WebRendererHandler.hpp"
-
-#include "Web/Bridge/WebRendererQueryHandler.hpp"
-
-#include "Web/Bridge/Client/ClientFunctions.hpp"
-
+#include "WebRendererHandler.hpp"
+#include "Logger.hpp"
+#include "../Utils/Rectangle.hpp"
+#include "Bridge/WebRendererQueryHandler.hpp"
+#include "Bridge/Client/ClientFunctions.hpp"
 #include <boost/algorithm/string/predicate.hpp>
 
 using namespace Anvil::Client::Rendering;

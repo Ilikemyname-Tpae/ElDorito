@@ -1,4 +1,4 @@
-#include "Blam/Memory/DatumHandle.hpp"
+#include "DatumHandle.hpp"
 
 namespace Blam
 {

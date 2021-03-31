@@ -15,7 +15,7 @@
 #ifndef RAPIDJSON_ITOA_
 #define RAPIDJSON_ITOA_
 
-#include "ThirdParty/rapidjson/rapidjson.h"
+#include "../rapidjson.h"
 
 RAPIDJSON_NAMESPACE_BEGIN
 namespace internal {

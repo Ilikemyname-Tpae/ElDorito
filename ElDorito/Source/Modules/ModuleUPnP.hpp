@@ -1,8 +1,7 @@
 #pragma once
 
-#include "Modules/ModuleBase.hpp"
-
-#include "Utils/UPnP.hpp"
+#include "ModuleBase.hpp"
+#include "../Utils/UPnP.hpp"
 
 #include <miniupnpc/miniupnpc.h>
 

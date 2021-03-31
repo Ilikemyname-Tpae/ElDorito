@@ -1,4 +1,4 @@
-#include "Blam/Tags/Sounds/Sound/Sound.hpp"
+#include "Sound.hpp"
 
 namespace Blam::Tags::Sounds
 {

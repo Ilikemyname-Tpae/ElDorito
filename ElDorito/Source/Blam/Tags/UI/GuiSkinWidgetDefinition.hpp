@@ -1,11 +1,8 @@
 #pragma once
-
-#include "Blam/Tags/Tags.hpp"
-
-#include "Blam/Text/StringID.hpp"
-
 #include <cstdint>
 #include <string>
+#include "../Tags.hpp"
+#include "../../Text/StringID.hpp"
 
 namespace Blam::Tags::UI
 {

@@ -1,8 +1,6 @@
 #pragma once
-
-#include "Patch.hpp"
-
-#include "Modules/ModuleBase.hpp"
+#include "ModuleBase.hpp"
+#include "../Patch.hpp"
 
 namespace Modules
 {

@@ -1,10 +1,9 @@
 #pragma once
-
-#include "Blam/Text/StringID.hpp"
-
 #include <cstdint>
 #include <iostream>
 #include <string>
+
+#include <Blam\Text\StringID.hpp>
 
 namespace Blam::Cache
 {
@@ -31,3 +30,4 @@ namespace Blam::Cache
 		Text::StringID GetStringID(const std::string &string);
 	};
 }
+

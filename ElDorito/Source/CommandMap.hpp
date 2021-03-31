@@ -1,11 +1,11 @@
 #pragma once
 
-#include "Utils/Singleton.hpp"
-
-#include <deque>
-#include <functional>
 #include <vector>
+#include <deque>
 #include <Windows.h>
+#include <functional>
+
+#include "Utils/Singleton.hpp"
 
 enum VariableSetReturnValue
 {

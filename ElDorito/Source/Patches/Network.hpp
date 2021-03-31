@@ -1,8 +1,7 @@
 #pragma once
 
-#include "Blam/BlamNetwork.hpp"
-
 #include <functional>
+#include "../Blam/BlamNetwork.hpp"
 
 #define WM_INFOSERVER WM_USER + 1337
 

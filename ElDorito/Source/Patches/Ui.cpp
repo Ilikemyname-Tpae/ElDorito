@@ -1,51 +1,45 @@
-#include "ElDorito.hpp"
-#include "Patch.hpp"
-
-#include "Blam/BlamEvents.hpp"
-#include "Blam/BlamInput.hpp"
-#include "Blam/BlamNetwork.hpp"
-#include "Blam/BlamObjects.hpp"
-#include "Blam/BlamTime.hpp"
-
-#include "Blam/Tags/TagInstance.hpp"
-
-#include "Blam/Tags/Game/Globals.hpp"
-#include "Blam/Tags/Game/MultiplayerGlobals.hpp"
-
-#include "Blam/Tags/Globals/CacheFileGlobalTags.hpp"
-
-#include "Blam/Tags/Items/DefinitionWeapon.hpp"
-
-#include "Blam/Tags/Objects/Biped.hpp"
-
-#include "Blam/Tags/UI/ChudDefinition.hpp"
-#include "Blam/Tags/UI/ChudGlobalsDefinition.hpp"
-#include "Blam/Tags/UI/GfxTexturesList.hpp"
-#include "Blam/Tags/UI/MultilingualUnicodeStringList.hpp"
-
-#include "Modules/ModuleCamera.hpp"
-#include "Modules/ModuleGame.hpp"
-#include "Modules/ModuleGraphics.hpp"
-#include "Modules/ModuleInput.hpp"
-#include "Modules/ModuleTweaks.hpp"
-#include "Modules/ModuleVoIP.hpp"
-
-#include "new/game/game.hpp"
-
-#include "Patches/Core.hpp"
-#include "Patches/Events.hpp"
-#include "Patches/Input.hpp"
-#include "Patches/Tweaks.hpp"
-#include "Patches/Ui.hpp"
-
-#include "Web/Ui/ScreenLayer.hpp"
-
-#include <cassert>
-#include <iomanip>
 #include <iostream>
 #include <string>
-#include <unordered_map>
+#include <iomanip>
+#include <cassert>
 #include <vector>
+#include <unordered_map>
+
+#include "Ui.hpp"
+
+#include "../ElDorito.hpp"
+#include "../Patch.hpp"
+#include "../Patches/Core.hpp"
+#include "../Patches/Input.hpp"
+#include "../Patches/Events.hpp"
+#include "../Blam/BlamEvents.hpp"
+#include "../Blam/BlamInput.hpp"
+#include "../Blam/BlamNetwork.hpp"
+#include "../Blam/BlamObjects.hpp"
+#include "../Blam/BlamTime.hpp"
+#include "../Blam/Tags/TagInstance.hpp"
+#include "../Blam/Tags/UI/ChudGlobalsDefinition.hpp"
+#include "../Blam/Tags/UI/ChudDefinition.hpp"
+#include "../Blam/Tags/Globals/CacheFileGlobalTags.hpp"
+#include "../Blam/Tags/Game/Globals.hpp"
+#include "../Blam//Tags/Objects/Biped.hpp"
+#include "../Blam/Tags/Items/DefinitionWeapon.hpp"
+#include "../Blam/Tags/Globals/CacheFileGlobalTags.hpp"
+#include "../Blam/Tags/Game/Globals.hpp"
+#include "../Blam/Tags/Game/MultiplayerGlobals.hpp"
+#include "../Blam/Tags/UI/GfxTexturesList.hpp"
+#include "../Blam/Tags/UI/MultilingualUnicodeStringList.hpp"
+#include "../Modules/ModuleGraphics.hpp"
+#include "../Modules/ModuleInput.hpp"
+#include "../Modules/ModuleGame.hpp"
+#include "../Modules/ModuleVoIP.hpp"
+#include "../Web/Ui/ScreenLayer.hpp"
+#include "../Modules/ModuleTweaks.hpp"
+#include "../Modules/ModuleCamera.hpp"
+#include "../Patches/Tweaks.hpp"
+#include "../Web/Ui/ScreenLayer.hpp"
+
+#include <game\game.hpp>
 
 using namespace Patches::Ui;
 
@@ -961,7 +955,7 @@ namespace
 
 	void WindowTitleSprintfHook(char* destBuf, char* format, char* version)
 	{
-		std::string windowTitle = "Unofficial ElDewrito | Version: " + Utils::Version::GetVersionString() + " | Build Date: " __DATE__;
+		std::string windowTitle = "ElDewrito | Version: " + Utils::Version::GetVersionString() + " | Build Date: " __DATE__;
 		strcpy_s(destBuf, 0x40, windowTitle.c_str());
 	}
 
@@ -1335,8 +1329,8 @@ namespace
 		if (screenName == 0x10083) // main_menu
 		{
 			uint32_t id;
-			auto itemIndex = (*(int(__thiscall**)(void*))(*(uint8_t**)a4 + 0x18))(a4);
-			if ((*(bool(__thiscall**)(void*, uint32_t, uint32_t, uint32_t*))(*(uint8_t**)a5 + 0x34))(a5, itemIndex, 0x2AA, &id))
+			auto itemIndex = (*(int(__thiscall **)(void*))(*(uint8_t**)a4 + 0x18))(a4);
+			if ((*(bool(__thiscall **)(void*, uint32_t, uint32_t, uint32_t*))(*(uint8_t**)a5 + 0x34))(a5, itemIndex, 0x2AA, &id))
 			{
 				// TODO: Maybe check the menu item's text over the index?
 
@@ -1649,51 +1643,6 @@ namespace
 
 		return flags;
 	}
-
-	__declspec(naked) void GetGlobalDynamicColorHook()
-	{
-		_asm
-		{
-			cmp enableCustomHUDColors, 1
-			jne tag_color
-			cmp[ebp + 0xC], 0x0
-			je secondary_color
-			cmp[ebp + 0xC], 0x1
-			je secondary_color
-			cmp[ebp + 0xC], 0x2
-			je primary_color
-			cmp[ebp + 0xC], 0x4
-			je primary_color
-			cmp[ebp + 0xC], 0x8
-			je primary_color
-			cmp[ebp + 0xC], 0xA
-			je primary_color
-			cmp[ebp + 0xC], 0xB
-			je primary_color
-			cmp[ebp + 0xC], 0xF
-			je primary_color
-
-			tag_color :
-			mov eax, [eax + edi * 4 + 4]
-				jmp eldorado_return
-
-				primary_color :
-			mov eax, Patches::Ui::customPrimaryHUDColor
-				jmp eldorado_return
-
-				secondary_color :
-			mov eax, Patches::Ui::customSecondaryHUDColor
-				jmp eldorado_return
-
-				eldorado_return :
-			pop edi
-				pop esi
-				pop ebx
-				pop ebp
-				ret 8
-		}
-	}
-
 
 	__declspec(naked) void GetGlobalDynamicColorHook()
 	{

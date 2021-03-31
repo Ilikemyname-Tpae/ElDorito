@@ -1,13 +1,9 @@
 #pragma once
-
-#include "Blam/BlamPlayers.hpp"
-
-#include "Blam/Math/RealVector3D.hpp"
-
-#include "Patches/PlayerPropertiesExtension.hpp"
-
 #include <string>
 #include <vector>
+#include "../Blam/BlamPlayers.hpp"
+#include "../Blam/Math/RealVector3D.hpp"
+#include "../Patches/PlayerPropertiesExtension.hpp"
 
 namespace Game::Armor
 {

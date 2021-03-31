@@ -1,4 +1,4 @@
-#include "Blam/Math/RealMatrix4x3.hpp"
+#include "RealMatrix4x3.hpp"
 
 namespace Blam::Math
 {
@@ -31,3 +31,4 @@ namespace Blam::Math
 		return &Scale;
 	}
 }
+

@@ -1,11 +1,8 @@
-#include "Patches/LoadingScreen.hpp"
-
-#include "ThirdParty/rapidjson/stringbuffer.h"
-#include "ThirdParty/rapidjson/writer.h"
-
-#include "Web/Ui/ScreenLayer.hpp"
-#include "Web/Ui/WebLoadingScreen.hpp"
-
+#include "WebLoadingScreen.hpp"
+#include "../../Patches/LoadingScreen.hpp"
+#include "ScreenLayer.hpp"
+#include "../../ThirdParty/rapidjson/stringbuffer.h"
+#include "../../ThirdParty/rapidjson/writer.h"
 #include <chrono>
 
 using namespace Web::Ui;

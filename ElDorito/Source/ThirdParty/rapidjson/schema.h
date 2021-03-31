@@ -15,9 +15,8 @@
 #ifndef RAPIDJSON_SCHEMA_H_
 #define RAPIDJSON_SCHEMA_H_
 
-#include "ThirdParty/rapidjson/document.h"
-#include "ThirdParty/rapidjson/pointer.h"
-
+#include "document.h"
+#include "pointer.h"
 #include <cmath> // abs, floor
 
 #if !defined(RAPIDJSON_SCHEMA_USE_INTERNALREGEX)

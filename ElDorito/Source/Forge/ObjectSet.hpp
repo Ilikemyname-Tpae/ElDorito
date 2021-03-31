@@ -1,7 +1,7 @@
 #pragma once
 
-#include <bitset>
 #include <cstdint>
+#include <bitset>
 
 namespace Forge
 {

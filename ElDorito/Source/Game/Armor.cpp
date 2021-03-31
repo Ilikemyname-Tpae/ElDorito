@@ -1,28 +1,22 @@
-#include "Patch.hpp"
 
-#include "Blam/BlamObjects.hpp"
-
-#include "Blam/Cache/StringIdCache.hpp"
-
-#include "Blam/Math/RealQuaternion.hpp"
-
-#include "Blam/Tags/TagInstance.hpp"
-#include "Blam/Tags/Tags.hpp"
-
-#include "Blam/Tags/Game/Globals.hpp"
-#include "Blam/Tags/Game/MultiplayerGlobals.hpp"
-
-#include "Blam/Tags/Globals/CacheFileGlobalTags.hpp"
-
-#include "Blam/Tags/Scenario/Scenario.hpp"
-
-#include "Game/Armor.hpp"
-
-#include "Modules/ModulePlayer.hpp"
-
-#include <boost/regex.hpp>
-#include <map>
 #include <unordered_map>
+#include <map>
+
+#include "Armor.hpp"
+#include "../Patch.hpp"
+#include "../Modules/ModulePlayer.hpp"
+
+#include "../Blam/Cache/StringIdCache.hpp"
+#include "../Blam/Tags/Tags.hpp"
+#include "../Blam/Tags/TagInstance.hpp"
+#include "../Blam/Tags/Game/Globals.hpp"
+#include "../Blam/Tags/Game/MultiplayerGlobals.hpp"
+#include "../Blam/Tags/Globals/CacheFileGlobalTags.hpp"
+#include "../Blam/Tags/Scenario/Scenario.hpp"
+#include "../Modules/ModulePlayer.hpp"
+#include "../Blam/BlamObjects.hpp"
+#include "../Blam/Math/RealQuaternion.hpp"
+#include <boost/regex.hpp>
 
 using namespace Blam::Players;
 
@@ -127,6 +121,7 @@ namespace Game::Armor
 
 		auto* mulg = TagInstance::GetDefinition<MultiplayerGlobals>("multiplayer\\multiplayer_globals");
 
+
 		BuildPlayerCustomization(Modules::ModulePlayer::Instance(), out);
 
 		for (auto& element : mulg->Universal->GameVariantWeapons)
@@ -229,7 +224,10 @@ namespace Game::Armor
 				AddArmorPermutations(element, legsIndices);
 			else if (string == "pelvis")
 				AddArmorPermutations(element, pelvisIndices);
+			else if (string == "upper_body")
+				AddArmorPermutations(element, upperBodyIndices);
 		}
+
 
 		for (auto& element : mulg->Universal->EliteArmorCustomization)
 		{
@@ -257,7 +255,7 @@ namespace Game::Armor
 		{
 			if (element.Weapon.TagIndex == -1)
 				continue;
-			
+
 			weaponIndices.emplace(
 				std::string(Blam::Cache::StringIDCache::Instance.GetString(element.Name)),
 				(uint16_t)element.Weapon.TagIndex);
@@ -278,7 +276,7 @@ namespace Game::Armor
 		return true;
 	}
 
-	__declspec(naked) void PoseWithWeapon(uint32_t unit, uint32_t weaponTag, uint32_t bipedObject)
+	__declspec(naked) void PoseWithWeapon(uint32_t unit, uint32_t weaponTag)
 	{
 		// This is a pretty big hack, basically I don't know where the function pulls the weapon index from
 		// so this lets us skip over the beginning of the function and set the weapon tag to whatever we want
@@ -339,9 +337,6 @@ namespace Game::Armor
 	void UpdateUiPlayerModelArmor()
 	{
 		using namespace Blam::Math;
-
-		static auto UI_Globals = *(void**)0x05260F34;
-		static auto UI_ExecuteScenarioScript = (signed int(__thiscall*)(void* thisptr, int scriptIndex))(0xAACE40);
 
 		auto isElite = Modules::ModulePlayer::Instance().VarRepresentation->ValueString == "elite";
 

@@ -1,6 +1,5 @@
-#include "Blam/Tags/Items/DefinitionWeapon.hpp"
-
-#include "Definitions/EnumDefinition.hpp"
+#include "Blam\Tags\Items\DefinitionWeapon.hpp"
+#include "Definitions\EnumDefinition.hpp"
 
 using namespace Blam::Tags::Items;
 using namespace Blam::Tags;

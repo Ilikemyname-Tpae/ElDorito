@@ -1,10 +1,9 @@
 #pragma once
 
-#include "Blam/BlamInput.hpp"
-
-#include <functional>
 #include <memory>
+#include <functional>
 #include <vector>
+#include "../Blam/BlamInput.hpp"
 
 namespace Patches::Input
 {

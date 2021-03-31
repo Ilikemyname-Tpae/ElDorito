@@ -1,4 +1,4 @@
-#include "Utils/VersionInfo.hpp"
+#include "VersionInfo.hpp"
 
 #define V(a, b, c, d) (((a) << 24) | ((b) << 16) | ((c) << 8) | (d))
 #define V1(v) (((v) >> 24) & 0xFF)

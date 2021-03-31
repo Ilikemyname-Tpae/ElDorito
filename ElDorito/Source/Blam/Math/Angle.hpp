@@ -39,3 +39,4 @@ namespace Blam::Math
 		friend Angle operator/(const float a, const Angle &b);
 	};
 }
+

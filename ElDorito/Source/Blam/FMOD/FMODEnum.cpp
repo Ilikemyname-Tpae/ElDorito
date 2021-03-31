@@ -1,4 +1,4 @@
-#include "Blam/FMOD/FMODEnum.hpp"
+#include "FMODEnum.hpp"
 
 namespace FMOD {
 

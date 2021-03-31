@@ -1,7 +1,7 @@
-#include "ElDorito.hpp"
-#include "Patch.hpp"
+#include "Mouse.hpp"
 
-#include "Patches/Mouse.hpp"
+#include "../ElDorito.hpp"
+#include "../Patch.hpp"
 
 namespace
 {

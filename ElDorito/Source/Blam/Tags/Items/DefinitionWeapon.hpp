@@ -1,22 +1,15 @@
 #pragma once
-
-#include "Blam/Math/Angle.hpp"
-#include "Blam/Math/Bounds.hpp"
-#include "Blam/Math/RealEulerAngles2D.hpp"
-#include "Blam/Math/RealPoint3D.hpp"
-#include "Blam/Math/RealVector2D.hpp"
-#include "Blam/Math/RealVector3D.hpp"
-
-#include "Blam/Tags/Tags.hpp"
-
-#include "Blam/Tags/Items/Item.hpp"
-
-#include "Blam/Tags/Objects/Damage.hpp"
-
-#include "Blam/Tags/Sounds/Noise.hpp"
-
-#include "Blam/Text/StringID.hpp"
-
+#include "../Tags.hpp"
+#include "../../Math/Angle.hpp"
+#include "../../Math/Bounds.hpp"
+#include "../../Math/RealEulerAngles2D.hpp"
+#include "../../Math/RealPoint3D.hpp"
+#include "../../Math/RealVector2D.hpp"
+#include "../../Math/RealVector3D.hpp"
+#include "../../Text/StringID.hpp"
+#include "../Objects/Damage.hpp"
+#include "../Sounds/Noise.hpp"
+#include "Item.hpp"
 
 namespace Blam::Tags::Items
 {

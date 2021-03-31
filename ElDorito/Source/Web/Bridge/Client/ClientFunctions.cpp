@@ -1,35 +1,25 @@
 #pragma once
+#include "ClientFunctions.hpp"
+#include "../../Ui/ScreenLayer.hpp"
+#include "../../Ui/WebVirtualKeyboard.hpp"
+#include "../../Ui/WebForge.hpp"
+#include "../../Ui/WebScoreboard.hpp"
+#include "../../../CommandMap.hpp"
+#include "../../../Blam/BlamNetwork.hpp"
+#include "../../../Discord/DiscordRPC.h"
+#include "../../../Patches/Network.hpp"
+#include "../../../Patches/Input.hpp"
+#include "../../../Patches/Ui.hpp"
+#include "../../../Modules/ModuleVoIP.hpp"
+#include "../../../Modules/ModulePlayer.hpp"
+#include "../../../Pointer.hpp"
+#include "../../../Server/ServerChat.hpp"
+#include "../../../Utils/VersionInfo.hpp"
+#include "../../../Utils/String.hpp"
+#include "../../../ThirdParty/rapidjson/writer.h"
+#include "../../../ThirdParty/rapidjson/stringbuffer.h"
 
-#include "CommandMap.hpp"
-#include "Pointer.hpp"
-
-#include "Blam/BlamNetwork.hpp"
-
-#include "Discord/DiscordRPC.h"
-
-#include "Modules/ModulePlayer.hpp"
-#include "Modules/ModuleVoIP.hpp"
-
-#include "new/game/game.hpp"
-
-#include "Patches/Input.hpp"
-#include "Patches/Network.hpp"
-#include "Patches/Ui.hpp"
-
-#include "Server/ServerChat.hpp"
-
-#include "ThirdParty/rapidjson/stringbuffer.h"
-#include "ThirdParty/rapidjson/writer.h"
-
-#include "Utils/String.hpp"
-#include "Utils/VersionInfo.hpp"
-
-#include "Web/Bridge/Client/ClientFunctions.hpp"
-
-#include "Web/Ui/ScreenLayer.hpp"
-#include "Web/Ui/WebForge.hpp"
-#include "Web/Ui/WebScoreboard.hpp"
-#include "Web/Ui/WebVirtualKeyboard.hpp"
+#include <game\game.hpp>
 
 namespace
 {

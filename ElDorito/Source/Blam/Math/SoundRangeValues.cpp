@@ -1,4 +1,4 @@
-#include "Blam/Math/SoundRangeValues.hpp"
+#include "SoundRangeValues.hpp"
 
 namespace Blam::Math {
 

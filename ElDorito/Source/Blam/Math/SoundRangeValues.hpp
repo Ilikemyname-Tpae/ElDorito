@@ -1,7 +1,6 @@
 #pragma once
-
-#include <cmath>
 #include <cstdint>
+#include <cmath>
 
 namespace Blam::Math {
 

@@ -1,7 +1,7 @@
 /*
 Code was used from NoFaTe (http://nofate.me)
 */
-#include "Web/WebRendererApp.hpp"
+#include "WebRendererApp.hpp"
 
 using namespace Anvil::Client::Rendering;
 

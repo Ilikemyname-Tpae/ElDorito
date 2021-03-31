@@ -15,7 +15,7 @@
 #ifndef RAPIDJSON_ENCODINGS_H_
 #define RAPIDJSON_ENCODINGS_H_
 
-#include "ThirdParty/rapidjson/rapidjson.h"
+#include "rapidjson.h"
 
 #ifdef _MSC_VER
 RAPIDJSON_DIAG_PUSH

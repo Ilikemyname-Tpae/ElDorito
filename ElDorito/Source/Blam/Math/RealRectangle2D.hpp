@@ -16,3 +16,4 @@ namespace Blam::Math
 		bool operator!=(const RealRectangle2D &other) const;
 	};
 }
+

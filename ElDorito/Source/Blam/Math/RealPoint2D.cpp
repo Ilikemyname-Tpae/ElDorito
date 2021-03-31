@@ -1,4 +1,4 @@
-#include "Blam/Math/RealPoint2D.hpp"
+#include "RealPoint2D.hpp"
 
 namespace Blam::Math
 {
@@ -152,3 +152,4 @@ namespace Blam::Math
 		return RealPoint2D(a / b.X, a / b.Y);
 	}
 }
+

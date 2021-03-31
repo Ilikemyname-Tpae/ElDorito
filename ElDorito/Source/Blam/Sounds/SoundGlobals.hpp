@@ -1,6 +1,5 @@
 #pragma once
-
-#include "Blam/Sounds/SoundDatum.hpp"
+#include "SoundDatum.hpp"
 
 namespace Blam{
 

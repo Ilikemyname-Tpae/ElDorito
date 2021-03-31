@@ -1,13 +1,10 @@
-#include "Patch.hpp"
-
-#include "Blam/BlamEvents.hpp"
-#include "Blam/BlamPlayers.hpp"
-#include "Blam/BlamTime.hpp"
-
-#include "Modules/ModuleGame.hpp"
-
-#include "Patches/Events.hpp"
-#include "Patches/Medals.hpp"
+#include "Medals.hpp"
+#include "Events.hpp"
+#include "../Blam/BlamEvents.hpp"
+#include "../Blam/BlamPlayers.hpp"
+#include "../Blam/BlamTime.hpp"
+#include "../Patch.hpp"
+#include "../Modules/ModuleGame.hpp"
 
 namespace
 {

@@ -1,4 +1,4 @@
-#include "Blam/Sounds/Functions.hpp"
+#include "Functions.hpp"
 
 namespace Blam::Sounds
 {

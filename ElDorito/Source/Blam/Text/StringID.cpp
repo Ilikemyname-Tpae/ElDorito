@@ -1,4 +1,4 @@
-#include "Blam/Text/StringID.hpp"
+#include "StringID.hpp"
 
 namespace Blam::Text
 {

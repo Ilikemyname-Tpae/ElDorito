@@ -14,3 +14,4 @@ namespace Patches::VirtualKeyboard
 	typedef std::function<void(Blam::Input::VirtualKeyboard* keyboard)> KeyboardHandlerCallback;
 	void SetKeyboardHandler(KeyboardHandlerCallback callback);
 }
+

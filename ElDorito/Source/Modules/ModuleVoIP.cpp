@@ -1,19 +1,14 @@
-#include "Blam/Tags/TagInstance.hpp"
-
-#include "Modules/ModuleVoIP.hpp"
-
-#include "new/game/game.hpp"
-
-#include "Patches/Core.hpp"
-#include "Patches/Input.hpp"
-#include "Patches/Ui.hpp"
-
-#include "ThirdParty/rapidjson/stringbuffer.h"
-#include "ThirdParty/rapidjson/writer.h"
-
-#include "Web/Ui/ScreenLayer.hpp"
-
+#include "ModuleVoIP.hpp"
 #include <sstream>
+#include "../Patches/Core.hpp"
+#include "../Patches/Ui.hpp"
+#include "../Patches/Input.hpp"
+#include "../Web/Ui/ScreenLayer.hpp"
+#include "../ThirdParty/rapidjson/writer.h"
+#include "../ThirdParty/rapidjson/stringbuffer.h"
+#include "../Blam/Tags/TagInstance.hpp"
+
+#include <game\game.hpp>
 
 namespace
 {

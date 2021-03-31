@@ -1,8 +1,7 @@
-#include "Blam/Math/RealQuaternion.hpp"
-#include "Blam/Math/RealVector3D.hpp"
-
-#include <cassert>
+#include "RealVector3D.hpp"
+#include "RealQuaternion.hpp"
 #include <cmath>
+#include <cassert>
 #include <limits>
 
 namespace Blam::Math
@@ -217,3 +216,4 @@ namespace Blam::Math
 		return result;
 	}
 }
+

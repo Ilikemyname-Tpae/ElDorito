@@ -1,12 +1,9 @@
-#include "Patch.hpp"
-#include "Pointer.hpp"
-
-#include "Patches/CustomPackets.hpp"
-
-#include "Utils/Cryptography.hpp"
-
-#include <limits>
+#include "CustomPackets.hpp"
+#include "../Pointer.hpp"
+#include "../Patch.hpp"
+#include "../Utils/Cryptography.hpp"
 #include <unordered_map>
+#include <limits>
 
 namespace
 {

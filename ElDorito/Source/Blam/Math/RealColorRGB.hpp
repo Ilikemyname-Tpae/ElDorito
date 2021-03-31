@@ -17,3 +17,4 @@ namespace Blam::Math
 		explicit operator const float *() const;
 	};
 }
+

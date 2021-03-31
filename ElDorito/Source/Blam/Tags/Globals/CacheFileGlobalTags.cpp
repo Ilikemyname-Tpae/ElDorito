@@ -1,6 +1,5 @@
-#include "Blam/Tags/Globals/CacheFileGlobalTags.hpp"
-
-#include "Definitions/EnumDefinition.hpp"
+#include "Blam\Tags\Globals\CacheFileGlobalTags.hpp"
+#include "Definitions\EnumDefinition.hpp"
 
 using namespace Blam::Tags::Globals;
 using namespace Definitions;

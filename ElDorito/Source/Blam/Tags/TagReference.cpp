@@ -1,4 +1,4 @@
-#include "Blam/Tags/TagReference.hpp"
+#include "TagReference.hpp"
 
 namespace Blam::Tags
 {

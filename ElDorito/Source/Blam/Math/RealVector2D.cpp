@@ -1,4 +1,4 @@
-#include "Blam/Math/RealVector2D.hpp"
+#include "RealVector2D.hpp"
 
 namespace Blam::Math
 {
@@ -152,3 +152,4 @@ namespace Blam::Math
 		return RealVector2D(a / b.I, a / b.J);
 	}
 }
+

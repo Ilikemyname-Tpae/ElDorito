@@ -12,12 +12,12 @@
 // CONDITIONS OF ANY KIND, either express or implied. See the License for the 
 // specific language governing permissions and limitations under the License.
 
-#include "ThirdParty/rapidjson/rapidjson.h"
+#include "rapidjson.h"
 
 #ifndef RAPIDJSON_STREAM_H_
 #define RAPIDJSON_STREAM_H_
 
-#include "ThirdParty/rapidjson/encodings.h"
+#include "encodings.h"
 
 RAPIDJSON_NAMESPACE_BEGIN
 

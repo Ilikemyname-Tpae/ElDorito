@@ -1,12 +1,8 @@
-#include "ElDorito.hpp"
-
-#include "Blam/BlamTypes.hpp"
-
-#include "Modules/ModuleTime.hpp"
-
-#include "Server/VariableSynchronization.hpp"
-
+#include "ModuleTime.hpp"
 #include <sstream>
+#include "../ElDorito.hpp"
+#include "../Blam/BlamTypes.hpp"
+#include "../Server/VariableSynchronization.hpp"
 
 namespace
 {

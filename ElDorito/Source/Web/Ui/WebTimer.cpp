@@ -1,15 +1,11 @@
-#include "Pointer.hpp"
-
-#include "Blam/BlamPlayers.hpp"
-#include "Blam/BlamTime.hpp"
-
-#include "ThirdParty/rapidjson/stringbuffer.h"
-#include "ThirdParty/rapidjson/writer.h"
-
-#include "Web/Ui/ScreenLayer.hpp"
-#include "Web/Ui/WebTimer.hpp"
-
+#include "WebTimer.hpp"
+#include "../../ThirdParty/rapidjson/writer.h"
+#include "../../ThirdParty/rapidjson/stringbuffer.h"
 #include <ctime>
+#include "ScreenLayer.hpp"
+#include "../../Blam/BlamPlayers.hpp"
+#include "../../Blam/BlamTime.hpp"
+#include "../../Pointer.hpp"
 
 namespace Web::Ui
 {

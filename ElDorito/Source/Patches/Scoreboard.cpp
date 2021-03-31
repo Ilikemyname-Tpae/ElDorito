@@ -1,11 +1,9 @@
-#include "ElDorito.hpp"
-#include "Patch.hpp"
+#include "Scoreboard.hpp"
 
-#include "Blam/BlamPlayers.hpp"
-
-#include "Modules/ModuleSettings.hpp"
-
-#include "Patches/Scoreboard.hpp"
+#include "../ElDorito.hpp"
+#include "../Patch.hpp"
+#include "../Blam/BlamPlayers.hpp"
+#include "../Modules/ModuleSettings.hpp"
 
 namespace
 {

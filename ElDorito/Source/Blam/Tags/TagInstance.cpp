@@ -1,4 +1,4 @@
-#include "Blam/Tags/TagInstance.hpp"
+#include "TagInstance.hpp"
 
 namespace Blam::Tags
 {

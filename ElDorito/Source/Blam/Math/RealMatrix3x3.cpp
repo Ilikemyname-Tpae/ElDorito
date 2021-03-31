@@ -1,4 +1,4 @@
-#include "Blam/Math/RealMatrix3x3.hpp"
+#include "RealMatrix3x3.hpp"
 
 namespace Blam::Math
 {
@@ -29,3 +29,4 @@ namespace Blam::Math
 		return Forward.operator const float *();
 	}
 }
+

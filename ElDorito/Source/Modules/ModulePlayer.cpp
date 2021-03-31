@@ -1,17 +1,13 @@
-#include "ElDorito.hpp"
-
-#include "Game/Armor.hpp"
-
-#include "Modules/ModulePlayer.hpp"
-
-#include "Patches/PlayerRepresentation.hpp"
-#include "Patches/PlayerUid.hpp"
-#include "Patches/Tweaks.hpp"
-#include "Patches/Ui.hpp"
-
-#include <algorithm>
 #include <ctime>
+#include "ModulePlayer.hpp"
+#include "../ElDorito.hpp"
+#include "../Game/Armor.hpp"
+#include "../Patches/PlayerRepresentation.hpp"
+#include "../Patches/PlayerUid.hpp"
+#include "../Patches/Tweaks.hpp"
+#include "../Patches/Ui.hpp"
 #include <iomanip>
+#include <algorithm>
 #include <unordered_set>
 
 namespace
@@ -167,7 +163,6 @@ namespace Modules
 		VarArmorEliteLegs = AddVariableString("Armor.Legs", "armor_legs", "Armor ID for player legs", eCommandFlagsArchived, "", VariablePlayerArmorUpdate);
 		VarArmorElitePelvis = AddVariableString("Armor.Pelvis", "armor_pelvis", "Armor ID for player pelvis", eCommandFlagsArchived, "", VariablePlayerArmorUpdate);
 		VarArmorEliteUpperBody = AddVariableString("Armor.UpperBody", "armor_upper_body", "Armor ID for player upper body", eCommandFlagsArchived, "", VariablePlayerArmorUpdate);
-
 		VarRenderWeapon = AddVariableString("RenderWeapon", "render_weapon", "The weapon to display on the player's render mannequin", eCommandFlagsArchived, "assault_rifle", VariablePlayerArmorUpdate);
 		AddCommand("Armor.Update", "armor_update", "Update the player's armor.", eCommandFlagsHidden, VariablePlayerArmorUpdate);
 		AddCommand("Armor.SetUiModelPosition", "armor_ui_player_model_position", "Set the position of the ui player model", (CommandFlags)(eCommandFlagsOmitValueInList | eCommandFlagsHidden), CommandSetUiPlayerModelPosition);

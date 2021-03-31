@@ -1,4 +1,4 @@
-#include "Blam/Math/Rectangle2D.hpp"
+#include "Rectangle2D.hpp"
 
 namespace Blam::Math
 {
@@ -170,3 +170,4 @@ namespace Blam::Math
 		return Rectangle2D(a / b.Top, a / b.Left, a / b.Bottom, a / b.Right);
 	}
 }
+

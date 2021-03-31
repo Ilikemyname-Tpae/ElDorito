@@ -15,9 +15,8 @@
 #ifndef RAPIDJSON_STRINGBUFFER_H_
 #define RAPIDJSON_STRINGBUFFER_H_
 
-#include "ThirdParty/rapidjson/stream.h"
-
-#include "ThirdParty/rapidjson/internal/stack.h"
+#include "stream.h"
+#include "internal/stack.h"
 
 #if RAPIDJSON_HAS_CXX11_RVALUE_REFS
 #include <utility> // std::move

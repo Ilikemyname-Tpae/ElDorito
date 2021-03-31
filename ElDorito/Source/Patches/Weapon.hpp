@@ -1,11 +1,9 @@
 #pragma once
-
-#include "Blam/Math/RealVector3D.hpp"
-
-#include "Modules/ModuleWeapon.hpp"
-
 #include <string>
 #include <vector>
+
+#include "../Modules/ModuleWeapon.hpp"
+#include "../Blam/Math/RealVector3D.hpp"
 
 namespace Patches::Weapon
 {

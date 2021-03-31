@@ -1,7 +1,7 @@
-#include "Modules/ModuleUPnP.hpp"
+#include "ModuleUPnP.hpp"
 
-#include <string>
 #include <miniupnpc/upnpcommands.h>
+#include <string>
 
 namespace Modules
 {

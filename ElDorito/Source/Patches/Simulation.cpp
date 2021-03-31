@@ -1,16 +1,12 @@
-#include "Patch.hpp"
-
-#include "Blam/BlamEvents.hpp"
-#include "Blam/BlamNetwork.hpp"
-#include "Blam/BlamObjects.hpp"
-#include "Blam/BlamTypes.hpp"
-
-#include "Blam/Math/RealVector3D.hpp"
-
-#include "Blam/Tags/Objects/Object.hpp"
-
-#include "Patches/Network.hpp"
-#include "Patches/Simulation.hpp"
+#include "Simulation.hpp"
+#include "../Blam/Math/RealVector3D.hpp"
+#include "../Blam/BlamNetwork.hpp"
+#include "../Blam/BlamTypes.hpp"
+#include "../Patches/Network.hpp"
+#include "../Blam/Tags/Objects/Object.hpp"
+#include "../Blam/BlamObjects.hpp"
+#include "../Blam/BlamEvents.hpp"
+#include "../Patch.hpp"
 
 namespace
 {

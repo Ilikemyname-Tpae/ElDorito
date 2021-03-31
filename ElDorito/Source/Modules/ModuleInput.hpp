@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Modules/ModuleBase.hpp"
+#include "ModuleBase.hpp"
 
 namespace Blam
 {

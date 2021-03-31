@@ -1,5 +1,6 @@
-#include "Blam/Math/Bounds.hpp"
+#include "Bounds.hpp"
 
 namespace Blam::Math
 {
 }
+

@@ -1,5 +1,4 @@
-#include "Modules/ModuleBase.hpp"
-
+#include "ModuleBase.hpp"
 #include <string>
 
 namespace Modules

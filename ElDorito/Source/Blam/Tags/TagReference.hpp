@@ -1,10 +1,7 @@
 #pragma once
-
-#include "Blam/Padding.hpp"
-
-#include "Blam/Tags/Tag.hpp"
-
 #include <cstdint>
+#include "../Padding.hpp"
+#include "Tag.hpp"
 
 namespace Blam::Tags
 {

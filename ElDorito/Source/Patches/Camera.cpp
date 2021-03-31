@@ -1,10 +1,9 @@
-#include "Blam/BlamObjects.hpp"
+#include "Camera.hpp"
 
-#include "Modules/ModuleCamera.hpp"
+#include "../Blam/BlamObjects.hpp"
+#include "../Modules/ModuleCamera.hpp"
 
-#include "new/game/game.hpp"
-
-#include "Patches/Camera.hpp"
+#include <game\game.hpp>
 
 #include <cstdint>
 

@@ -1,9 +1,8 @@
 #pragma once
-
-#include <sstream>
-#include <stdint.h>
 #include <string>
+#include <stdint.h>
 #include <Windows.h>
+#include <sstream>
 
 enum HookFlags : int
 {

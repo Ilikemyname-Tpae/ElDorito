@@ -1,4 +1,4 @@
-#include "Blam/BitStream.hpp"
+#include "BitStream.hpp"
 
 namespace Blam
 {

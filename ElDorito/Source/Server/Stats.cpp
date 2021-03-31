@@ -1,29 +1,21 @@
-#include "ElDorito.hpp"
-
-#include "Blam/BlamEvents.hpp"
-#include "Blam/BlamNetwork.hpp"
-
-#include "Modules/ModulePlayer.hpp"
-#include "Modules/ModuleServer.hpp"
-
-#include "new/game/game_globals.hpp"
-
-#include "Patches/Core.hpp"
-#include "Patches/Events.hpp"
-#include "Patches/Network.hpp"
-
-#include "Server/Stats.hpp"
-
-#include "ThirdParty/HttpRequest.hpp"
-
-#include "ThirdParty/rapidjson/document.h"
-#include "ThirdParty/rapidjson/writer.h"
-
-#include "Utils/Logger.hpp"
-
-#include <fstream>
-#include <iomanip>
 #include <WS2tcpip.h>
+#include <fstream>
+#include "Stats.hpp"
+#include "../Blam/BlamEvents.hpp"
+#include "../Blam/BlamNetwork.hpp"
+#include "../Patches/Events.hpp"
+#include "../Patches/Core.hpp"
+#include "../Modules/ModuleServer.hpp"
+#include "../Modules/ModulePlayer.hpp"
+#include "../Utils/Logger.hpp"
+#include "../ElDorito.hpp"
+#include "../ThirdParty/rapidjson/writer.h"
+#include "../ThirdParty/HttpRequest.hpp"
+#include "../ThirdParty/rapidjson/document.h"
+#include "../Patches/Network.hpp"
+#include <iomanip>
+
+#include <game\game_globals.hpp>
 
 namespace Server::Stats
 {

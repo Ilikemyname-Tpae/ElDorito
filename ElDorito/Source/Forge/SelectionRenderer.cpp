@@ -1,21 +1,16 @@
-#include "Patch.hpp"
-
-#include "Blam/BlamObjects.hpp"
-#include "Blam/BlamTime.hpp"
-
-#include "Blam/Math/MathUtil.hpp"
-#include "Blam/Math/RealMatrix4x3.hpp"
-
-#include "Blam/Tags/TagInstance.hpp"
-
-#include "Forge/ForgeUtil.hpp"
-#include "Forge/Geoemetry.hpp"
-#include "Forge/Magnets.hpp"
-#include "Forge/ObjectSet.hpp"
-#include "Forge/Selection.hpp"
-#include "Forge/SelectionRenderer.hpp"
-
-#include "Modules/ModuleTweaks.hpp"
+#include "SelectionRenderer.hpp"
+#include "../Blam/Math/RealMatrix4x3.hpp"
+#include "../Blam/BlamObjects.hpp"
+#include "../Blam/BlamTime.hpp"
+#include "../Forge/ForgeUtil.hpp"
+#include "../Forge/Selection.hpp"
+#include "../Forge/ObjectSet.hpp"
+#include "../Blam/Tags/TagInstance.hpp"
+#include "../Blam/Math/MathUtil.hpp"
+#include "../Patch.hpp"
+#include "Geoemetry.hpp"
+#include "Magnets.hpp"
+#include "../Modules/ModuleTweaks.hpp"
 
 using namespace Blam::Math;
 

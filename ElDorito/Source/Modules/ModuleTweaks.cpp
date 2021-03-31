@@ -1,7 +1,6 @@
-#include "Modules/ModuleTweaks.hpp"
-
-#include "Patches/Ui.hpp"
-#include "Patches/Tweaks.hpp"
+#include "ModuleTweaks.hpp"
+#include "../Patches/Ui.hpp"
+#include "../Patches/Tweaks.hpp"
 
 namespace
 {

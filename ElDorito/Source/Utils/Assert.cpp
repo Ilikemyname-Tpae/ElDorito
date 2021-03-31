@@ -1,9 +1,8 @@
-#include "Utils/Assert.hpp"
-
+#include "Assert.hpp"
 #ifdef _DEBUG
 
-#include <string>
 #include <windows.h>
+#include <string>
 
 namespace Utils
 {

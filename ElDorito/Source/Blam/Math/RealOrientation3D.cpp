@@ -1,4 +1,4 @@
-#include "Blam/Math/RealOrientation3D.hpp"
+#include "RealOrientation3D.hpp"
 
 namespace Blam::Math
 {
@@ -24,3 +24,4 @@ namespace Blam::Math
 		return !(*this == other);
 	}
 }
+

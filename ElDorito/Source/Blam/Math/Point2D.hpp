@@ -1,5 +1,4 @@
 #pragma once
-
 #include <cstdint>
 
 namespace Blam::Math
@@ -42,3 +41,4 @@ namespace Blam::Math
 		friend Point2D operator/(const int16_t a, const Point2D &b);
 	};
 }
+

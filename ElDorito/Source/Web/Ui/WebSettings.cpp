@@ -1,10 +1,8 @@
-#include "Modules/ModuleInput.hpp"
-#include "Modules/ModuleSettings.hpp"
-
-#include "Patches/Input.hpp"
-#include "Patches/Ui.hpp"
-
-#include "Web/Ui/ScreenLayer.hpp"
+#include "ScreenLayer.hpp"
+#include "../../Patches/Input.hpp"
+#include "../../Patches/Ui.hpp"
+#include "../../Modules/ModuleInput.hpp"
+#include "../../Modules/ModuleSettings.hpp"
 
 namespace
 {

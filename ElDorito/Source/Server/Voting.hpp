@@ -1,6 +1,5 @@
 #pragma once
-
-#include "Server/VotingPackets.hpp"
+#include "../Server/VotingPackets.hpp"
 
 namespace Server::Voting
 {

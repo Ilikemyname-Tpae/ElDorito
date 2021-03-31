@@ -1,6 +1,5 @@
-#include "Blam/Tags/Objects/Object.hpp"
-
-#include "Definitions/EnumDefinition.hpp"
+#include "Blam\Tags\Objects\Object.hpp"
+#include "Definitions\EnumDefinition.hpp"
 
 using namespace Blam::Tags::Objects;
 using namespace Definitions;

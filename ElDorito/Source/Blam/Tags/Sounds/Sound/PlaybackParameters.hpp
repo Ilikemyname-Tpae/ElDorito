@@ -1,8 +1,7 @@
 #pragma once
 
-#include "Blam/Math/Bounds.hpp"
-
-#include "Blam/Tags/Tags.hpp"
+#include <Blam\Tags\Tags.hpp>
+#include <Blam\Math\Bounds.hpp>
 
 namespace Blam::Tags::Sounds {
 

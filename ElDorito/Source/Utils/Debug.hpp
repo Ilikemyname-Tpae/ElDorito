@@ -1,5 +1,4 @@
 #pragma once
-
 #include <sstream>
 
 namespace Utils

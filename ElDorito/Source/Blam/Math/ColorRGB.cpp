@@ -1,4 +1,4 @@
-#include "Blam/Math/ColorRGB.hpp"
+#include "ColorRGB.hpp"
 
 namespace Blam::Math
 {
@@ -24,3 +24,4 @@ namespace Blam::Math
 		return !(*this == other);
 	}
 }
+

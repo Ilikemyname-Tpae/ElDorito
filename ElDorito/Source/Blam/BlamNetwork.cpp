@@ -1,12 +1,9 @@
+#include <WS2tcpip.h>
 #define WIN32_LEAN_AND_MEAN
 
-#include "Pointer.hpp"
-
-#include "Blam/BlamNetwork.hpp"
-
-#include "Discord/DiscordRPC.h"
-
-#include <WS2tcpip.h>
+#include "BlamNetwork.hpp"
+#include "../Pointer.hpp"
+#include "../Discord/DiscordRPC.h"
 
 namespace
 {

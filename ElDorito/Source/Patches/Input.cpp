@@ -1,22 +1,18 @@
 #define _USE_MATH_DEFINES
-
-#include "Console.hpp"
-#include "ElDorito.hpp"
-#include "Patch.hpp"
-
-#include "Blam/BlamInput.hpp"
-#include "Blam/BlamObjects.hpp"
-#include "Blam/BlamPlayers.hpp"
-#include "Blam/BlamTime.hpp"
-
-#include "Modules/ModuleInput.hpp"
-
-#include "new/game/game.hpp"
-
-#include "Patches/Input.hpp"
-
+#include "Input.hpp"
 #include <stack>
 #include <cmath>
+
+#include "../Patch.hpp"
+#include "../Blam/BlamInput.hpp"
+#include "../Blam/BlamObjects.hpp"
+#include "../Blam/BlamPlayers.hpp"
+#include "../Blam/BlamTime.hpp"
+#include "../Modules/ModuleInput.hpp"
+#include "../Console.hpp"
+#include "../ElDorito.hpp"
+
+#include <game\game.hpp>
 
 using namespace Patches::Input;
 using namespace Blam::Input;

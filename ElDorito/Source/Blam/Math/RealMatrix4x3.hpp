@@ -1,7 +1,6 @@
 #pragma once
-
-#include "Blam/Math/RealPoint3D.hpp"
-#include "Blam/Math/RealVector3D.hpp"
+#include "RealPoint3D.hpp"
+#include "RealVector3D.hpp"
 
 namespace Blam::Math
 {
@@ -22,3 +21,4 @@ namespace Blam::Math
 		explicit operator const float *() const;
 	};
 }
+

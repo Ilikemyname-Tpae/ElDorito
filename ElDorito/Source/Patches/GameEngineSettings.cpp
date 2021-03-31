@@ -1,8 +1,6 @@
-#include "Patch.hpp"
-
-#include "Blam/BitStream.hpp"
-
-#include "Patches/GameEngineSettings.hpp"
+#include "GameEngineSettings.hpp"
+#include "../Blam/BitStream.hpp"
+#include "../Patch.hpp"
 
 namespace
 {

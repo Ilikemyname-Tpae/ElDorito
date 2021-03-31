@@ -1,4 +1,4 @@
-#include "Definitions/EnumDefinition.hpp"
+#include "EnumDefinition.hpp"
 
 namespace Definitions
 {

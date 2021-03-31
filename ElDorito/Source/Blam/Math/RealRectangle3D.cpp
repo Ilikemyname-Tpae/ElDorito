@@ -1,4 +1,4 @@
-#include "Blam/Math/RealRectangle3D.hpp"
+#include "RealRectangle3D.hpp"
 
 namespace Blam::Math
 {
@@ -27,3 +27,4 @@ namespace Blam::Math
 		return !(*this == other);
 	}
 }
+

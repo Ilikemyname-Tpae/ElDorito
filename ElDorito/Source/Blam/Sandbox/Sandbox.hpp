@@ -1,9 +1,8 @@
 #pragma once
 
-#include "Blam/BlamTypes.hpp"
-
-#include "Blam/Math/RealMatrix4x3.hpp"
-#include "Blam/Math/RealVector3D.hpp"
+#include "../BlamTypes.hpp"
+#include "../Math/RealVector3D.hpp"
+#include "../Math/RealMatrix4x3.hpp"
 
 namespace Blam::Sandbox
 {

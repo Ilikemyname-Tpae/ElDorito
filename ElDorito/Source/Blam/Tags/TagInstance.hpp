@@ -1,14 +1,11 @@
 #pragma once
-
-#include "ElDorito.hpp"
-
-#include "Blam/Tags/Tags.hpp"
-
 #include <cstdint>
 #include <fstream>
 #include <string>
-#include <unordered_map>
 #include <vector>
+#include <unordered_map>
+#include "../../ElDorito.hpp"
+#include "Tags.hpp"
 
 namespace Blam::Tags
 {

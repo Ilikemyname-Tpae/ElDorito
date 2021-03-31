@@ -1,24 +1,18 @@
-#include "Patches/Core.hpp"
-
-#include "Server/ReportHandler.hpp"
-
-#include "ThirdParty/HttpRequest.hpp"
-
-#include "ThirdParty/rapidjson/document.h"
-
-#include "ThirdParty/rapidjson/error/en.h"
-
-#include "Utils/Logger.hpp"
-#include "Utils/String.hpp"
-#include "Utils/VersionInfo.hpp"
-
-#include <chrono>
-#include <condition_variable>
-#include <fstream>
-#include <mutex>
+#include "ReportHandler.hpp"
 #include <string>
-#include <vector>
 #include <Windows.h>
+#include <vector>
+#include <mutex>
+#include <condition_variable>
+#include <chrono>
+#include "../Utils/Logger.hpp"
+#include "../Patches/Core.hpp"
+#include "../ThirdParty/HttpRequest.hpp"
+#include "../Utils/String.hpp"
+#include "../Utils/VersionInfo.hpp"
+#include <fstream>
+#include "../ThirdParty/rapidjson/document.h"
+#include "../ThirdParty/rapidjson/error/en.h"
 
 namespace
 {

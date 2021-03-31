@@ -1,4 +1,4 @@
-#include "Blam/Tags/Sounds/SoundClasses/SoundClasses.hpp"
+#include "SoundClasses.hpp"
 
 namespace Blam::Tags::Sounds {
 	ClassProperty* GetClassProperty(Classes* classes, SoundClass soundClass) {

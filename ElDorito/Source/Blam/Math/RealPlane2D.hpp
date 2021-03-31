@@ -1,6 +1,5 @@
 #pragma once
-
-#include "Blam/Math/RealVector2D.hpp"
+#include "RealVector2D.hpp"
 
 namespace Blam::Math
 {
@@ -17,3 +16,4 @@ namespace Blam::Math
 		bool operator!=(const RealPlane2D &other) const;
 	};
 }
+

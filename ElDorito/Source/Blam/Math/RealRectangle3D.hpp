@@ -18,3 +18,4 @@ namespace Blam::Math
 		bool operator!=(const RealRectangle3D &other) const;
 	};
 }
+

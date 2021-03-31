@@ -1,23 +1,19 @@
 #pragma once
-
-#include "Blam/Padding.hpp"
-
-#include "Blam/Tags/Tags.hpp"
-
-#include "Blam/Tags/Game/AssaultVariant.hpp"
-#include "Blam/Tags/Game/CTFVariant.hpp"
-#include "Blam/Tags/Game/GameVariant.hpp"
-#include "Blam/Tags/Game/InfectionVariant.hpp"
-#include "Blam/Tags/Game/JuggernautVariant.hpp"
-#include "Blam/Tags/Game/KOTHVariant.hpp"
-#include "Blam/Tags/Game/OddballVariant.hpp"
-#include "Blam/Tags/Game/SandboxVariant.hpp"
-#include "Blam/Tags/Game/SlayerVariant.hpp"
-#include "Blam/Tags/Game/TerritoriesVariant.hpp"
-#include "Blam/Tags/Game/TraitsProfile.hpp"
-#include "Blam/Tags/Game/VIPVariant.hpp"
-
-#include "Blam/Text/StringID.hpp"
+#include "../../Padding.hpp"
+#include "../Tags.hpp"
+#include "../../Text/StringID.hpp"
+#include "TraitsProfile.hpp"
+#include "GameVariant.hpp"
+#include "SlayerVariant.hpp"
+#include "OddballVariant.hpp"
+#include "CTFVariant.hpp"
+#include "AssaultVariant.hpp"
+#include "InfectionVariant.hpp"
+#include "KOTHVariant.hpp"
+#include "TerritoriesVariant.hpp"
+#include "JuggernautVariant.hpp"
+#include "VIPVariant.hpp"
+#include "SandboxVariant.hpp"
 
 namespace Blam::Tags::Game
 {
@@ -46,3 +42,4 @@ namespace Blam::Tags::Game
 	};
 	TAG_STRUCT_SIZE_ASSERT(struct GameEngineSettingsDefinition, 0x8C);
 }
+

@@ -1,12 +1,9 @@
 #pragma once
-
-#include "Blam/Memory/DatumHandle.hpp"
-
-#include "Blam/Tags/Tag.hpp"
-
 #include <cstdint>
 #include <iterator>
 #include <type_traits>
+#include "Tags\Tag.hpp"
+#include "Memory\DatumHandle.hpp"
 
 namespace Blam
 {

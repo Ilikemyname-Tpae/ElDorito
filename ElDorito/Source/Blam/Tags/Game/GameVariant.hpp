@@ -1,10 +1,7 @@
 #pragma once
-
-#include "Blam/Tags/Tags.hpp"
-
-#include "Blam/Text/StringID.hpp"
-
 #include <cstdint>
+#include "../Tags.hpp"
+#include "../../Text/StringID.hpp"
 
 namespace Blam::Tags::Game
 {
@@ -135,3 +132,4 @@ namespace Blam::Tags::Game
 	};
 	TAG_STRUCT_SIZE_ASSERT(struct GameVariant, 0x58);
 }
+

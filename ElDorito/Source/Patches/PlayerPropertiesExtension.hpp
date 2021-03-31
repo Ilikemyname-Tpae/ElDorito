@@ -1,12 +1,11 @@
 #pragma once
 
-#include "Blam/BitStream.hpp"
-#include "Blam/BlamPlayers.hpp"
+#include "../Utils/Singleton.hpp"
+#include "../Blam/BitStream.hpp"
+#include "../Blam/BlamPlayers.hpp"
 
-#include "Utils/Singleton.hpp"
-
-#include <memory>
 #include <vector>
+#include <memory>
 
 namespace Patches::Network
 {

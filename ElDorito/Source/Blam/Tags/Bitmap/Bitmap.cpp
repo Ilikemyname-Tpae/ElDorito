@@ -1,1 +1,1 @@
-#include "Blam/Tags/Bitmap/Bitmap.hpp"
+#include "Bitmap.hpp"

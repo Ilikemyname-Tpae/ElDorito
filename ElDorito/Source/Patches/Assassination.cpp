@@ -1,7 +1,6 @@
-#include "ElDorito.hpp"
-#include "Patch.hpp"
-
-#include "Patches/Assassination.hpp"
+#include "Assassination.hpp"
+#include "../ElDorito.hpp"
+#include "../Patch.hpp"
 
 namespace
 {

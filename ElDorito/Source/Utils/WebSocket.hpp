@@ -1,10 +1,10 @@
 #pragma once
 
-#include "Utils/Logger.hpp"
-
 #include <websocketpp/config/core.hpp>
-#include <websocketpp/logger/levels.hpp>
 #include <websocketpp/transport/asio/endpoint.hpp>
+#include <websocketpp/logger/levels.hpp>
+
+#include "Logger.hpp"
 
 namespace Utils::WebSocket
 {

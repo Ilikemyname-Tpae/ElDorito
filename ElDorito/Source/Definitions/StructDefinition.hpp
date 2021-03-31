@@ -1,11 +1,9 @@
 #pragma once
-
-#include "Definitions/FieldDefinition.hpp"
-
 #include <cstdint>
-#include <initializer_list>
 #include <string>
 #include <vector>
+#include <initializer_list>
+#include "FieldDefinition.hpp"
 
 namespace Definitions
 {

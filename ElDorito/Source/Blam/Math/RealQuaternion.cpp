@@ -1,6 +1,5 @@
-#include "Blam/Math/RealMatrix4x3.hpp"
-#include "Blam/Math/RealQuaternion.hpp"
-
+#include "RealQuaternion.hpp"
+#include "RealMatrix4x3.hpp"
 #include <cmath>
 
 namespace Blam::Math
@@ -344,3 +343,4 @@ namespace Blam::Math
 		};
 	}
 }
+

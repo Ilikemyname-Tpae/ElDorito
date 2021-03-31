@@ -1,6 +1,5 @@
 #pragma once
-
-#include "Blam/Math/Angle.hpp"
+#include "Angle.hpp"
 
 namespace Blam::Math
 {

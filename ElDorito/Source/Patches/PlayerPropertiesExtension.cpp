@@ -1,4 +1,4 @@
-#include "Patches/PlayerPropertiesExtension.hpp"
+#include "PlayerPropertiesExtension.hpp"
 
 namespace Patches:: Network
 {

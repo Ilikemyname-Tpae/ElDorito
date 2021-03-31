@@ -1,25 +1,23 @@
-#include "Pointer.hpp"
+#include "DiscordRPC.h"
 
-#include "Blam/BlamNetwork.hpp"
-
-#include "Discord/DiscordRPC.h"
-
-#include "Modules/ModuleGame.hpp"
-#include "Modules/ModuleServer.hpp"
-
-#include "ThirdParty/HttpRequest.hpp"
-#include "ThirdParty/rapidjson/stringbuffer.h"
-#include "ThirdParty/rapidjson/writer.h"
-
-#include "Utils/Cryptography.hpp"
-#include "Utils/Logger.hpp"
-#include "Utils/String.hpp"
-#include "Utils/VersionInfo.hpp"
-
-#include "Web/Ui/ScreenLayer.hpp"
-
-#include <discord_register.h>
 #include <time.h>
+
+#include "../Blam/BlamNetwork.hpp"
+#include "../Patches/Network.hpp"
+#include "../Patches/Core.hpp"
+#include "../Modules/ModuleServer.hpp"
+#include "../Modules/ModuleGame.hpp"
+#include "../Web/Ui/ScreenLayer.hpp"
+#include "../ThirdParty/rapidjson/stringbuffer.h"
+#include "../ThirdParty/rapidjson/writer.h"
+#include "../ThirdParty/HttpRequest.hpp"
+#include "../Pointer.hpp"
+#include "../Utils/String.hpp"
+#include "../Utils/Cryptography.hpp"
+#include "../Utils/VersionInfo.hpp"
+#include <discord_register.h>
+
+#include "../Utils/Logger.hpp"
 
 static const char* APPLICATION_ID = "378984448022020112";
 

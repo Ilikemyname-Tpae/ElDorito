@@ -1,24 +1,18 @@
-#include "ElDorito.hpp"
-#include "Patch.hpp"
-
-#include "Blam/BlamInput.hpp"
-#include "Blam/BlamNetwork.hpp"
-#include "Blam/BlamObjects.hpp"
-#include "Blam/BlamPlayers.hpp"
-#include "Blam/BlamTime.hpp"
-
-#include "Modules/ModuleInput.hpp"
-#include "Modules/ModuleSettings.hpp"
-
-#include "Patches/Spectate.hpp"
-
-#include "Utils/String.hpp"
-
-#include "ThirdParty/rapidjson/stringbuffer.h"
-#include "ThirdParty/rapidjson/writer.h"
-
-#include "Web/Ui/ScreenLayer.hpp"
-#include "Web/Ui/WebTimer.hpp"
+#include "Spectate.hpp"
+#include "../Blam/BlamPlayers.hpp"
+#include "../Blam/BlamInput.hpp"
+#include "../Blam/BlamTime.hpp"
+#include "../Blam/BlamObjects.hpp"
+#include "../Blam/BlamNetwork.hpp"
+#include "../ElDorito.hpp"
+#include "../Patch.hpp"
+#include "../Utils/String.hpp"
+#include "../Web/Ui/ScreenLayer.hpp"
+#include "../Web/Ui/WebTimer.hpp"
+#include "../Modules/ModuleInput.hpp"
+#include "../Modules/ModuleSettings.hpp"
+#include "../ThirdParty/rapidjson/writer.h"
+#include "../ThirdParty/rapidjson/stringbuffer.h"
 
 namespace
 {

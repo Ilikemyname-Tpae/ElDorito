@@ -1,14 +1,10 @@
 #pragma once
-
-#include "Blam/Math/Bounds.hpp"
-#include "Blam/Math/RealPoint2D.hpp"
-#include "Blam/Math/RealPoint3D.hpp"
-
-#include "Blam/Tags/Tags.hpp"
-
-#include "Blam/Text/StringID.hpp"
-
 #include <cstdint>
+#include "../../Math/Bounds.hpp"
+#include "../../Math/RealPoint2D.hpp"
+#include "../../Math/RealPoint3D.hpp"
+#include "../Tags.hpp"
+#include "../../Text/StringID.hpp"
 
 namespace Blam::Tags::Game
 {
@@ -1061,3 +1057,4 @@ namespace Blam::Tags::Game
 	};
 	TAG_STRUCT_SIZE_ASSERT(struct Globals, 0x608);
 }
+

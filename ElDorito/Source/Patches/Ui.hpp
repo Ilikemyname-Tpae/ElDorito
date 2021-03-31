@@ -1,15 +1,13 @@
 #pragma once
-
-#define WIN32_LEAN_AND_MEAN
-
-#include "Patch.hpp"
-
-#include "Blam/Text/StringID.hpp"
-
 #include <cstdint>
 #include <functional>
 #include <map>
+
+#define WIN32_LEAN_AND_MEAN
 #include <Windows.h>
+
+#include "../Blam/Text/StringID.hpp"
+#include "../Patch.hpp"
 
 namespace Patches::Ui
 {

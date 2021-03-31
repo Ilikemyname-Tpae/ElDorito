@@ -1,27 +1,20 @@
-#include "ElDorito.hpp"
-#include "CommandMap.hpp"
-
-#include "Blam/BlamInput.hpp"
-#include "Blam/BlamTime.hpp"
-
-#include "Modules/ModuleInput.hpp"
-#include "Modules/ModuleServer.hpp"
-#include "Modules/ModuleSettings.hpp"
-
-#include "Patches/Core.hpp"
-#include "Patches/Input.hpp"
-#include "Patches/Ui.hpp"
-
-#include "ThirdParty/rapidjson/stringbuffer.h"
-#include "ThirdParty/rapidjson/writer.h"
-
-#include "Web/WebRenderer.hpp"
-#include "Web/WebRendererSchemeHandler.hpp"
-
-#include "Web/Ui/ScreenLayer.hpp"
-
-#include <shellapi.h>
+#include "ScreenLayer.hpp"
+#include "../WebRenderer.hpp"
+#include "../WebRendererSchemeHandler.hpp"
+#include "../../Modules/ModuleServer.hpp"
+#include "../../Patches/Input.hpp"
+#include "../../Patches/Core.hpp"
+#include "../../Blam/BlamInput.hpp"
+#include "../../Blam/BlamTime.hpp"
+#include "../../Patches/Ui.hpp"
+#include "../../ElDorito.hpp"
 #include <Windows.h>
+#include <shellapi.h>
+#include "../../ThirdParty/rapidjson/stringbuffer.h"
+#include "../../ThirdParty/rapidjson/writer.h"
+#include "../../CommandMap.hpp"
+#include "../../Modules/ModuleSettings.hpp"
+#include "../../Modules/ModuleInput.hpp"
 
 using namespace Blam::Input;
 using namespace Anvil::Client::Rendering;

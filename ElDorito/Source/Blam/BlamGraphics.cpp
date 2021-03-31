@@ -1,4 +1,4 @@
-#include "Blam/BlamGraphics.hpp"
+#include "BlamGraphics.hpp"
 
 namespace Blam::Graphics
 {

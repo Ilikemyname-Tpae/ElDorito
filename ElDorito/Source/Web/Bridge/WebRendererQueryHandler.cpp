@@ -1,4 +1,4 @@
-#include "Web/Bridge/WebRendererQueryHandler.hpp"
+#include "WebRendererQueryHandler.hpp"
 
 using Anvil::Client::Rendering::Bridge::WebRendererQuery;
 using Anvil::Client::Rendering::Bridge::WebRendererQueryHandler;

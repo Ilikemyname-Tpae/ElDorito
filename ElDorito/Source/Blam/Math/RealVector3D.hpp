@@ -48,3 +48,4 @@ namespace Blam::Math
 		static RealVector3D Transform(const RealVector3D& value, const RealQuaternion& rotation);
 	};
 }
+
