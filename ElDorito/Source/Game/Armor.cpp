@@ -50,7 +50,7 @@ namespace
 	std::map<std::string, uint8_t> upperBodyIndices;
 	std::map<std::string, uint16_t> weaponIndices;
 
-	bool updateUiPlayerArmor = true; // Set to true to update the Spartan on the main menu
+	bool updateUiPlayerArmor = false; // Set to true to update the Spartan on the main menu
 
 	uint8_t GetArmorIndex(const std::string &name, const std::map<std::string, uint8_t> &Indices)
 	{
@@ -79,14 +79,14 @@ namespace
 		if (boost::regex_match(playerVars.VarColorsHolo->ValueString.c_str(), what, expression))
 			out->Colors[ColorIndices::Holo] = std::stoi(playerVars.VarColorsHolo->ValueString.substr(1), 0, 16);
 
-		out->Armor[ArmorIndices::Helmet] = GetArmorIndex(playerVars.VarArmorSpartanHelmet->ValueString, helmetIndices) && GetArmorIndex(playerVars.VarArmorEliteHelmet->ValueString, helmetIndices);
-		out->Armor[ArmorIndices::Chest] = GetArmorIndex(playerVars.VarArmorSpartanChest->ValueString, chestIndices) && GetArmorIndex(playerVars.VarArmorEliteChest->ValueString, chestIndices);
-		out->Armor[ArmorIndices::RightShoulder] = GetArmorIndex(playerVars.VarArmorSpartanRightShoulder->ValueString, rightShoulderIndices) && GetArmorIndex(playerVars.VarArmorEliteRightShoulder->ValueString, rightShoulderIndices);
-		out->Armor[ArmorIndices::LeftShoulder] = GetArmorIndex(playerVars.VarArmorSpartanLeftShoulder->ValueString, leftShoulderIndices) && GetArmorIndex(playerVars.VarArmorEliteLeftShoulder->ValueString, leftShoulderIndices);
-		out->Armor[ArmorIndices::Arms] = GetArmorIndex(playerVars.VarArmorSpartanArms->ValueString, armsIndices) && GetArmorIndex(playerVars.VarArmorEliteArms->ValueString, armsIndices);
-		out->Armor[ArmorIndices::Legs] = GetArmorIndex(playerVars.VarArmorSpartanLegs->ValueString, legsIndices) && GetArmorIndex(playerVars.VarArmorEliteLegs->ValueString, legsIndices);
-		out->Armor[ArmorIndices::Pelvis] = GetArmorIndex(playerVars.VarArmorSpartanPelvis->ValueString, pelvisIndices) && GetArmorIndex(playerVars.VarArmorElitePelvis->ValueString, pelvisIndices);
-		out->Armor[ArmorIndices::UpperBody] = GetArmorIndex(playerVars.VarArmorSpartanUpperBody->ValueString, upperBodyIndices) && GetArmorIndex(playerVars.VarArmorEliteUpperBody->ValueString, upperBodyIndices);
+		out->Armor[ArmorIndices::Helmet] = GetArmorIndex(playerVars.VarArmorHelmet->ValueString, helmetIndices);
+		out->Armor[ArmorIndices::Chest] = GetArmorIndex(playerVars.VarArmorChest->ValueString, chestIndices);
+		out->Armor[ArmorIndices::RightShoulder] = GetArmorIndex(playerVars.VarArmorRightShoulder->ValueString, rightShoulderIndices);
+		out->Armor[ArmorIndices::LeftShoulder] = GetArmorIndex(playerVars.VarArmorLeftShoulder->ValueString, leftShoulderIndices);
+		out->Armor[ArmorIndices::Arms] = GetArmorIndex(playerVars.VarArmorArms->ValueString, armsIndices);
+		out->Armor[ArmorIndices::Legs] = GetArmorIndex(playerVars.VarArmorLegs->ValueString, legsIndices);
+		out->Armor[ArmorIndices::Pelvis] = GetArmorIndex(playerVars.VarArmorPelvis->ValueString, pelvisIndices);
+		out->Armor[ArmorIndices::UpperBody] = GetArmorIndex(playerVars.VarArmorUpperBody->ValueString, upperBodyIndices);
 	}
 
 	uint8_t ValidateArmorPiece(const std::map<std::string, uint8_t> &indices, const uint8_t index)
@@ -105,25 +105,7 @@ namespace Game::Armor
 {
 	void ArmorExtension::BuildData(int playerIndex, PlayerCustomization *out)
 	{
-		using Blam::Tags::TagInstance;
-		using Blam::Tags::Game::Globals;
-		using Blam::Tags::Game::MultiplayerGlobals;
-		using Blam::Tags::Globals::CacheFileGlobalTags;
-
-		auto* mulg = TagInstance::GetDefinition<MultiplayerGlobals>("multiplayer\\multiplayer_globals");
-
-
 		BuildPlayerCustomization(Modules::ModulePlayer::Instance(), out);
-
-		for (auto& element : mulg->Universal->GameVariantWeapons)
-		{
-			if (element.Weapon.TagIndex == -1)
-				continue;
-
-			weaponIndices.emplace(
-				std::string(Blam::Cache::StringIDCache::Instance.GetString(element.Name)),
-				(uint16_t)element.Weapon.TagIndex);
-		}
 	}
 
 	void ArmorExtension::ApplyData(int playerIndex, PlayerProperties *properties, const PlayerCustomization &data)
@@ -369,7 +351,7 @@ namespace Game::Armor
 		}
 
 		CustomizeBiped(uiPlayerBiped);
-		updateUiPlayerArmor = true;
+		updateUiPlayerArmor = false;
 	}
 
 	void SetUiPlayerModelTransform(const Blam::Math::RealVector3D * newPosition, const float* rotationAngle)

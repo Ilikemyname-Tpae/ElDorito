@@ -16,68 +16,69 @@ var emblemToggle = 1;
 var needApply = false;
 
 var h3ColorArray = [
-    ['Steel','#282828'],
-    ['Silver','#7C7C7C'],
-    ['White','#C3C3C3'],
-    ['Red','#620B0B'],
-    ['Mauve','#BD2B2B'],
-    ['Salmon','#E24444'],
-    ['Orange','#BC4D00'],
-    ['Coral','#F4791F'],
-    ['Peach','#FFA362'],
-    ['Gold','#A77708'],
-    ['Yellow','#DD9A08'],
-    ['Pale','#FFBC3B'],
-    ['Sage','#1F3602'],
-    ['Green','#546E26'],
-    ['Olive','#B3E164'],
-    ['Teal','#0A3B3F'],
-    ['Aqua','#178C95'],
-    ['Cyan','#54DDDB'],
-    ['Blue','#0B2156'],
-    ['Cobalt','#1D4BBC'],
-    ['Sapphire','#5D85EB'],
-    ['Violet','#1D1052'],
-    ['Orchid','#5438CF'],
-    ['Lavender','#A18CFF'],
-    ['Crimson','#460014'],
-    ['Rubine','#AF0E46'],
-    ['Pink','#FF4D8A'],
-    ['Brown','#1C0D02'],
-    ['Tan','#774D31'],
-    ['Khaki','#C69069']
+    ['Steel','#626262'],
+    ['Silver','#B0B0B0'],
+    ['White','#DEDEDE'],
+    ['Red','#9B3332'],
+    ['Mauve','#DB6766'],
+    ['Salmon','#EE807F'],
+    ['Orange','#DB8B00'],
+    ['Coral','#F8AE58'],
+    ['Peach','#FECB9C'],
+    ['Gold','#CCAE2C'],
+    ['Yellow','#F3BC2B'],
+    ['Pale','#FDD879'],
+    ['Sage','#57741A'],
+    ['Green','#90A560'],
+    ['Olive','#D8EFA7'],
+    ['Teal','#31787E'],
+    ['Aqua','#4ABBC1'],
+    ['Cyan','#91EDEC'],
+    ['Blue','#325992'],
+    ['Cobalt','#5588DB'],
+    ['Sapphire','#97B5F5'],
+    ['Violet','#553E8F'],
+    ['Orchid','#9175E3'],
+    ['Lavender','#C4B4FD'],
+    ['Crimson','#830147'],
+    ['Ruby Wine','#D23C83'],
+    ['Pink','#FC8BB9'],
+    ['Brown','#513714'],
+    ['Tan','#AC8A6E'],
+    ['Khaki','#E0BEA2']
 ];
 var settingsToLoad = [
     ['playerName', 'Player.Name','Name','', 2],
     ['serviceTag', 'Player.ServiceTag','Service Tag','', 3],
-    ['armorSpartanHelmet', 'Player.Armor.Helmet','Helmet','The thing that goes on your head.', 2],
-    ['armorSpartanRightShoulder', 'Player.Armor.RightShoulder','Right Shoulder','Right there on that shoulder.', 4],
-    ['armorSpartanLeftShoulder', 'Player.Armor.LeftShoulder','Left Shoulder','The only shoulder that\'s left.', 5],
-	['armorSpartanChest', 'Player.Armor.Chest','Body','From arm to arm.', 3],
-	['armorSpartanArms', 'Player.Armor.Arms','Arms','Arms.', 3],
-	['armorSpartanPelvis', 'Player.Armor.Pelvis','Pelvis','Pelvis.', 3],
-	['armorSpartanLegs', 'Player.Armor.Legs','Legs','Legs.', 3],
-	['armorSpartanUpperBody', 'Player.Armor.UpperBody','Upper Body','Upper Body.', 3],
-	['armorEliteHelmet', 'Player.Armor.Helmet','Helmet','The thing that goes on your head.', 2],
-    ['armorEliteRightShoulder', 'Player.Armor.RightShoulder','Right Shoulder','Right there on that shoulder.', 4],
-    ['armorEliteLeftShoulder', 'Player.Armor.LeftShoulder','Left Shoulder','The only shoulder that\'s left.', 5],
+    ['armorHelmet', 'Player.Armor.Helmet','Helmet','The thing that goes on your head.', 0],
+    ['armorRightShoulder', 'Player.Armor.RightShoulder','Right Shoulder','Right there on that shoulder.', 1],
+    ['armorLeftShoulder', 'Player.Armor.LeftShoulder','Left Shoulder','The only shoulder that\'s left.', 2],
+	['armorChest', 'Player.Armor.Chest','Body','From arm to arm.', 3],
+	['armorArms', 'Player.Armor.Arms','Arms','Arms.', 4],
+	['armorPelvis', 'Player.Armor.Pelvis','Pelvis','Pelvis.', 5],
+	['armorLegs', 'Player.Armor.Legs','Legs','Legs.', 6],
+	['armorUpperBody', 'Player.Armor.UpperBody','Upper Body','Upper Body.', 7],
+	['armorEliteHelmet', 'Player.Armor.Helmet','Helmet','The thing that goes on your head.', 0],
+    ['armorEliteRightShoulder', 'Player.Armor.RightShoulder','Right Shoulder','Right there on that shoulder.', 1],
+    ['armorEliteLeftShoulder', 'Player.Armor.LeftShoulder','Left Shoulder','The only shoulder that\'s left.', 2],
 	['armorEliteChest', 'Player.Armor.Chest','Body','From arm to arm.', 3],
-	['armorEliteArms', 'Player.Armor.Arms','Arms','Arms.', 3],
-	['armorElitePelvis', 'Player.Armor.Pelvis','Pelvis','Pelvis.', 3],
-	['armorEliteLegs', 'Player.Armor.Legs','Legs','Legs.', 3],
-	['armorEliteUpperBody', 'Player.Armor.UpperBody','Upper Body','Upper Body.', 3],
-	['playerRep', 'Player.Representation', 'Player Representation','', 6],
-    ['gender', 'Player.Gender','Gender','', 6],
-	['renderWeapon', 'Player.RenderWeapon','Render Weapon','The weapon to display on the player\'s render mannequin.',3],
-    ['colorsPrimary', 'Player.Colors.Primary','Armor Primary','The primary armor color will serve you in individual combat but will be overwritten in team scenarios.',0],
-    ['colorsSecondary', 'Player.Colors.Secondary','Armor Secondary','The secondary armor color accents your primary color and will be overwritten in team scenarios.',1],
-    ['colorsVisor', 'Player.Colors.Visor','Armor Detail','The armor detail color preserves your individual identity in all multiplayer scenarios.',2],
-	['colorsHolo', 'Player.Colors.Holo','Armor Holo','Armor Holo.',3]
+	['armorEliteArms', 'Player.Armor.Arms','Arms','Arms.', 4],
+	['armorElitePelvis', 'Player.Armor.Pelvis','Pelvis','Pelvis.', 5],
+	['armorEliteLegs', 'Player.Armor.Legs','Legs','Legs.', 6],
+	['armorEliteUpperBody', 'Player.Armor.UpperBody','Upper Body','Upper Body.', 7],
+	['renderWeapon', 'Player.RenderWeapon','Render Weapon','The weapon to display on the player\'s render mannequin.', 8],
+    ['gender', 'Player.Gender','Gender','', 9],
+	['playerRep', 'Player.Representation', 'Player Representation','', 10],
+    ['colorsPrimary', 'Player.Colors.Primary','Primary Color','The primary armor color will serve you in individual combat but will be overwritten in team scenarios.',0],
+    ['colorsSecondary', 'Player.Colors.Secondary','Secondary Color','The secondary armor color accents your primary color and will be overwritten in team scenarios.',1],
+    ['colorsVisor', 'Player.Colors.Visor','Visor Color','Adjust the tint of your Spartan\'s visor.',2],
+    ['colorsLights', 'Player.Colors.Lights','Light Color','Like Christmas, but more subtle.',3],
+	['colorsHolo', 'Player.Colors.Holo','Armor Holo','Armor Holo.',4]
 ];
-var armorSpartanHelmetList = [
-	['Mark VI','base','Integrated Communications Helmet, Mjolnir: This standard-issue helmet for the Mjolnir Mark VI Powered Assault Armor has been in use since October 2552. It is compatible with all Mjolnir variants.'],
-	['Mark V','mp_markv',' Originally issued in August 2542, all extant Mark V helmets have been upgraded with current-issue internal components and software.'],
-	['CQB','mp_cobra','The Mjolnir/C variant was developed and tested at UNSC facilities in Essen, Deutschland, and Songnam, Hanguk, respectively, integrating feedback gathered from the Jericho VII Theater.'],
+var armorHelmetList = [
+    ['Mark VI','base','Integrated Communications Helmet, Mjolnir: This standard-issue helmet for the Mjolnir Mark VI Powered Assault Armor has been in use since October 2552. It is compatible with all Mjolnir variants.'],
+    ['Mark V','mp_markv',' Originally issued in August 2542, all extant Mark V helmets have been upgraded with current-issue internal components and software.'],
+    ['CQB','mp_cobra','The Mjolnir/C variant was developed and tested at UNSC facilities in Essen, Deutschland, and Songnam, Hanguk, respectively, integrating feedback gathered from the Jericho VII Theater.'],
     ['EOD','mp_regulator','The Mjolnir/EOD variant was created at UNSC facilities on Chi Ceti 4. The helmet was designed specifically to channel the pressure wave around the user\'s head, significantly reducing the likelihood of decapitation.'],
     ['EVA','mp_intruder','The Mjolnir/V variant was developed and tested at UNSC facilities in Lister, Aigburth on Ganymede, integrating feedback gathered from the Summa Deep Space Incident.'],
     ['Recon','mp_ninja','The Mjolnir VI/R variant was developed concurrently with the Mjolnir Mark VI Powered Assault Armor. The goal was to increase stealth capability without impacting endurance.'],
@@ -113,7 +114,7 @@ var armorSpartanHelmetList = [
 	['Strider','strider','Strider'],
 	['Widow Maker','widow_maker','Widow Maker']
 ];
-var armorSpartanShoulderList = [
+var armorShoulderList = [
     ['Mark VI','base','Supplemental Armor, Pauldron, Mjolnir: This standard-issue shoulder armor for the Mjolnir Mark VI Powered Assault Armor has been in use since October 2552. It is compatible with all Mjolnir variants.'],
     ['CQB','mp_cobra','Developed at Beweglichrüstungsysteme of Essen and tested at the Special Warfare Center in Songnam, the Mjolnir/C variant focuses on improving combat survivability and mobility.'],
     ['EOD','mp_regulator','Developed at the UNSC Damascus Materials Testing Facility on Chi Ceti 4, the Mjolnir/EOD variant was designed specifically to reduce the number of grabbing edges on the armor, decreasing the likelihood of dismemberment.'],
@@ -150,16 +151,16 @@ var armorSpartanShoulderList = [
 	['Tankmode','tankmode_human','The divine creation of Tankmode.'],
 	['Widow Maker','widow_maker','Widow Maker']
 ];
-var armorSpartanChestList = [
+var armorChestList = [
     ['Mark VI','base','Mjolnir Mark VI Powered Assault Armor: This is the standard issue Powered Assault Armor for Spartans as of October 2552. It is compatible with all certified helmet and pauldron variants.'],
-	['Bungie','mp_bungie','Forged in the flames of passion and perseverance. Go forth and represent.'],
+    ['Bungie','mp_bungie','Forged in the flames of passion and perseverance. Go forth and represent.'],
     ['CQB','mp_cobra','The Mjolnir/C variant was developed and tested at UNSC facilities in Essen, Deutschland, and Songnam, Hanguk, respectively, integrating feedback gathered from the Jericho VII Theater.'],
     ['EOD','mp_regulator','This variant was designed specifically to protect Spartans during operations involving the handling of explosive ordnance (e.g., clearing/planting land mines, demolishing enemy structures/materiel).'],
     ['EVA','mp_intruder','In developing the Mjolnir Mark VI Powered Assault Armor/V variant, emphasis was placed on increasing exoatmospheric endurance and improving mobility in zero gravity without the use of thrusters.'],
     ['Recon','mp_ninja','In developing the Mjolnir Mark VI Powered Assault Armor/R, the emphasis was to increase stealth capability, specifically by reducing its IR signature, reflective surfaces, and Cherenkov radiation emission.'],
     ['Scout','mp_scout','The Mjolnir VI/S variant was developed and tested alongside the RECON variant at the ONI\'s Ordnance Testing Facility (B5D) at Swanbourne, Perth, Western Australia.'],
     ['Hayabusa','mp_ryu','In late 2536, RKD-an Earth-based think tank-presented the UNSC Ordnance Committee with its answer to the self-contained powered armor problem: Project: HAYABUSA.'],
-	['Katana','mp_katana','To correctly use the sword, one must make it an extension of one\'s body. This is for the understanding of those intending to be warriors.'],
+    ['Katana','mp_katana','To correctly use the sword, one must make it an extension of one\'s body. This is for the understanding of those intending to be warriors.'],
 	['Air Assault','air_assault','Based on a proven Ushuaia Armory design, Naphtali hopes to leverage the AIR ASSAULT\'s all-around excellent performance and combat endurance to compete for the UNSC\'s lucrative Spartan recruit armor contract. AIR ASSAULT armor is a front-runner for the standard armor that future Spartans will be clad in.'],
     ['Renegade','renegade',' Obstentially a strategic reconnaissance variant, users have noticed the RENEGADE\'s sensor suite is calibrated specifically to track other Mjolnir suits; particularly those featuring emissions cloaking.'],
     ['Juggernaut','juggernaut','The JUGGERNAUT\'s design was thought lost during the fall of Reach. Recovered by a corporate scout team in 2553, the prototype helmets were paired with a GEN2 prototype harness and shipped to Anvil Station for integration testing. 2553 Each JUGGERNAUT helmet is dabbed with vitrified dirt from Reach as a reminder of what is at stake.'],
@@ -188,7 +189,7 @@ var armorSpartanChestList = [
 	['Tankmode','tankmode_human','The divine creation of Tankmode.'],
 	['Widow Maker','widow_maker','Widow Maker']
 ];
-var armorSpartanArmList = [
+var armorArmList = [
 	['Mark VI','base','Integrated Communications Helmet, Mjolnir: This standard-issue helmet for the Mjolnir Mark VI Powered Assault Armor has been in use since October 2552. It is compatible with all Mjolnir variants.'],
 	['Air Assault','air_assault','Based on a proven Ushuaia Armory design, Naphtali hopes to leverage the AIR ASSAULT\'s all-around excellent performance and combat endurance to compete for the UNSC\'s lucrative Spartan recruit armor contract. AIR ASSAULT armor is a front-runner for the standard armor that future Spartans will be clad in.'],
     ['Renegade','renegade',' Obstentially a strategic reconnaissance variant, users have noticed the RENEGADE\'s sensor suite is calibrated specifically to track other Mjolnir suits; particularly those featuring emissions cloaking.'],
@@ -217,41 +218,12 @@ var armorSpartanArmList = [
 	['Strider','strider','Strider'],
 	['Widow Maker','widow_maker','Widow Maker']
 ];
-var armorSpartanPelvisList = [
+var armorPelvisList = [
 	['Mark VI','base','Mjolnir Mark VI Powered Assault Armor: This is the standard issue Powered Assault Armor for Spartans as of October 2552. It is compatible with all certified helmet and pauldron variants.'],
 	['Air Assault','air_assault','Based on a proven Ushuaia Armory design, Naphtali hopes to leverage the AIR ASSAULT\'s all-around excellent performance and combat endurance to compete for the UNSC\'s lucrative Spartan recruit armor contract. AIR ASSAULT armor is a front-runner for the standard armor that future Spartans will be clad in.'],
 	['Tankmode','tankmode_human','The divine creation of Tankmode.']
 ];
-var armorSpartanLegList = [
-	['Mark VI','base','Integrated Communications Helmet, Mjolnir: This standard-issue helmet for the Mjolnir Mark VI Powered Assault Armor has been in use since October 2552. It is compatible with all Mjolnir variants.'],
-	['Air Assault','air_assault','Based on a proven Ushuaia Armory design, Naphtali hopes to leverage the AIR ASSAULT\'s all-around excellent performance and combat endurance to compete for the UNSC\'s lucrative Spartan recruit armor contract. AIR ASSAULT armor is a front-runner for the standard armor that future Spartans will be clad in.'],
-    ['Renegade','renegade',' Obstentially a strategic reconnaissance variant, users have noticed the RENEGADE\'s sensor suite is calibrated specifically to track other Mjolnir suits; particularly those featuring emissions cloaking.'],
-    ['Juggernaut','juggernaut','The JUGGERNAUT\'s design was thought lost during the fall of Reach. Recovered by a corporate scout team in 2553, the prototype helmets were paired with a GEN2 prototype harness and shipped to Anvil Station for integration testing. 2553 Each JUGGERNAUT helmet is dabbed with vitrified dirt from Reach as a reminder of what is at stake.'],
-    ['Scanner','scanner','Scanner'],
-    ['Chameleon','chameleon','Chameleon'],
-    ['Stealth','stealth','Stealth'],
-    ['Omni','omni','A surprisingly effective composite of other Acheron Security designs, the OMNI is currently the companys cutting-edge Mjolnir suit, and one of the few able to effectively use Material Groups GEN2 prototype sensor suite. Petabytes of Mjolnir combat data have been carefully sifted and analzed by Acheron researchers to inform the OMNI\'s design.'],
-    ['Orbital','orbital','Orbital'],
-    ['Shark','shark','Shark'],
-    ['Halberd','halberd','Cloaked in secrecy, all users of the HALBERD-class armor must sign binding non-disclosure agreements about its performance and the particulars of its new weapon mag-lock arrangement. Emerson guards the HALBERD prototype suits with their own - heavily armed - private security.'],
-    ['Hoplite','hoplite','Initially designed as an alternative to the SPI armor used by SPARTAN-III operatives, the notoriously secretive Watershed group has unexpectedly revealed the HOPLITE as a low-cost Mjolnir variant optimized for pairing with UNSC pistols.-III. HOPLITE armor lacks the bells and whistles of most Mjolnir variants, but is easy to build and repair.'],
-	['Ballista','ballista','Ballista'],
-	['Cyclops','cyclops','Cyclops'],
-	['Demo','demo','Demo'],
-	['Dutch','dutch','Dutch'],
-	['Gladiator','gladiator','Gladiator'],
-	['Gungnir','gungnir','Gungnir'],
-	['Hammerhead','hammerhead','Hammerhead'],
-	['Mac','mac','Mac'],
-	['Mercenary','mercenary','Mercenary'],
-	['Nihard','nihard','Nihard'],
-	['Oracle','oracle','Oracle'],
-	['Silverback','silverback','Silverback'],
-	['Spectrum','spectrum','Spectrum'],
-	['Strider','strider','Strider'],
-	['Widow Maker','widow_maker','Widow Maker']
-];
-var armorSpartanUpperBodyList = [
+var armorUpperBodyList = [
 ];
 var armorEliteHelmetList = [
 ];
@@ -263,19 +235,97 @@ var armorEliteArmList = [
 ];
 var armorElitePelvisList = [
 ];
-var armorEliteLegList = [
-];
 var armorEliteUpperBodyList = [
 ];
 var weaponArray = [
-];
-var playerRepList = [
-    ['Spartan','spartan','Spartans are members of a series of United Nations Space Command projects designed to create physically, genetically, technologically, and mentally superior supersoldiers as special fighting units.'],
-    ['Elite','elite','The Sangheili, known to humans as Elites, are a saurian species of strong, proud, and intelligent warriors, as well as skilled combat tacticians.']
+	['Assault Rifle','assault_rifle','Assault Rifle.'],
+	['Battle Rifle','battle_rifle','Battle Rifle.'],
+	['Plasma Pistol','plasma_pistol','Plasma Pistol.'],
+	['Spike Rifle','spike_rifle','Spike Rifle.'],
+	['SMG','smg','SMG.'],
+	['Covenant Carbine','carbine','Covenant Carbine.'],
+	['Energy Sword','energy_sword','Energy Sword.'],
+	['Magnum','magnum','Magnum.'],
+	['Needler','needler','Needler.'],
+	['Plasma Rifle','plasma_rifle','Plasma Rifle.'],
+	['Rocket Launcher','rocket_launcher','Rocket Launcher.'],
+	['Shotgun','shotgun','Shotgun.'],
+	['Sniper Rifle','sniper_rifle','Sniper Rifle.'],
+	['Unarmed','unarmed','Unarmed.'],
+	['Beam Rifle','beam_rifle','Beam Rifle.'],
+	['Spartan Laser','spartan_laser','Spartan Laser.'],
+	['None','none','None.'],
+	['Gravity Hammer','gravity_hammer','Gravity Hammer.'],
+	['Excavator','excavator','Excavator.'],
+	['Flamethrower','flamethrower','Flamethrower.'],
+	['Missile Pod','missile_pod','Missile Pod.'],
+	['Sentinel Beam','sentinel_beam','Sentinel Beam.'],
+	['Fuel Rod Gun','fuel_rod_gun','Fuel Rod Gun.'],
+	['DMR','dmr','DMR.'],
+	['Assault Rifle Ammo','assault_rifle_v1','Assault Rifle Ammo.'],
+	['Assault Rifle Damage','assault_rifle_v2','Assault Rifle Damage.'],
+	['Assault Rifle Accuracy','assault_rifle_v3','Assault Rifle Accuracy.'],
+	['Assault Rifle Rate Of Fire','assault_rifle_v4','Assault Rifle Rate Of Fire.'],
+	['Assault Rifle Range','assault_rifle_v5','Assault Rifle Range.'],
+	['Assault Rifle Power','assault_rifle_v6','Assault Rifle Power.'],
+	['Battle Rifle Ammo','battle_rifle_v1','Battle Rifle Ammo.'],
+	['Battle Rifle Damage','battle_rifle_v2','Battle Rifle Damage.'],
+	['Battle Rifle Accuracy','battle_rifle_v3','Battle Rifle Accuracy.'],
+	['Battle Rifle Rate Of Fire','battle_rifle_v4','Battle Rifle Rate Of Fire.'],
+	['Battle Rifle Range','battle_rifle_v5','Battle Rifle Range.'],
+	['Battle Rifle Power','battle_rifle_v6','Battle Rifle Power.'],
+	['DMR Ammo','dmr_v1','DMR Ammo.'],
+	['DMR Damage','dmr_v2','DMR Damage.'],
+	['DMR Accuracy','dmr_v3','DMR Accuracy.'],
+	['DMR Rate Of Fire','dmr_v4','DMR Rate Of Fire.'],
+	['DMR Range','dmr_v5','DMR Range.'],
+	['DMR Power','dmr_v6','DMR Power.'],
+	['SMG Ammo','smg_v1','SMG Ammo.'],
+	['SMG Damage','smg_v2','SMG Damage.'],
+	['SMG Accuracy','smg_v3','SMG Accuracy.'],
+	['SMG Rate Of Fire','smg_v4','SMG Rate Of Fire.'],
+	['SMG Range','smg_v5','SMG Range.'],
+	['SMG Power','smg_v6','SMG Power.'],
+	['Plasma Rifle Ammo','plasma_rifle_v1','Plasma Rifle Ammo.'],
+	['Plasma Rifle Damage','plasma_rifle_v2','Plasma Rifle Damage.'],
+	['Plasma Rifle Accuracy','plasma_rifle_v3','Plasma Rifle Accuracy.'],
+	['Plasma Rifle Rate Of Fire','plasma_rifle_v4','Plasma Rifle Rate Of Fire.'],
+	['Plasma Rifle Range','plasma_rifle_v5','Plasma Rifle Range.'],
+	['Plasma Rifle Power','plasma_rifle_v6','Plasma Rifle Power.'],
+	['Covenant Carbine Ammo','covenant_carbine_v1','Covenant Carbine Ammo.'],
+	['Covenant Carbine Damage','covenant_carbine_v2','Covenant Carbine Damage.'],
+	['Covenant Carbine Accuracy','covenant_carbine_v3','Covenant Carbine Accuracy.'],
+	['Covenant Carbine Rate Of Fire','covenant_carbine_v4','Covenant Carbine Rate Of Fire.'],
+	['Covenant Carbine Range','covenant_carbine_v5','Covenant Carbine Range.'],
+	['Covenant Carbine Power','covenant_carbine_v6','Covenant Carbine Power.'],
+	['Excavator Ammo','excavator_v1','Excavator Ammo.'],
+	['Excavator Damage','excavator_v2','Excavator Damage.'],
+	['Excavator Accuracy','excavator_v3','Excavator Accuracy.'],
+	['Excavator Rate Of Fire','excavator_v4','Excavator Rate Of Fire.'],
+	['Excavator Range','excavator_v5','Excavator Range.'],
+	['Excavator Power','excavator_v6','Excavator Power.'],
+	['Magnum Ammo','magnum_v1','Magnum Ammo.'],
+	['Magnum Damage','magnum_v2','Magnum Damage.'],
+	['Magnum Accuracy','magnum_v3','Magnum Accuracy.'],
+	['Magnum Rate Of Fire','magnum_v4','Magnum Rate Of Fire.'],
+	['Magnum Range','magnum_v5','Magnum Range.'],
+	['Magnum Power','magnum_v6','Magnum Power.'],
+	['Plasma Pistol Ammo','plasma_pistol_v1','Plasma Pistol Ammo.'],
+	['Plasma Pistol Damage','plasma_pistol_v2','Plasma Pistol Damage.'],
+	['Plasma Pistol Accuracy','plasma_pistol_v3','Plasma Pistol Accuracy.'],
+	['Plasma Pistol Rate Of Fire','plasma_pistol_v4','Plasma Pistol Rate Of Fire.'],
+	['Plasma Pistol Range','plasma_pistol_v5','Plasma Pistol Range.'],
+	['Plasma Pistol Power','plasma_pistol_v6','Plasma Pistol Power.'],
+	['Machinegun Turret','machinegun_turret','Machinegun Turret.'],
+	['Plasma Canon','plasma_canon','Plasma Canon.']
 ];
 var genderList = [
     ['Male','male','State your gender. This will not be displayed to other players, but combat effects will be tailored to your gender.'],
     ['Female','female','State your gender. This will not be displayed to other players, but combat effects will be tailored to your gender.']    
+];
+var playerRepList = [
+    ['Spartan','spartan','Spartans are members of a series of United Nations Space Command projects designed to create physically, genetically, technologically, and mentally superior supersoldiers as special fighting units.'],
+    ['Elite','elite','The Sangheili, known to humans as Elites, are a saurian species of strong, proud, and intelligent warriors, as well as skilled combat tacticians.']
 ];
 var colorPicker;
 
@@ -331,54 +381,23 @@ $(document).ready(function(){
 	$("#randomColors").hide();
 	SetupEmblems(false, true, true);
 	
-	while(playerRep == 'spartan') {
-		if(getComputedStyle(eliteArmory).display != "none"){
-			eliteArmory.style.display = "none";
-		}
-		
-		if(getComputedStyle(spartanArmory).display == "none"){
-			spartanArmory.style.display = "block";
-		}
-	}
-	
-	while(playerRep == 'elite') {
-		if(getComputedStyle(spartanArmory).display != "none"){
-			spartanArmory.style.display = "none";
-		}
-		if(getComputedStyle(eliteArmory).display == "none"){
-			eliteArmory.style.display = "block";
-		}
-	}
-	
-	dew.command('Weapon.List', {}).then(function(response){
-        var weaponList = response.split('\n');
-        var weaponArray = [];
-        for(i = 0; i < weaponList.length; i++){
-            var weapName = weaponList[i].split('Name: ')[1]
-            if(weapName && weapName != 'unarmed'){
-                var fancyName = weapName.replace(/_/g, ' ');
-                weaponArray.push([fancyName,weapName]);
-            }   
-        }
-        setRadioList('renderWeapon', weaponArray, true);
-    });
-	
-	setRadioList('armorSpartanHelmet', armorSpartanHelmetList, true);
-    setRadioList('armorSpartanRightShoulder', armorSpartanShoulderList, true);
-    setRadioList('armorSpartanLeftShoulder', armorSpartanShoulderList, true);
-	setRadioList('armorSpartanChest', armorSpartanChestList, true);
-    setRadioList('armorSpartanArms', armorSpartanArmList, true);
-	setRadioList('armorSpartanPelvis', armorSpartanPelvisList, true);
-    setRadioList('armorSpartanLegs', armorSpartanLegList, true);
-	setRadioList('armorSpartanUpperBody', armorSpartanUpperBodyList, true);
+    setRadioList('armorHelmet', armorHelmetList, true);
+    setRadioList('armorRightShoulder', armorShoulderList, true);
+    setRadioList('armorLeftShoulder', armorShoulderList, true);
+	setRadioList('armorChest', armorChestList, true);
+	setRadioList('armorArms', armorArmList, true);
+	setRadioList('armorPelvis', armorPelvisList, true);
+    setRadioList('armorLegs', armorArmList, true);
+	setRadioList('armorUpperBody', armorUpperBodyList, true);
 	setRadioList('armorEliteHelmet', armorEliteHelmetList, true);
     setRadioList('armorEliteRightShoulder', armorEliteShoulderList, true);
     setRadioList('armorEliteLeftShoulder', armorEliteShoulderList, true);
 	setRadioList('armorEliteChest', armorEliteChestList, true);
     setRadioList('armorEliteArms', armorEliteArmList, true);
 	setRadioList('armorElitePelvis', armorElitePelvisList, true);
-    setRadioList('armorEliteLegs', armorEliteLegList, true);
+    setRadioList('armorEliteLegs', armorEliteArmList, true);
 	setRadioList('armorEliteUpperBody', armorEliteUpperBodyList, true);
+	setRadioList('renderWeapon', weaponArray, true);
     setRadioList('playerRep', playerRepList, true);
     setRadioList('gender', genderList, true);
     setRadioList('colorsPrimary', h3ColorArray);
@@ -386,6 +405,7 @@ $(document).ready(function(){
     setRadioList('colorsVisor', h3ColorArray);
     setRadioList('colorsLights', h3ColorArray);
 	setRadioList('colorsHolo', h3ColorArray);
+
     $('.tabs li a').off('click').on('click', function(e){
         $('.tabs li').removeClass('selected');
         $(this).parent().addClass('selected');
@@ -408,7 +428,7 @@ $(document).ready(function(){
             });
         }
 		
-        dew.command('Game.PlaySound sound\\game_sfx\\ui\\button_based_ui_sounds\\a_button.snd!');
+        dew.command('Game.PlaySound 0x0B00');
     });
     $('.colorForm input, .armorForm input').off('click').on('change click', function(e){
         $(this).parent().parent().parent().find('.chosenElement').removeClass('chosenElement');
@@ -423,7 +443,7 @@ $(document).ready(function(){
         $(location.hash+' #infoBox #infoText').text($(this).attr('desc'));
 		setUrl(false);
     });
-    $('#colorsPrimaryText, #colorsSecondaryText, #colorsVisorText, #colorsLightsText, #colorsHoloText').off('click').on('click', function(e){
+    $('#colorsPrimaryText, #colorsSecondaryText,#colorsVisorText,#colorsLightsText,#colorsHoloText').off('click').on('click', function(e){
         $('.colorForm').hide();
         colorPicker = dew.makeColorPicker(document.querySelector('#colorPicker'));
         var whichColor = $(this);
@@ -672,14 +692,14 @@ dew.on('show', function(e){
     $('.armorForm, .colorForm, .emblemForm, .emblemColorForm').hide();
     $('#infoHeader, #infoText').text('');
     $('#infoBox').hide();
+    bipedRotate = 270;
     dew.getSessionInfo().then(function(i){
         if(i.mapName == "mainmenu"){
             $('#blackLayer').fadeIn(200, function() {
                 dew.command('Player.Armor.Update');
-                dew.command('Player.Armor.SetUiModelPosition 16.6759 1.75339 -1.534238');
-                dew.command('Player.Armor.SetUiModelRotation 30');
+                dew.command('Player.Armor.SetUiModelRotation 270');
                 dew.command('game.hideh3ui 1');
-                dew.command('Game.ScenarioScript matchmaking_cam');
+                dew.command('Game.ScenarioScript settings_cam');
                 dew.command('Game.ScreenEffectRange 0 0');
                 $('#settingsWindow').show();
                 $('#blueHeader, #blueFooter, #blackLayer').show();
@@ -798,15 +818,14 @@ function effectReset(){
         return;
     exiting = true;
 
-    dew.command('Game.PlaySound sound\\game_sfx\\ui\\back1.snd!');
+    dew.command('Game.PlaySound 0x0B04');
     dew.getSessionInfo().then(function(i){
         if(i.mapName == "mainmenu"){
             $('#blackLayer').fadeIn(200, function(){
-                dew.command('Game.ScenarioScript mainmenu_cam');
+                dew.command('Game.ScenarioScript leave_settings');
                 dew.command('Game.ScreenEffectRange 0 1E+19');
                 dew.command('Player.Armor.SetUiModelRotation 270');
-                dew.command('Player.Armor.SetUiModelPosition 16.6759 1.75339 -8');
-                $('#appearanceWindow').hide();				
+                dew.command('game.hideh3ui 0');
                 $('#settingsWindow').hide();
                 $('#blueHeader').hide();
                 $('#blueFooter').hide();
@@ -851,12 +870,7 @@ function setRadioList(ElementID, ArrayVar,hasImage){
 }
 
 function randomArmor(){
-	if (playerRep == 'spartan') {	
-		var armorArray = ['armorSpartanHelmet','armorSpartanRightShoulder','armorSpartanLeftShoulder','armorSpartanChest','armorSpartanArms','armorSpartanPelvis','armorSpartanLegs','armorSpartanUpperBody'];
-    }
-	else {
-		var armorArray = ['armorEliteHelmet','armorEliteRightShoulder','armorEliteLeftShoulder','armorEliteChest','armorEliteArms','armorElitePelvis','armorEliteLegs','armorEliteUpperBody'];
-	}
+    var armorArray = ['armorHelmet','armorChest','armorRightShoulder','armorLeftShoulder','armorArms','armorPelvis','armorLegs','armorUpperBody'];
     for(var i = 0; i < armorArray.length; i++) {
         var $options = $('#'+armorArray[i]).find('input'),
             random = ~~(Math.random() * $options.length);
@@ -919,7 +933,7 @@ function updateSelection(item, sound, move, direct){
             $(elem+' .selectedElement')[0].scrollIntoView(false);
         }
         if(sound){
-            dew.command('Game.PlaySound sound\\game_sfx\\ui\\button_based_ui_sounds\\cursor_horzontal.snd!');
+            dew.command('Game.PlaySound 0xAFE');
         }
     }
 }
@@ -977,7 +991,7 @@ function downNav(){
             updateSelection(itemNumber, true, true);
         }
     }else{
-        if((activePage.split(' ').length < 2 && itemNumber < 3 && activePage == '#page2') || ((activePage.split(' ').length < 2 && itemNumber < 5 && activePage == '#page3')) || (activePage.split(' ').length < 2 && itemNumber < 7 && activePage == '#page1') ||  (activePage.split(' ').length > 1 && itemNumber < $(activePage + ' label:visible').length-1)){
+        if((activePage.split(' ').length < 2 && itemNumber < 3 && activePage == '#page2') || ((activePage.split(' ').length < 2 && itemNumber < 5 && activePage == '#page3')) || (activePage.split(' ').length < 2 && itemNumber < 6 && activePage == '#page1') ||  (activePage.split(' ').length > 1 && itemNumber < $(activePage + ' label:visible').length-1)){
             itemNumber++;
             updateSelection(itemNumber, true, true);
         }
@@ -1024,9 +1038,9 @@ function hideInputBox(sound,condition){
     activePage = activePage.replace('inputBox', '');
     if(sound){
         if(condition=='ok'){
-            dew.command('Game.PlaySound sound\\game_sfx\\ui\\button_based_ui_sounds\\a_button.snd!');
+            dew.command('Game.PlaySound 0x0B00');
         }else if(condition=='dismiss'){
-            dew.command('Game.PlaySound sound\\game_sfx\\ui\\back1.snd!');
+            dew.command('Game.PlaySound 0x0B04');
         }
     }
 }
@@ -1100,7 +1114,7 @@ function selectElement(){
     }else if($(activePage + ' form:visible')){
         $(activePage+' .selectedElement').find('input').click();
     }
-    dew.command('Game.PlaySound sound\\game_sfx\\ui\\button_based_ui_sounds\\a_button.snd!');
+    dew.command('Game.PlaySound 0x0B00');
 }
 
 function exitSubform(){
@@ -1109,7 +1123,7 @@ function exitSubform(){
         activePage = location.hash;
         itemNumber = $(activePage+' span').has('.setting').index($('span:has(.selectedElement)'));
         colorPicker = null;
-        dew.command('Game.PlaySound sound\\game_sfx\\ui\\back1.snd!');
+        dew.command('Game.PlaySound 0x0B04');
         $(activePage + ' form:visible').hide();
         $(activePage + ' #infoBox').hide();
     }
