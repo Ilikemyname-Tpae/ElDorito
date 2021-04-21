@@ -58,7 +58,7 @@ namespace
 
 		if (blam::game_is_mainmenu())
 		{
-			fov = 70.0f;
+			fov = 0.0f;
 		}
 		else
 		{
